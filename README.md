@@ -19,7 +19,7 @@ The `update_and_convert_schema.py` script is responsible for updating the XLSX b
 The main script, `convert.py`, is used to convert the XLSX schema into XLSX, XML, html and JSON files according to the namespace prefix. It is found in the project root directory.
 
 > **Important note**:
-Please do not directly modify the base YAML and JSON files in the `schemas` directory. To make changes, update the `data` worksheet in `singlecell_schema_main_vxx.xlsx` spreadsheet located in the `schemas` directory.
+> Please do not directly modify the base YAML and JSON files in the `schemas` directory. To make changes, update the `data` worksheet in `singlecell_schema_main_vxx.xlsx` spreadsheet located in the `schemas` directory.
 
 After making changes to the base XLSX file, run the `update_and_convert_schema.py` script in the `utils` directory to regenerate and update the YAML and JSON files. To run the update script, execute in the terminal - `python3 utils/update_and_convert_schema.py`.
 
@@ -34,7 +34,7 @@ Please follow the instructions below to convert the XLSX schema into an xlsx, xm
 
 1. Download or clone this repository and navigate to its directory in the terminal
 
-   `git clone https://github.com/TGAC/SingleCellSchemas.git`
+   `git clone https://github.com/EarlhamInst/SingleCellSchemas.git`
 
    `cd SingleCellSchemas`
 
@@ -75,22 +75,22 @@ Please follow the instructions below to convert the XLSX schema into an xlsx, xm
    - `python3 convert.py <format_type>`
 
      where `<format_type>` is the format type that the output will be returned in (e.g. xlsx, xml, html, json)
-      e.g. `python3 convert.py html`
+     e.g. `python3 convert.py html`
 
      --**OR**--
 
    - Run the tests (which also runs the converter whilst verifying the output)
 
      `python -m unittest`
+
 ---
 
 ## Related repositories
 
-- [SingleCellSchemas](https://github.com/TGAC/SingleCellSchemas) – _This repository (included for reference)_
-- [COPO-production](https://github.com/TGAC/COPO-production)
-- [COPO-schemas](https://github.com/TGAC/COPO-schemas)
-- [COPO-documentation](https://github.com/TGAC/COPO-documentation)
-
+- [SingleCellSchemas](https://github.com/EarlhamInst/SingleCellSchemas) – _This repository (included for reference)_
+- [COPO-production](https://github.com/EarlhamInst/COPO-production)
+- [COPO-schemas](https://github.com/EarlhamInst/COPO-schemas)
+- [COPO-documentation](https://github.com/EarlhamInst/COPO-documentation)
 
 ## Additional resources
 
@@ -100,4 +100,4 @@ Please follow the instructions below to convert the XLSX schema into an xlsx, xm
 
 - [COPO's FAIRsharing resource](https://doi.org/10.25504/FAIRsharing.91a79b)
 
-- [To report issues](https://github.com/TGAC/SingleCellSchemas/issues)
+- [To report issues](https://github.com/EarlhamInst/SingleCellSchemas/issues)
