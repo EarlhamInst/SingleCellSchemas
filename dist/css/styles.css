@@ -276,13 +276,6 @@ small > a {
   word-break: break-word;
 }
 
-.jsonld-link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: black;
-}
-
 /* Prevent wrapping for the first cell in each table row
  i.e. the row title e.g. Name */
 .card-body table td:first-child {
