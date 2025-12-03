@@ -6,9 +6,9 @@
     "term_label": "Study ID",
     "identifier": true,
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -16,7 +16,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "study",
@@ -32,7 +32,7 @@
     "version_dwc_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "study",
@@ -49,7 +49,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "study",
@@ -64,7 +64,7 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Laser microdissection",
       "Laser microdissection, Culturing",
@@ -90,7 +90,7 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "study",
@@ -106,7 +106,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Apache-2.0",
       "CC-BY-4.0",
@@ -123,9 +123,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -133,7 +133,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -143,7 +143,7 @@
     "term_description": "A 16-digit number that uniquely identify researchers.",
     "term_example": "0000-1234-5678-9012",
     "term_regex": "^\\d{4}-\\d{4}-\\d{4}-\\d{4}$",
-    "term_error_message": "Value must follow the format XXXX-XXXX-XXXX-XXXX.",
+    "term_error_message": "Expected a value in the format XXXX-XXXX-XXXX-XXXX.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -151,7 +151,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -161,7 +161,7 @@
     "term_description": "A first name (or given name) is the personal name given to an individual conducting the study.",
     "term_example": "Jane",
     "term_regex": "^[A-Za-z]+(?:[-\\s][A-Za-z]+)*[a-z]+$",
-    "term_error_message": "String must contain at least one lowercase letter.",
+    "term_error_message": "Expected a value that contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://schema.org/givenName",
@@ -170,7 +170,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -180,7 +180,7 @@
     "term_description": "A last name (or surname) is the family name passed down from one generation to the next for the individual conducting the study.",
     "term_example": "Doe",
     "term_regex": "^[A-Za-z]+(-[A-Za-z]+)*[a-z]+$",
-    "term_error_message": "String must contain at least one lowercase letter.",
+    "term_error_message": "Expected a value that contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://schema.org/familyName",
@@ -189,7 +189,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -199,7 +199,7 @@
     "term_description": "A unique identifier used to send and receive electronic messages (emails) over the internet.",
     "term_example": "jane.doe@example.com",
     "term_regex": "^(?!.*\\.{2,})(?!.*-{2,})[\\w.-]+@[a-zA-Z\\d.-]+\\.[a-zA-Z]{2,}$",
-    "term_error_message": "No consecutive dots or hyphens, must contain '@'.",
+    "term_error_message": "Expected a valid email address with no consecutive dots or hyphens and containing the \u201c@\u201d symbol.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://schema.org/email",
@@ -208,7 +208,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -218,7 +218,7 @@
     "term_description": "An organisation or institution that this person is associated with.",
     "term_example": "University of Liverpool",
     "term_regex": "^[A-Za-z]+(?: [A-Za-z]+)*[a-z]+$",
-    "term_error_message": "String must contain at least one lowercase letter.",
+    "term_error_message": "Expected a value that contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://schema.org/affiliation",
@@ -227,7 +227,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -244,7 +244,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "person",
@@ -254,7 +254,7 @@
     "term_description": "A grant that directly or indirectly provides funding or sponsorship for the person to conduct the study.",
     "term_example": "GRAK3489",
     "term_regex": "^[A-Za-z0-9]+(?: [A-Za-z0-9]+)*$",
-    "term_error_message": "String must contain at least one lowercase letter.",
+    "term_error_message": "Expected a value that contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://schema.org/funding",
@@ -263,7 +263,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sample",
@@ -272,9 +272,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for the  study if referring to",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -282,7 +282,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sample",
@@ -291,9 +291,9 @@
     "term_label": "Sample ID",
     "identifier": true,
     "term_description": "A unique alphanumeric reference or identifier for the sample. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.",
-    "term_example": "sample123",
+    "term_example": "SAMPLE001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -301,7 +301,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sample",
@@ -312,7 +312,7 @@
     "term_description": "The formal Latin name used to identify the organism from which the sample was derived (e.g. Homo sapiens or Arabidopsis thaliana). This name must accurately correspond to the Taxon ID provided to ensure correct taxonomic classification.",
     "term_example": "Salvelinus alpinus",
     "term_regex": "^[A-Za-z]+(?: [A-Za-z]+)*[a-z]+$",
-    "term_error_message": "String must start with uppercase and contain at least one lowercase letter.",
+    "term_error_message": "Expected a text that starts with an uppercase letter and contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "BIOSAMPLEACCESSION_EXT_FIELD",
     "term_reference": "http://rs.tdwg.org/dwc/terms/scientificName",
@@ -321,7 +321,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sample",
@@ -332,7 +332,7 @@
     "term_description": "A unique identifier (usually from a recognized taxonomy database like NCBI Taxonomy) that corresponds to the organism\u2019s scientific name. It must be accurately matched to the provided scientificName to maintain consistency and traceability in biological records.",
     "term_example": 8036,
     "term_regex": "^[0-9]+$",
-    "term_error_message": "It must be numbers",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "BIOSAMPLEACCESSION_EXT_FIELD",
     "term_reference": "http://rs.tdwg.org/dwc/terms/taxonID",
@@ -341,7 +341,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sample",
@@ -359,7 +359,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -368,9 +368,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -378,7 +378,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -388,9 +388,9 @@
     "identifier": true,
     "identifier_prefix": "DISSOC",
     "term_description": "A unique alphanumeric code for the dissociation protocol in the study",
-    "term_example": "disProtocol123",
+    "term_example": "DISSOC001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -398,7 +398,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -407,7 +407,6 @@
     "term_label": "Protocol Name",
     "term_description": "A descriptive name of the protocol used for single-cell sequencing.",
     "term_example": "10X Genomics Single Cell 3' Library Prep",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -415,7 +414,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -431,7 +430,7 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -447,7 +446,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -463,7 +462,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "10x Nuclei Isolation Kit",
       "3' standard throughput kit",
@@ -477,7 +476,6 @@
     "term_label": "Literature Source Reference",
     "term_description": "Reference to literature sources that describe the protocol or methods used.",
     "term_example": "Doe et al. (2024), 'Single-cell RNA-seq: A comprehensive overview'",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -485,18 +483,18 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
     "namespace_prefix": "ei",
     "term_name": "protocols_io_reference",
-    "term_label": "Protocols Io Reference",
+    "term_label": "Protocols IO Reference",
     "copo_name": "isolation_protocol_refence",
     "term_description": "Reference link to protocols.io for additional details on the protocol.",
     "term_example": "https://www.protocols.io/view/sample-protocol-b2ubqesn",
     "term_regex": "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)+(?: \\| https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)*)*$",
-    "term_error_message": "String must contain at least one lowercase letter.",
+    "term_error_message": "Expected a value that contains at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -504,7 +502,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -513,7 +511,6 @@
     "term_label": "Workflowhub Sop Reference",
     "term_description": "Reference to the Standard Operating Procedure (SOP) in workflow hub.",
     "term_example": "https://workflowhub.eu/works/12345",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -521,7 +518,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -530,7 +527,6 @@
     "term_label": "Dissociation Protocol Method",
     "term_description": "The method used to dissociate tissues into single cells.",
     "term_example": "Mechanical and enzymatic dissociation",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -538,7 +534,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "dissociation",
@@ -547,7 +543,6 @@
     "term_label": "Single Cell Quality Metric",
     "term_description": "Metrics used to assess the quality of single cells before sequencing.",
     "term_example": "Cell viability percentage",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -555,7 +550,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -564,9 +559,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only alphanumeric characters are allowed.",
+    "term_error_message": "Expected alphanumeric characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -574,7 +569,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -584,9 +579,9 @@
     "identifier": true,
     "identifier_prefix": "CELLSUSP",
     "term_description": "A unique alphanumeric code for the cell suspension for the sample",
-    "term_example": "cellSusp123",
+    "term_example": "CELLSUSP001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -594,7 +589,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -603,9 +598,9 @@
     "term_label": "Sample ID",
     "referenced_component": "sample",
     "term_description": "A unique alphanumeric reference or identifier for the sample associated with the cell suspension. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.",
-    "term_example": "sample123",
+    "term_example": "SAMPLE001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -613,7 +608,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -622,9 +617,9 @@
     "term_label": "Dissociation Protocol ID",
     "referenced_component": "dissociation",
     "term_description": "A unique alphanumeric code for the dissociation protocol in the study",
-    "term_example": "disProtocol123",
+    "term_example": "DISSOC001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -632,7 +627,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -648,7 +643,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Cell",
       "Nuclei",
@@ -664,7 +659,7 @@
     "term_description": "An number representing the number of cells in the sequencing library.",
     "term_example": "10000",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -672,7 +667,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -687,7 +682,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "1",
       "1000000+",
@@ -708,7 +703,6 @@
     "term_label": "Cell Viability",
     "term_description": "The percentage of living cells in a sample, indicating the health and quality of cells for RNA-sequencing analysis.",
     "term_example": "95",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -716,7 +710,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -725,7 +719,6 @@
     "term_label": "Cell Viability Assessment Method",
     "term_description": "The method used to evaluate the viability of cells in the sample, often involving staining or flow cytometry techniques.",
     "term_example": "Trypan Blue Exclusion",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -733,7 +726,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -742,7 +735,6 @@
     "term_label": "Cell Size",
     "term_description": "The size of the cell, typically measured in micrometres.",
     "term_example": "10",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -750,7 +742,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -759,7 +751,6 @@
     "term_label": "Suspension Volume (\u00b5L)",
     "term_description": "The volume of the cell suspension in microlitres (\u00b5L).",
     "term_example": "100",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -767,7 +758,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -776,7 +767,6 @@
     "term_label": "Suspension Concentration Cells Per \u00b5L",
     "term_description": "The concentration of cells in the suspension in microlitres (\u00b5L).",
     "term_example": "1000",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -784,7 +774,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -793,7 +783,6 @@
     "term_label": "Suspension Dilution",
     "term_description": "The dilution factor of the cell suspension.",
     "term_example": "1:10",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -801,7 +790,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -811,7 +800,7 @@
     "term_description": "The volume of the cell suspension loaded into the single-cell RNA-sequencing system for analysis.",
     "term_example": "10",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -819,7 +808,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "cell_suspension",
@@ -828,7 +817,6 @@
     "term_label": "Suspension Dilution Buffer",
     "term_description": "A solution used to dilute cell suspensions to a desired concentration, typically prior to loading cells into a device for single-cell RNA sequencing. It helps maintain cell viability and integrity during processing.",
     "term_example": "PBS (Phosphate-buffered saline) with 0.04% BSA (Bovine serum albumin)",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -836,7 +824,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -845,9 +833,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -855,7 +843,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -865,9 +853,9 @@
     "identifier": true,
     "identifier_prefix": "LIBPREP",
     "term_description": "A unique alphanumeric reference or identifier for the library preparation protocol used during the sequencing.",
-    "term_example": "libPrep123",
+    "term_example": "LIBPREP001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -875,7 +863,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -884,9 +872,9 @@
     "term_label": "Cell Suspension ID",
     "referenced_component": "cell_suspension",
     "term_description": "A unique alphanumeric code for the cell suspension for the library preparation.",
-    "term_example": "cellSusp123",
+    "term_example": "CELLSUSP001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -894,7 +882,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -903,7 +891,6 @@
     "term_label": "Library Preparation Kit",
     "term_description": "Packaged kits (containing adapters, indexes, enzymes, buffers etc.), tailored for specific sequencing workflows, which allow the simplified preparation of sequencing-ready libraries for small genomes, amplicons, and plasmids",
     "term_example": "10X Genomics Single Cell 3' v3",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://w3id.org/mixs/0001145",
@@ -912,7 +899,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -922,7 +909,7 @@
     "term_description": "The version number of the library preparation kit used for sequencing.",
     "term_example": "2",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://purl.obolibrary.org/obo/GENEPIO_0000149",
@@ -931,7 +918,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -941,7 +928,6 @@
     "copo_name": "amplification_method",
     "term_description": "The method used to amplify the Complementary DNA (cDNA).",
     "term_example": "PCR",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -949,7 +935,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -959,7 +945,7 @@
     "term_description": "The number of cycles used during the Complementary DNA (cDNA) amplification process.",
     "term_example": "12",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -967,7 +953,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -977,7 +963,7 @@
     "term_description": "The average length of RNA fragments in base pairs (BP) after library preparation, indicating the quality and suitability of the RNA for sequencing.",
     "term_example": "350",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -985,7 +971,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -994,7 +980,6 @@
     "term_label": "Library Construction Method",
     "term_description": "The library construction method (including version) that was used.",
     "term_example": "Smart-Seq2",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1002,7 +987,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1011,7 +996,6 @@
     "term_label": "Input Molecule",
     "term_description": "The specific fraction of biological macromolecule from which the sequencing library is derived.",
     "term_example": "RNA",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1019,7 +1003,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1035,7 +1019,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Oligo-dT",
       "Random"
@@ -1055,7 +1039,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "3'",
       "5'",
@@ -1076,7 +1060,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "3",
       "5"
@@ -1096,7 +1080,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Antisense",
       "Both",
@@ -1118,7 +1102,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "No",
       "Yes"
@@ -1131,7 +1115,6 @@
     "term_label": "Spike Type",
     "term_description": "The specific type of external RNA used for spiking in, often indicating the source or nature of the control RNA.",
     "term_example": "Synthetic RNA",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1139,7 +1122,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1148,7 +1131,6 @@
     "term_label": "Spike In Dilution Or Concentration",
     "term_description": "The final concentration or dilution (for commercial sets) of the spike in mix.",
     "term_example": "1:1000",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1156,7 +1138,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1165,7 +1147,6 @@
     "term_label": "i5 Index",
     "term_description": "Barcode sequence used on the i5 adapter during library preparation for identifying samples in multiplexed single-cell RNA-sequencing.",
     "term_example": "ATCACG",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1173,7 +1154,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1182,7 +1163,6 @@
     "term_label": "i7 Index",
     "term_description": "Barcode sequence used on the i7 adapter to distinguish samples in multiplexed sequencing runs.",
     "term_example": "CGATGT",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1190,7 +1170,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1206,7 +1186,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Dual",
       "Single"
@@ -1219,7 +1199,6 @@
     "term_label": "I5 Sequence",
     "term_description": "The nucleotide sequence of the i5 index used in multiplexing during sequencing.",
     "term_example": "ATCGTAGC",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1227,7 +1206,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1236,7 +1215,6 @@
     "term_label": "i7 Sequence",
     "term_description": "The specific nucleotide sequence of the i7 index used for a sample.",
     "term_example": "TGCATGCA",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1244,7 +1222,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1252,9 +1230,9 @@
     "term_name": "plate_id",
     "term_label": "Plate ID",
     "term_description": "Identifier for the 96-well plate used in sample preparation.",
-    "term_example": "plate123",
+    "term_example": "PLT001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1262,7 +1240,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1271,7 +1249,6 @@
     "term_label": "Well Row",
     "term_description": "The row identifier in a 96-well plate indicating the sample's position.",
     "term_example": "A",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1279,7 +1256,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1289,7 +1266,7 @@
     "term_description": "The column identifier in a 96-well plate indicating the sample's position.",
     "term_example": "5",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1297,7 +1274,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1313,7 +1290,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "CD41+",
       "CD41-"
@@ -1332,7 +1309,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "lib_prep",
@@ -1349,7 +1326,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "5-methylcytidine antibody",
       "CAGE",
@@ -1395,7 +1372,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "GENOMIC",
       "METAGENOMIC",
@@ -1421,7 +1398,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "AMPLICON",
       "ATAC-seq",
@@ -1472,9 +1449,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1482,7 +1459,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1492,9 +1469,9 @@
     "identifier": true,
     "identifier_prefix": "SEQ",
     "term_description": "A unique alphanumeric reference or identifier for the sequencing protocol.",
-    "term_example": "seq123",
+    "term_example": "SEQ001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "https://w3id.org/mixs/0000016",
@@ -1503,7 +1480,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1512,7 +1489,6 @@
     "term_label": "Sequencing Platform Name",
     "term_description": "The name of the sequencing platform used for the experiment.",
     "term_example": "Pacbio",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://purl.obolibrary.org/obo/NCIT_C172274",
@@ -1521,7 +1497,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1531,7 +1507,6 @@
     "copo_name": "instrument_model",
     "term_description": "This refers to the machine or platform used for sequencing, with variations in throughput, read lengths, error rates, and application suitability.",
     "term_example": "Illumina NovaSeq 6000",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "enum",
     "term_reference": "http://purl.obolibrary.org/obo/GENEPIO_0000149",
@@ -1540,7 +1515,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "454 GS",
       "454 GS 20",
@@ -1643,7 +1618,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Other",
       "Paired",
@@ -1665,7 +1640,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "index1",
       "index2",
@@ -1681,7 +1656,7 @@
     "term_description": "The offset in sequence of the Unique Molecular Identifier (UMI) identifying barcode.",
     "term_example": "0",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1689,7 +1664,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1699,7 +1674,7 @@
     "term_description": "The size of the Unique Molecular Identifier (UMI) identifying barcode.",
     "term_example": "10",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1707,7 +1682,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1724,7 +1699,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "index1",
       "index2",
@@ -1740,7 +1715,7 @@
     "term_description": "The offset in sequence of the cell identifying barcode.",
     "term_example": "10",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://www.ebi.ac.uk/efo/EFO_0010204",
@@ -1749,7 +1724,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1759,7 +1734,7 @@
     "term_description": "The offset in sequence of the cell identifying barcode.",
     "term_example": "0",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://www.ebi.ac.uk/efo/EFO_0010205",
@@ -1768,7 +1743,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1785,7 +1760,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "index1",
       "index2",
@@ -1801,7 +1776,7 @@
     "term_description": "The starting position of the Complementary DNA (cDNA) read within the entire sequence, indicating where the read begins after any barcodes or technical sequences.",
     "term_example": 6,
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://www.ebi.ac.uk/efo/EFO_0010201",
@@ -1810,7 +1785,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "sequencing",
@@ -1820,7 +1795,7 @@
     "term_description": "The size of the Complementary DNA (cDNA) read.",
     "term_example": "75",
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "term_reference": "http://www.ebi.ac.uk/efo/EFO_0010202",
@@ -1829,7 +1804,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "analysis_derived_data",
@@ -1838,9 +1813,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1848,7 +1823,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "analysis_derived_data",
@@ -1857,7 +1832,6 @@
     "term_label": "File Derived From",
     "term_description": "The name of the file that was used to generate the analysis derived data.",
     "term_example": "file1_sequencing.json",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "file",
     "version_dwc_sc_rnaseq": "O",
@@ -1865,7 +1839,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "analysis_derived_data",
@@ -1874,7 +1848,6 @@
     "term_label": "Inferred Cell Type",
     "term_description": "Post analysis cell type or identity declaration based on expression profile or known gene function identified by the performer.",
     "term_example": "type II bipolar neuron",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1882,7 +1855,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "analysis_derived_data",
@@ -1898,7 +1871,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Fail",
       "Pass"
@@ -1918,7 +1891,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Cluster",
       "Count",
@@ -1934,9 +1907,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -1944,7 +1917,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -1953,7 +1926,6 @@
     "term_label": "Reference Genome",
     "term_description": "Indicate version and include stable link to genome data (or attach genome fasta file).",
     "term_example": "GRCh38, https://example.org/grch38.fa",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1961,7 +1933,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -1970,7 +1942,6 @@
     "term_label": "Genome Annotation",
     "term_description": "Indicate version and include stable link. Also indicate if any modification to the original annotation has been applied (e.g. 3' UTR extension) and include modified annotation file employed in the analysis.",
     "term_example": "Ensembl v101, https://example.org/ensembl_v101.gtf",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1978,7 +1949,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -1987,7 +1958,6 @@
     "term_label": "Annotation Filtering",
     "term_description": "Indicate which features were filtered (i.e. protein coding, pseudo-genes, TCRs, etc.)",
     "term_example": "Filtered to include only protein-coding genes",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1995,7 +1965,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2004,7 +1974,6 @@
     "term_label": "Genes vs Exons",
     "term_description": "Quantification using whole gene intervals or exons.",
     "term_example": "Exon quantification",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2012,7 +1981,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2021,7 +1990,6 @@
     "term_label": "Library Structure",
     "term_description": "seqspec format",
     "term_example": "Single-cell 3' library",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2029,7 +1997,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2038,7 +2006,6 @@
     "term_label": "Mapping and Demultiplexing Software",
     "term_description": "Reads/UMI",
     "term_example": "Cell Ranger 6.0.0",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2046,7 +2013,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2055,7 +2022,6 @@
     "term_label": "Read Mapping Statistics",
     "term_description": "Statistics of the Reads or Unique Molecular Identifier (UMI).",
     "term_example": "80% reads mapped to reference",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2063,7 +2029,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2072,7 +2038,6 @@
     "term_label": "Sequencing Saturation",
     "term_description": "Depending on number of cells recovered (not targeted) and technology",
     "term_example": "95% sequencing saturation",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2080,7 +2045,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2089,7 +2054,6 @@
     "term_label": "UMIs or Barcode Distribution QC",
     "term_description": "Show Unique Molecular Identifiers (UMIs) per barcode distribution and threshold applied",
     "term_example": "Threshold: 10 UMIs per barcode",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2097,7 +2061,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2106,7 +2070,6 @@
     "term_label": "Cell or Non-Cell Filtering Strategy",
     "term_description": "Unique Molecular Identifier (UMI) threshold used to discriminate cells from non-cells. Description of algorithm (if any) and parameters used to determine cells or non-cells.",
     "term_example": "Threshold: 5 UMIs for cell detection",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2114,7 +2077,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2123,7 +2086,6 @@
     "term_label": "Other Quality Filters Applied",
     "term_description": "Cells/nuclei discarded based on % mitochondrial reads, % rRNA reads, etc.",
     "term_example": "Cells with >20% mitochondrial reads discarded",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2131,7 +2093,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2140,7 +2102,6 @@
     "term_label": "Ambient RNA QC",
     "term_description": "Report % UMIs in background cell barcodes, and algorithm (if any) used to remove ambient RNA",
     "term_example": "Ambient RNA removed if >5% UMIs in background barcodes",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2148,7 +2109,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2157,7 +2118,6 @@
     "term_label": "Predicted Doublet Rate QC",
     "term_description": "Depending on number of cells recovered (not targeted) and technology",
     "term_example": "Predicted doublet rate: 1.5%",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2165,7 +2125,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "raw_data_processing",
@@ -2174,8 +2134,6 @@
     "term_label": "Individual Organism SNP Demultiplexing",
     "term_description": "If carried out, show SNP partitioning quality (e.g. SNP UMAP embedding or covariance matrix), algorithm used",
     "term_example": "SNP UMAP embedding using CellSNP",
-    "term_regex": "^[A-Za-z]+(?: [A-Za-z]+)*[a-z]+$",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2183,7 +2141,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "downstream_processing",
@@ -2192,9 +2150,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2202,7 +2160,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "downstream_processing",
@@ -2211,7 +2169,6 @@
     "term_label": "Clustering Algorithm and Version",
     "term_description": "If compared/integrated with existing datasets",
     "term_example": "Louvain 0.8.0",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2219,7 +2176,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "downstream_processing",
@@ -2228,7 +2185,6 @@
     "term_label": "Clustering Parameters",
     "term_description": "If compared/integrated with existing datasets",
     "term_example": "Resolution: 0.6, K-nearest neighbors: 10",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2236,7 +2192,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "downstream_processing",
@@ -2245,7 +2201,6 @@
     "term_label": "Integration/Batch Correction",
     "term_description": "If compared/integrated with existing datasets",
     "term_example": "Harmony v1.0",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2253,7 +2208,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2262,7 +2217,6 @@
     "term_label": "Source Code",
     "term_description": "If any newly developed code/software has been used in the processing and downstream analysis of the dataset.",
     "term_example": "Source code is hosted on GitHub and includes custom algorithms for UMI count normalization. The repository can be found at: https://github.com/user/umi-normalization.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2270,7 +2224,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2279,7 +2233,6 @@
     "term_label": "UMI Count Matrix",
     "term_description": "Gene x cell matrix with UMI counts for each gene in each cell.",
     "term_example": "The UMI count matrix is stored in a CSV file with gene IDs as rows (e.g., ENSG00000139618) and cell barcodes as columns (e.g., Cell_001, Cell_002). The matrix file is available at: https://example.com/umi_count_matrix.csv.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2287,7 +2240,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2297,7 +2250,7 @@
     "term_description": "Gene or transcript names should be listed as Ensembl (or other standardized ID), with gene short names in metadata.",
     "term_example": "ENSG00000139618",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2305,7 +2258,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2314,7 +2267,6 @@
     "term_label": "Functional Gene Annotations",
     "term_description": "Any functional annotation generated/used (gene names, GOs, structural domains, etc.).",
     "term_example": "Functional gene annotations, including Gene Ontology (GO) terms, are provided in the metadata. For example, the gene 'ENSG00000139618' (BRCA1) is annotated with the GO term 'GO:0003674' (DNA binding).",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2322,7 +2274,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2331,7 +2283,6 @@
     "term_label": "Protein Models",
     "term_description": "FASTA file with (or stable link to) the predicted proteins associated to genes in the UMI count matrix and matching IDs.",
     "term_example": "The protein sequences for genes are provided in a FASTA file available at: https://example.com/protein_models.fasta, where each protein sequence is linked to the corresponding gene ID.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2339,7 +2290,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2348,7 +2299,6 @@
     "term_label": "Cell Metadata",
     "term_description": "Table mapping cell IDs to cluster/cell type/broad cell type annotations.",
     "term_example": "Cell metadata includes information such as cell type annotations ('Tumor', 'Normal') and experimental conditions ('Control', 'Treatment'). This data is available in a table at: https://example.com/cell_metadata.csv.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2356,7 +2306,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2365,7 +2315,6 @@
     "term_label": "Cluster-Level Normalised Expression Tables",
     "term_description": "Expression tables that show normalised gene expression at the cluster or cell-type level.",
     "term_example": "Normalised gene expression data at the cluster level is provided in a tab-delimited text file. For example, gene 'ENSG00000139618' (BRCA1) has expression values for clusters: Cluster_1: 1200, Cluster_2: 900. The full expression table is available at: https://example.com/cluster_level_expression.csv.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2373,7 +2322,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "data_availability_checklist",
@@ -2382,7 +2331,6 @@
     "term_label": "Other Resource Files",
     "term_description": "Necessary to re-use and interpret the data. E.g. barcode information in complex, serial multiplexing protocols (clicktags).",
     "term_example": "Barcode information used in multiplexing protocols is provided in a separate file, which can be accessed at: https://example.com/barcode_data.csv.",
-    "term_error_message": "String must contain at least one lowercase letter.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2390,7 +2338,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2399,9 +2347,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2409,7 +2357,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2419,9 +2367,9 @@
     "identifier": true,
     "identifier_prefix": "FILE",
     "term_description": "A unique alphanumeric identifier for this file",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2429,7 +2377,26 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
+  },
+  {
+    "component_name": "file",
+    "namespace_prefix": "ei",
+    "term_name": "sample_id",
+    "term_label": "Sample ID",
+    "referenced_component": "sample",
+    "term_description": "A unique alphanumeric reference or identifier for the sample associated with the cell suspension. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.",
+    "term_example": "SAMPLE001",
+    "term_regex": "^[a-zA-Z0-9]+$",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
+    "term_cardinality": "single",
+    "term_type": "string",
+    "version_dwc_sc_rnaseq": "M",
+    "version_mixs_sc_rnaseq": "M",
+    "version_tol_sc_rnaseq": "M",
+    "version_faang_sc_rnaseq": "M",
+    "technology_name": "sc_rnaseq",
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2438,9 +2405,9 @@
     "term_label": "Library Preparation ID",
     "referenced_component": "lib_prep",
     "term_description": "A unique alphanumeric reference or identifier for the library preparation protocol used during the sequencing.",
-    "term_example": "libPrep123",
+    "term_example": "LIBPREP001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2448,7 +2415,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2457,9 +2424,9 @@
     "term_label": "Sequencing ID",
     "referenced_component": "sequencing",
     "term_description": "A unique alphanumeric reference or identifier for the sequencing protocol.",
-    "term_example": "seq123",
+    "term_example": "SEQ001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2467,7 +2434,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2483,7 +2450,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2499,7 +2466,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2510,12 +2477,12 @@
     "term_example": "file1_i1.fastq.gz",
     "term_cardinality": "single",
     "term_type": "string",
-    "version_dwc_sc_rnaseq": "M",
-    "version_mixs_sc_rnaseq": "M",
-    "version_tol_sc_rnaseq": "M",
-    "version_faang_sc_rnaseq": "M",
+    "version_dwc_sc_rnaseq": "O",
+    "version_mixs_sc_rnaseq": "O",
+    "version_tol_sc_rnaseq": "O",
+    "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2531,7 +2498,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2539,7 +2506,9 @@
     "term_name": "read_1_file_checksum",
     "term_label": "Read 1 Checksum",
     "term_description": "Result of a hash function calculated on the content of the read 1 file  to verify file integrity. Commonly used algorithms include MD5 and SHA-1. The checksums should be separated by a comma (,).",
-    "term_example": "32-char hex",
+    "term_example": "f8d29e41a73b5c02de9a6fb314e7c8ad",
+    "term_regex": "^[0-9a-f]{32}$",
+    "term_error_message": "Expected a 32-digit hexadecimal number.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2547,7 +2516,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2555,7 +2524,9 @@
     "term_name": "read_2_file_checksum",
     "term_label": "Read 2 Checksum",
     "term_description": "Result of a hash function calculated on the content of the read 2 file  to verify file integrity. Commonly used algorithms include MD5 and SHA-1. The checksums should be separated by a comma (,).",
-    "term_example": "32-char hex",
+    "term_example": "a3f4c1b29d8e57fa41b02de6c7f9ab83",
+    "term_regex": "^[0-9a-f]{32}$",
+    "term_error_message": "Expected a 32-digit hexadecimal number.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2563,7 +2534,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "file",
@@ -2579,7 +2550,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2588,9 +2559,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2598,7 +2569,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2608,9 +2579,9 @@
     "identifier": true,
     "identifier_prefix": "EXPSET",
     "term_description": "A unique alphanumeric identifier for the expression data process setting",
-    "term_example": "expdataprocess1",
+    "term_example": "EXPSET001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2618,7 +2589,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2634,7 +2605,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "imputed",
       "log1p",
@@ -2650,9 +2621,9 @@
     "term_name": "reference_genome",
     "term_label": "Reference Genome",
     "term_description": "The associated reference genome",
-    "term_example": "the download link for GRCh38.p13, GRCm39, TAIR10 \u2026",
+    "term_example": "https://reference-genome-example.com",
     "term_regex": "^(https?|ftp):\\/\\/[^\\s/$.?#].[^\\s]*$",
-    "term_error_message": "URL must start with 'http', 'https', or 'ftp'.",
+    "term_error_message": "Expected a URL starting with 'http', 'https' or 'ftp'.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2660,7 +2631,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2668,7 +2639,7 @@
     "term_name": "annotation_version",
     "term_label": "Annotation Version",
     "term_description": "The annotation version of the associated reference genome",
-    "term_example": "Ensembl 110, GENCODE v44 \u2026",
+    "term_example": "GENCODE v44",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2676,7 +2647,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2684,7 +2655,7 @@
     "term_name": "normalisation_method",
     "term_label": "Normalisation Method",
     "term_description": "Any normalisation processing performed",
-    "term_example": "Log Normalisation",
+    "term_example": "Log normalisation",
     "term_cardinality": "single",
     "term_type": "enum",
     "version_dwc_sc_rnaseq": "O",
@@ -2692,7 +2663,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Library Size Normalisation",
       "Log Normalisation",
@@ -2707,7 +2678,7 @@
     "term_name": "highly_variable_gene_selection",
     "term_label": "Highly Variable Gene Selection (HVG)",
     "term_description": "Number of Highly Variable Genes",
-    "term_example": "seurat_v3, n=2000 (or none)",
+    "term_example": "seurat_v3, n=2000",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2715,7 +2686,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2731,7 +2702,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "Diffusion Map",
       "ICA",
@@ -2747,7 +2718,7 @@
     "term_name": "n_neighbours",
     "term_label": "Number of Nearest Neighbours",
     "term_description": "Number of nearest neighbours used to calculate cluster membership",
-    "term_example": "pca:50, mnn:30 \u2026",
+    "term_example": "pca:50",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2755,7 +2726,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2770,7 +2741,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2778,9 +2749,9 @@
     "term_name": "clustering_resolution",
     "term_label": "Clustering  Resolution",
     "term_description": "Resolution parameter",
-    "term_example": "Numeric (1.0) or NA",
+    "term_example": 2.5,
     "term_regex": "^([0-9]*[.])?[0-9]+",
-    "term_error_message": "Only floating point number",
+    "term_error_message": "Expected a decimal number.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2788,7 +2759,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2804,7 +2775,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "cosine",
       "euclidean",
@@ -2827,7 +2798,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2842,7 +2813,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2851,7 +2822,7 @@
     "term_label": "Generated by Pipeline",
     "term_description": "URL of the deposited pipeline used to create this data",
     "term_regex": "^(https?|ftp):\\/\\/[^\\s/$.?#].[^\\s]*$",
-    "term_error_message": "URL must start with 'http', 'https', or 'ftp'.",
+    "term_error_message": "Expected a URL starting with 'http', 'https' or 'ftp'.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -2859,7 +2830,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -2874,7 +2845,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2883,9 +2854,9 @@
     "term_label": "Study ID",
     "referenced_component": "study",
     "term_description": "A unique alphanumeric identifier for this study",
-    "term_example": "A7F9B3X2",
+    "term_example": "STUDY001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2893,7 +2864,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2903,9 +2874,9 @@
     "identifier": true,
     "identifier_prefix": "EXPFILE",
     "term_description": "A unique alphanumeric identifier for the expression data file",
-    "term_example": "AB3X2",
+    "term_example": "EXPFILE001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2913,7 +2884,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2922,9 +2893,9 @@
     "term_label": "Library Preparation ID",
     "referenced_component": "lib_prep",
     "term_description": "A unique alphanumeric identifier for library preparation",
-    "term_example": "libPrep123",
+    "term_example": "LIBPREP001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2932,7 +2903,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2941,9 +2912,9 @@
     "term_label": "Expression Data Process Setting ID",
     "referenced_component": "expression_data_process_setting",
     "term_description": "A unique alphanumeric identifier for the expression data process setting",
-    "term_example": "expdataprocess1",
+    "term_example": "EXPSET001",
     "term_regex": "^[a-zA-Z0-9]+$",
-    "term_error_message": "Only letters and numbers allowed. No spaces or special characters.",
+    "term_error_message": "Expected letters and numbers only with no spaces or special characters.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2951,7 +2922,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2959,6 +2930,7 @@
     "term_name": "expression_data_file",
     "term_label": "File Name",
     "term_description": "Expression data file name",
+    "term_example": "exp_file.csv",
     "term_cardinality": "single",
     "term_type": "file",
     "version_dwc_sc_rnaseq": "M",
@@ -2966,7 +2938,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2974,7 +2946,9 @@
     "term_name": "expression_data_file_checksum",
     "term_label": "File md5  Checkshum",
     "term_description": "calculated md5 checksum for this file",
-    "term_example": "32-char hex",
+    "term_example": "9e4b7a23f6c1d0ab85f29c47e3d8a610",
+    "term_regex": "^[0-9a-f]{32}$",
+    "term_error_message": "Expected a 32-digit hexadecimal number.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "M",
@@ -2982,7 +2956,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -2998,7 +2972,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)",
+    "technology_label": "Tree of Life metadata",
     "allowed_values": [
       "csv",
       "h5ad",
@@ -3013,8 +2987,9 @@
     "term_name": "n_cells",
     "term_label": "Number of Cells",
     "term_description": "The number of cells represented in the expression data",
+    "term_example": 4,
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -3022,7 +2997,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -3030,8 +3005,9 @@
     "term_name": "n_genes",
     "term_label": "Number of Genes",
     "term_description": "The number of genese represented in the expression data",
+    "term_example": 50,
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -3039,7 +3015,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -3047,8 +3023,9 @@
     "term_name": "file_size_bytes",
     "term_label": "File Size in Bytes",
     "term_description": "Size of the file recorded in bytes",
+    "term_example": 90,
     "term_regex": "^\\d+$",
-    "term_error_message": "Only positive whole numbers allowed.",
+    "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -3056,7 +3033,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   },
   {
     "component_name": "expression_data_file",
@@ -3066,7 +3043,7 @@
     "term_description": "Approximate date this expression data was generated",
     "term_example": "2024-10-14",
     "term_regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
-    "term_error_message": "Date must be in the YYYY-MM-DD format.",
+    "term_error_message": "Expected a date in YYYY-MM-DD (year-month-day) format.",
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -3074,6 +3051,6 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing ((scRNA-Seq)"
+    "technology_label": "Tree of Life metadata"
   }
 ]

@@ -5,9 +5,9 @@
       <PRIMARY_ID>SCRNASEQ1</PRIMARY_ID>
     </IDENTIFIERS>
     <DESCRIPTOR>
-      <LABEL>Single-cell Ribonucleic Acid Sequencing (scRNA-Seq)</LABEL>
+      <LABEL>Darwin Core metadata</LABEL>
       <NAME>sc_rnaseq</NAME>
-      <DESCRIPTION>For single cell RNA-seq studies aimed focused on biodiversity-related information in alignment with the Darwin Core (DwC) standard.</DESCRIPTION>
+      <DESCRIPTION>For single-cell Ribonucleic Acid Sequencing (RNA-seq)  studies aimed focused on biodiversity-related information in alignment with the Darwin Core (DwC) standard.</DESCRIPTION>
       <AUTHORITY>COPO</AUTHORITY>
       <FIELD_GROUP restrictionType="Any number or none of the fields">
         <NAME>study</NAME>
@@ -17,7 +17,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -158,7 +158,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -271,7 +271,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for the  study if referring to</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -285,7 +285,7 @@
           <LABEL>Sample ID</LABEL>
           <NAME>sample_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the sample. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.</DESCRIPTION>
-          <EXAMPLE>sample123</EXAMPLE>
+          <EXAMPLE>SAMPLE001</EXAMPLE>
           <NAMESPACE>ei:sample_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -342,7 +342,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -356,7 +356,7 @@
           <LABEL>Dissociation Protocol ID</LABEL>
           <NAME>dissociation_protocol_id</NAME>
           <DESCRIPTION>A unique alphanumeric code for the dissociation protocol in the study</DESCRIPTION>
-          <EXAMPLE>disProtocol123</EXAMPLE>
+          <EXAMPLE>DISSOC001</EXAMPLE>
           <NAMESPACE>ei:dissociation_protocol_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -429,7 +429,7 @@
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
         <FIELD>
-          <LABEL>Protocols Io Reference</LABEL>
+          <LABEL>Protocols IO Reference</LABEL>
           <NAME>protocols_io_reference</NAME>
           <DESCRIPTION>Reference link to protocols.io for additional details on the protocol.</DESCRIPTION>
           <EXAMPLE>https://www.protocols.io/view/sample-protocol-b2ubqesn</EXAMPLE>
@@ -481,7 +481,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -495,7 +495,7 @@
           <LABEL>Cell Suspension ID</LABEL>
           <NAME>cell_suspension_id</NAME>
           <DESCRIPTION>A unique alphanumeric code for the cell suspension for the sample</DESCRIPTION>
-          <EXAMPLE>cellSusp123</EXAMPLE>
+          <EXAMPLE>CELLSUSP001</EXAMPLE>
           <NAMESPACE>ei:cell_suspension_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -509,7 +509,7 @@
           <LABEL>Sample ID</LABEL>
           <NAME>sample_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the sample associated with the cell suspension. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.</DESCRIPTION>
-          <EXAMPLE>sample123</EXAMPLE>
+          <EXAMPLE>SAMPLE001</EXAMPLE>
           <NAMESPACE>ei:sample_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -523,7 +523,7 @@
           <LABEL>Dissociation Protocol ID</LABEL>
           <NAME>dissociation_protocol_id</NAME>
           <DESCRIPTION>A unique alphanumeric code for the dissociation protocol in the study</DESCRIPTION>
-          <EXAMPLE>disProtocol123</EXAMPLE>
+          <EXAMPLE>DISSOC001</EXAMPLE>
           <NAMESPACE>ei:dissociation_protocol_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -662,7 +662,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -676,7 +676,7 @@
           <LABEL>Library Preparation ID</LABEL>
           <NAME>library_prep_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the library preparation protocol used during the sequencing.</DESCRIPTION>
-          <EXAMPLE>libPrep123</EXAMPLE>
+          <EXAMPLE>LIBPREP001</EXAMPLE>
           <NAMESPACE>ei:library_prep_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -690,7 +690,7 @@
           <LABEL>Cell Suspension ID</LABEL>
           <NAME>cell_suspension_id</NAME>
           <DESCRIPTION>A unique alphanumeric code for the cell suspension for the library preparation.</DESCRIPTION>
-          <EXAMPLE>cellSusp123</EXAMPLE>
+          <EXAMPLE>CELLSUSP001</EXAMPLE>
           <NAMESPACE>ei:cell_suspension_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -969,7 +969,7 @@
           <LABEL>Plate ID</LABEL>
           <NAME>plate_id</NAME>
           <DESCRIPTION>Identifier for the 96-well plate used in sample preparation.</DESCRIPTION>
-          <EXAMPLE>plate123</EXAMPLE>
+          <EXAMPLE>PLT001</EXAMPLE>
           <NAMESPACE>ei:plate_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -1302,7 +1302,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -1316,7 +1316,7 @@
           <LABEL>Sequencing ID</LABEL>
           <NAME>sequencing_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the sequencing protocol.</DESCRIPTION>
-          <EXAMPLE>seq123</EXAMPLE>
+          <EXAMPLE>SEQ001</EXAMPLE>
           <NAMESPACE>ontology:sequencing_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -1791,7 +1791,7 @@
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -1878,7 +1878,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2024,11 +2024,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <DESCRIPTION>If carried out, show SNP partitioning quality (e.g. SNP UMAP embedding or covariance matrix), algorithm used</DESCRIPTION>
           <EXAMPLE>SNP UMAP embedding using CellSNP</EXAMPLE>
           <NAMESPACE>ei:individual_organism_snp_demultiplexing</NAMESPACE>
-          <FIELD_TYPE>
-            <TEXT_FIELD>
-              <REGEX_VALUE>^[A-Za-z]+(?: [A-Za-z]+)*[a-z]+$</REGEX_VALUE>
-            </TEXT_FIELD>
-          </FIELD_TYPE>
+          <FIELD_TYPE/>
           <MANDATORY>optional</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
@@ -2041,7 +2037,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2179,7 +2175,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2193,8 +2189,22 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>File ID</LABEL>
           <NAME>file_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this file</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:file_id</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[a-zA-Z0-9]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Sample ID</LABEL>
+          <NAME>sample_id</NAME>
+          <DESCRIPTION>A unique alphanumeric reference or identifier for the sample associated with the cell suspension. This field must provide a consistent, unambiguous way to identify the sample within and across datasets. It can be a name, code, or accession-like format, as long as it remains unique.</DESCRIPTION>
+          <EXAMPLE>SAMPLE001</EXAMPLE>
+          <NAMESPACE>ei:sample_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
               <REGEX_VALUE>^[a-zA-Z0-9]+$</REGEX_VALUE>
@@ -2207,7 +2217,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Library Preparation ID</LABEL>
           <NAME>library_prep_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the library preparation protocol used during the sequencing.</DESCRIPTION>
-          <EXAMPLE>libPrep123</EXAMPLE>
+          <EXAMPLE>LIBPREP001</EXAMPLE>
           <NAMESPACE>ei:library_prep_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2221,7 +2231,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Sequencing ID</LABEL>
           <NAME>sequencing_id</NAME>
           <DESCRIPTION>A unique alphanumeric reference or identifier for the sequencing protocol.</DESCRIPTION>
-          <EXAMPLE>seq123</EXAMPLE>
+          <EXAMPLE>SEQ001</EXAMPLE>
           <NAMESPACE>ei:sequencing_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2258,7 +2268,7 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <EXAMPLE>file1_i1.fastq.gz</EXAMPLE>
           <NAMESPACE>ei:index_1_file</NAMESPACE>
           <FIELD_TYPE/>
-          <MANDATORY>mandatory</MANDATORY>
+          <MANDATORY>optional</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
         <FIELD>
@@ -2275,9 +2285,13 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Read 1 Checksum</LABEL>
           <NAME>read_1_file_checksum</NAME>
           <DESCRIPTION>Result of a hash function calculated on the content of the read 1 file  to verify file integrity. Commonly used algorithms include MD5 and SHA-1. The checksums should be separated by a comma (,).</DESCRIPTION>
-          <EXAMPLE>32-char hex</EXAMPLE>
+          <EXAMPLE>f8d29e41a73b5c02de9a6fb314e7c8ad</EXAMPLE>
           <NAMESPACE>ei:read_1_file_checksum</NAMESPACE>
-          <FIELD_TYPE/>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[0-9a-f]{32}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
           <MANDATORY>mandatory</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
@@ -2285,9 +2299,13 @@ from the cell was included in the sequencing analysis. For example, cells might 
           <LABEL>Read 2 Checksum</LABEL>
           <NAME>read_2_file_checksum</NAME>
           <DESCRIPTION>Result of a hash function calculated on the content of the read 2 file  to verify file integrity. Commonly used algorithms include MD5 and SHA-1. The checksums should be separated by a comma (,).</DESCRIPTION>
-          <EXAMPLE>32-char hex</EXAMPLE>
+          <EXAMPLE>a3f4c1b29d8e57fa41b02de6c7f9ab83</EXAMPLE>
           <NAMESPACE>ei:read_2_file_checksum</NAMESPACE>
-          <FIELD_TYPE/>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[0-9a-f]{32}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
           <MANDATORY>optional</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
@@ -2311,7 +2329,7 @@ dataset.</DESCRIPTION>
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2325,7 +2343,7 @@ dataset.</DESCRIPTION>
           <LABEL>Expression Data Process Setting ID</LABEL>
           <NAME>expression_data_process_setting_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for the expression data process setting</DESCRIPTION>
-          <EXAMPLE>expdataprocess1</EXAMPLE>
+          <EXAMPLE>EXPSET001</EXAMPLE>
           <NAMESPACE>ei:expression_data_process_setting_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2370,7 +2388,7 @@ dataset.</DESCRIPTION>
           <LABEL>Reference Genome</LABEL>
           <NAME>reference_genome</NAME>
           <DESCRIPTION>The associated reference genome</DESCRIPTION>
-          <EXAMPLE>the download link for GRCh38.p13, GRCm39, TAIR10 …</EXAMPLE>
+          <EXAMPLE>https://reference-genome-example.com</EXAMPLE>
           <NAMESPACE>ei:reference_genome</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2384,7 +2402,7 @@ dataset.</DESCRIPTION>
           <LABEL>Annotation Version</LABEL>
           <NAME>annotation_version</NAME>
           <DESCRIPTION>The annotation version of the associated reference genome</DESCRIPTION>
-          <EXAMPLE>Ensembl 110, GENCODE v44 …</EXAMPLE>
+          <EXAMPLE>GENCODE v44</EXAMPLE>
           <NAMESPACE>ei:annotation_version</NAMESPACE>
           <FIELD_TYPE/>
           <MANDATORY>optional</MANDATORY>
@@ -2394,7 +2412,7 @@ dataset.</DESCRIPTION>
           <LABEL>Normalisation Method</LABEL>
           <NAME>normalisation_method</NAME>
           <DESCRIPTION>Any normalisation processing performed</DESCRIPTION>
-          <EXAMPLE>Log Normalisation</EXAMPLE>
+          <EXAMPLE>Log normalisation</EXAMPLE>
           <NAMESPACE>ei:normalisation_method</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_CHOICE_FIELD>
@@ -2422,7 +2440,7 @@ dataset.</DESCRIPTION>
           <LABEL>Highly Variable Gene Selection (HVG)</LABEL>
           <NAME>highly_variable_gene_selection</NAME>
           <DESCRIPTION>Number of Highly Variable Genes</DESCRIPTION>
-          <EXAMPLE>seurat_v3, n=2000 (or none)</EXAMPLE>
+          <EXAMPLE>seurat_v3, n=2000</EXAMPLE>
           <NAMESPACE>ei:highly_variable_gene_selection</NAMESPACE>
           <FIELD_TYPE/>
           <MANDATORY>optional</MANDATORY>
@@ -2463,7 +2481,7 @@ dataset.</DESCRIPTION>
           <LABEL>Number of Nearest Neighbours</LABEL>
           <NAME>n_neighbours</NAME>
           <DESCRIPTION>Number of nearest neighbours used to calculate cluster membership</DESCRIPTION>
-          <EXAMPLE>pca:50, mnn:30 …</EXAMPLE>
+          <EXAMPLE>pca:50</EXAMPLE>
           <NAMESPACE>ei:n_neighbours</NAMESPACE>
           <FIELD_TYPE/>
           <MANDATORY>optional</MANDATORY>
@@ -2483,7 +2501,7 @@ dataset.</DESCRIPTION>
           <LABEL>Clustering  Resolution</LABEL>
           <NAME>clustering_resolution</NAME>
           <DESCRIPTION>Resolution parameter</DESCRIPTION>
-          <EXAMPLE>Numeric (1.0) or NA</EXAMPLE>
+          <EXAMPLE>2.5</EXAMPLE>
           <NAMESPACE>ei:clustering_resolution</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2577,7 +2595,7 @@ dataset.</DESCRIPTION>
           <LABEL>Study ID</LABEL>
           <NAME>study_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
-          <EXAMPLE>A7F9B3X2</EXAMPLE>
+          <EXAMPLE>STUDY001</EXAMPLE>
           <NAMESPACE>ei:study_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2591,7 +2609,7 @@ dataset.</DESCRIPTION>
           <LABEL>File ID</LABEL>
           <NAME>expression_data_file_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for the expression data file</DESCRIPTION>
-          <EXAMPLE>AB3X2</EXAMPLE>
+          <EXAMPLE>EXPFILE001</EXAMPLE>
           <NAMESPACE>ei:expression_data_file_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2605,7 +2623,7 @@ dataset.</DESCRIPTION>
           <LABEL>Library Preparation ID</LABEL>
           <NAME>library_prep_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for library preparation</DESCRIPTION>
-          <EXAMPLE>libPrep123</EXAMPLE>
+          <EXAMPLE>LIBPREP001</EXAMPLE>
           <NAMESPACE>ei:library_prep_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2619,7 +2637,7 @@ dataset.</DESCRIPTION>
           <LABEL>Expression Data Process Setting ID</LABEL>
           <NAME>expression_data_setting_id</NAME>
           <DESCRIPTION>A unique alphanumeric identifier for the expression data process setting</DESCRIPTION>
-          <EXAMPLE>expdataprocess1</EXAMPLE>
+          <EXAMPLE>EXPSET001</EXAMPLE>
           <NAMESPACE>ei:expression_data_setting_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2633,7 +2651,7 @@ dataset.</DESCRIPTION>
           <LABEL>File Name</LABEL>
           <NAME>expression_data_file</NAME>
           <DESCRIPTION>Expression data file name</DESCRIPTION>
-          <EXAMPLE/>
+          <EXAMPLE>exp_file.csv</EXAMPLE>
           <NAMESPACE>ei:expression_data_file</NAMESPACE>
           <FIELD_TYPE/>
           <MANDATORY>mandatory</MANDATORY>
@@ -2643,9 +2661,13 @@ dataset.</DESCRIPTION>
           <LABEL>File md5  Checkshum</LABEL>
           <NAME>expression_data_file_checksum</NAME>
           <DESCRIPTION>calculated md5 checksum for this file</DESCRIPTION>
-          <EXAMPLE>32-char hex</EXAMPLE>
+          <EXAMPLE>9e4b7a23f6c1d0ab85f29c47e3d8a610</EXAMPLE>
           <NAMESPACE>ei:expression_data_file_checksum</NAMESPACE>
-          <FIELD_TYPE/>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[0-9a-f]{32}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
           <MANDATORY>mandatory</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
@@ -2681,7 +2703,7 @@ dataset.</DESCRIPTION>
           <LABEL>Number of Cells</LABEL>
           <NAME>n_cells</NAME>
           <DESCRIPTION>The number of cells represented in the expression data</DESCRIPTION>
-          <EXAMPLE/>
+          <EXAMPLE>4</EXAMPLE>
           <NAMESPACE>ei:n_cells</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2695,7 +2717,7 @@ dataset.</DESCRIPTION>
           <LABEL>Number of Genes</LABEL>
           <NAME>n_genes</NAME>
           <DESCRIPTION>The number of genese represented in the expression data</DESCRIPTION>
-          <EXAMPLE/>
+          <EXAMPLE>50</EXAMPLE>
           <NAMESPACE>ei:n_genes</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
@@ -2709,7 +2731,7 @@ dataset.</DESCRIPTION>
           <LABEL>File Size in Bytes</LABEL>
           <NAME>file_size_bytes</NAME>
           <DESCRIPTION>Size of the file recorded in bytes</DESCRIPTION>
-          <EXAMPLE/>
+          <EXAMPLE>90</EXAMPLE>
           <NAMESPACE>ei:file_size_bytes</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>

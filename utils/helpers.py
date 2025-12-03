@@ -616,14 +616,32 @@ def get_checklists_from_xlsx_file():
         checklists_df = pd.read_excel(SCHEMA_FILE_PATH, sheet_name="checklists").fillna(
             ""
         )
+        standards_df = pd.read_excel(SCHEMA_FILE_PATH, sheet_name="standards").fillna(
+            ""
+        )
 
         # Ensure the required columns exist in the 'checklists' worksheet
-        required_columns = {"key", "name", "description", "standard", "technology"}
+        required_checklist_worksheet_columns = {
+            "key",
+            "name",
+            "description",
+            "standard",
+            "technology",
+        }
 
-        if not required_columns.issubset(checklists_df.columns):
+        if not required_checklist_worksheet_columns.issubset(checklists_df.columns):
             raise ValueError(
-                f"'checklists' worksheet must contain {required_columns} columns."
+                f"'checklists' worksheet must contain {required_checklist_worksheet_columns} columns."
             )
+
+        # Ensure the required columns exist in the 'standards' worksheet
+        standards_worksheet_columns = {'key', 'name'}
+        if not standards_worksheet_columns.issubset(standards_df.columns):
+            raise ValueError(
+                f"'standards' worksheet must contain {standards_worksheet_columns} columns."
+            )
+
+        standards_map = dict(zip(standards_df["key"], standards_df["name"]))
 
         # Create a dictionary where each 'key' maps to a dictionary of attributes
         checklists = {
@@ -632,7 +650,7 @@ def get_checklists_from_xlsx_file():
                 "version_column_label": row["name"],
                 "version_description": row["description"],
                 "standard_name": row["standard"],
-                "standard_label": re.search(r"\[(.*?)\]", row["name"]).group(1),
+                "standard_label": get_standard_label(row["standard"], standards_map),
                 "output_file_name": f"{row['technology']}_{row['standard']}",
                 "technology_name": row["technology"],
                 "technology_label": re.sub(r"\s*\[.*?\]", "", row["name"]).strip(),
@@ -863,3 +881,12 @@ def validate_version_column_value(data_df, non_empty, version_column_name):
             raise ValueError(
                 f"Invalid value '{invalid_value}' found in row {index} of column '{version_column_name}'. Only 'M' or 'O' are allowed."
             )
+
+
+def get_standard_label(key, standards_map):
+    if key not in standards_map:
+        raise ValueError(f'Unknown standard key: {key}')
+    label = standards_map[key]
+    # Remove bracketed content such as '(FAANG)' or '[something]'
+    label = re.sub(r"\s*[\(\[].*?[\)\]]", '', label).strip()
+    return label
