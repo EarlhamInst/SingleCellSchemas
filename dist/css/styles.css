@@ -315,7 +315,7 @@ small > a {
 }
 
 /* Buttons, icons and links */
-#download-manifest-btn {
+#downloadManifestBtn {
   border-color: #850001 !important;
   text-decoration: none;
   background-color: #c61f16;
@@ -324,7 +324,7 @@ small > a {
     border-color 0.15s ease-in-out;
 }
 
-#download-manifest-btn:hover {
+#downloadManifestBtn:hover {
   background-color: #a81a13;
   color: white;
 }

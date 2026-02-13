@@ -70,7 +70,11 @@ def extract_components_to_xlsx(element):
         )
 
         merge_format = workbook.add_format(
-            {'bold': True, 'align': 'left', 'valign': 'vcenter', 'bg_color': '#D3D3D3'}
+            {'bold': True, 'align': 'left', 'valign': 'vcenter', 'bg_color': '#B5EAAA'}
+        )
+
+        protected_format = workbook.add_format(
+            {'locked': False, 'num_format': '0;-0;;@', 'valign': 'top', 'bg_color': '#D3D3D3'}
         )
 
         required_format = workbook.add_format({'bold': True, 'locked': True})
@@ -89,11 +93,13 @@ def extract_components_to_xlsx(element):
         helpers.create_readme_worksheet(readme_sheet_data)
 
         # Iterate through unique components
-        for component_name in data_df['component_name'].unique():
-            component_df = data_df[data_df['component_name'] == component_name].copy()
+        component_name_series= data_df['component_name']
+        for component_name in component_name_series.unique():
+            component_df = data_df[component_name_series == component_name].copy()
 
-            # Get the name of the terms as the column names from the component DataFrame
-            column_names = component_df['term_name'].tolist()
+            # Pandas Series by term label i.e. column names are based on term label
+            term_series = component_df[helpers.TERM_SERIES_KEY]
+            column_names = term_series.tolist()
 
             # If there are no fields for this component, skip it
             if not column_names:
@@ -104,6 +110,9 @@ def extract_components_to_xlsx(element):
 
             # Extract metadata for formatting and validation
             required_columns = helpers.get_required_columns(
+                component_df, version_column_name
+            )
+            protected_columns = helpers.get_protected_columns(
                 component_df, version_column_name
             )
             col_desc_eg = helpers.get_col_desc_eg(component_df, version_column_name)
@@ -122,11 +131,13 @@ def extract_components_to_xlsx(element):
                 worksheet=worksheet,
                 column_names=column_names,
                 required_columns=required_columns,
+                protected_columns=protected_columns,
                 col_desc_eg=col_desc_eg,
                 locked_format=locked_format,
                 unlocked_format=unlocked_format,
                 merge_format=merge_format,
                 required_format=required_format,
+                protected_format=protected_format,
                 desc_eg_format=desc_eg_format,
             )
 
@@ -228,8 +239,9 @@ def extract_components_to_xml(element):
     authority.text = 'COPO'
 
     # Process FIELD_GROUPs from components
-    for component_name in data_df['component_name'].unique():
-        component_df = data_df[data_df['component_name'] == component_name].copy()
+    component_name_series = data_df['component_name']
+    for component_name in component_name_series.unique():
+        component_df = data_df[component_name_series == component_name].copy()
         restriction_type = (
             component_df['component_restriction_type'].iloc[0]
             if 'component_restriction_type' in component_df
@@ -423,9 +435,10 @@ def extract_components_to_html(element, all_components=None, seen_components=Non
 
         # Process FIELD_GROUPs from components
         components = []
+        component_name_series = data_df['component_name']
 
-        for component_name in data_df['component_name'].unique():
-            component_df = data_df[data_df['component_name'] == component_name].copy()
+        for component_name in component_name_series.unique():
+            component_df = data_df[component_name_series == component_name].copy()
 
             group_label = helpers.get_worksheet_info(component_df, return_label=True)
             component_dict = {

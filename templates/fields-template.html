@@ -23,7 +23,7 @@
         <a href="{{ rel_path_traverse }}checklists/html/index.html" target="_self" class="navbar-brand mb-0 h1 header-title text-center">Single-cell Schemas</a>
         
         <!-- Navbar toggle button -->
-        <button id="custom-toggler" class="navbar-toggler ms-auto" type="button">
+        <button id="customToggle" class="navbar-toggler ms-auto" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -80,12 +80,13 @@
                     data-bs-content="Please refer to the <span id='infoModalLink'>About modal</span> for more information.">
                   </i>
                 </label>
-                <select class="form-select" id="stdDropdown" data-bs-placement="right" 
-                  data-bs-trigger="hover" data-bs-toggle="tooltip">
-                  {% for key, value in standards.items() %}
-                    <option value="{{ key }}">{{ value }}</option>
-                  {% endfor %}
-                </select>
+                <div data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-title="" data-bs-placement="right">
+                  <select id="stdDropdown" class="form-select">
+                    {% for key, value in standards.items() %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
 
               <!-- Technology dropdown menu -->
@@ -99,23 +100,24 @@
                     data-bs-content="Please refer to the <span id='infoModalLink'>About modal</span> for more information.">
                   </i>
                 </label>
-                <select class="form-select" id="techDropdown" data-bs-placement="right" 
-                  data-bs-trigger="hover" data-bs-toggle="tooltip" title="">
-                  {% for key, value in technologies.items() %}
-                    <option value="{{ key }}">{{ value }}</option>
-                  {% endfor %}
-                </select>
+                <div data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-title="" data-bs-placement="right">
+                  <select id="techDropdown" class="form-select">
+                    {% for key, value in technologies.items() %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
               <!-- Buttons -->
               <div class="d-flex justify-content-between">
                 <!-- Download manifest button -->
-                <button id="download-manifest-btn" class="btn btn-sm" 
+                <button id="downloadManifestBtn" class="btn btn-sm" 
                     type="button" title="Download blank manifest">
                   <i class="fa fa-download"></i>
                   <span class="action-label" style="padding-left: 3px;">Download manifest</span> 
                 </button>
                 <!-- Submit button -->
-                <!-- <button id="sub_btn" class="btn btn-primary" type="submit">
+                <!-- <button id="submitBtn" class="btn btn-primary" type="submit">
                   Submit
                 </button> -->
               </div>
@@ -270,9 +272,9 @@
     </a>
 
     <!-- Placeholder for modals -->
-    <div id="info-modal-container"></div>
-    <div id="search-modal-container"></div>
-    <div id="warning-modal-container"></div>
+    <div id="infoModalContainer"></div>
+    <div id="searchModalContainer"></div>
+    <div id="warningModalContainer"></div>
 
     <!-- JS -->
     <script src="{{ rel_path_traverse }}js/jquery-3.6.0.min.js" type="text/javascript"></script>

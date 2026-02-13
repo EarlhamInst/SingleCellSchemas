@@ -89,7 +89,7 @@ $(document).ready(function () {
     }, 300); // Adjust if modal animates slowly (e.g., 300–500ms)
   });
 
-  $('#download-manifest-btn').on('click', function (e) {
+  $('#downloadManifestBtn').on('click', function (e) {
     e.preventDefault();
 
     let outputFileName = getOutputFileName();
@@ -114,8 +114,8 @@ $(document).ready(function () {
     document.body.removeChild(link);
   });
 
-  $('#custom-toggler').on('click', function (e) {
-    // Initialise navbar toggler button
+  $('#customToggle').on('click', function (e) {
+    // Initialise navbar toggle button
     e.preventDefault();
     $('#navIcons').toggleClass('show');
   });
@@ -126,18 +126,32 @@ $(document).ready(function () {
     e.preventDefault(); // Prevent the default form submission
     updateUrlWithParams();
 
+    // Update selected dropdown menu option
+    const selectedText = $(this)
+      .find(`option[value='${$(this).val()}']`)
+      .text();
+    const tooltipEl = $(this).closest("[data-bs-toggle='tooltip']")[0];
+
+    if (tooltipEl) {
+      tooltipEl.setAttribute('data-bs-title', selectedText);
+      const tooltip = bootstrap.Tooltip.getOrCreateInstance(tooltipEl);
+      tooltip.setContent({
+        '.tooltip-inner': selectedText,
+      });
+    }
+
     let outputFileName = getOutputFileName();
     let fieldsAccordion = $('#fieldsAccordion');
 
-    $('#sub_btn').prop('disabled', false);
-    $('#download-manifest-btn')
+    $('#submitBtn').prop('disabled', false);
+    $('#downloadManifestBtn')
       .prop('disabled', false)
       .attr('title', 'Download blank manifest');
 
     if (!outputFileName) {
       // Disable the download button if no valid output file is found
-      $('#sub_btn').prop('disabled', true);
-      $('#download-manifest-btn')
+      $('#submitBtn').prop('disabled', true);
+      $('#downloadManifestBtn')
         .prop('disabled', true)
         .attr('title', 'No manifest to download');
 
@@ -194,7 +208,10 @@ function loadSelectedValues() {
 
     if (value !== null && $dropdown.find(option).length) {
       $dropdown.val(value);
-      $dropdown.attr('title', $dropdown.find(option).text());
+     
+      // Update tooltip wrapper instead of the select itself
+      const $tooltipEl = $dropdown.closest('[data-bs-toggle="tooltip"]');
+      $tooltipEl.attr('data-bs-title', $dropdown.find(option).text());
     }
   }
 
@@ -278,7 +295,7 @@ function populateInfoModalContent() {
 }
 
 function loadInfoModal() {
-  const modalContainer = document.getElementById('info-modal-container');
+  const modalContainer = document.getElementById('infoModalContainer');
 
   // Elements that can trigger the contact modal
   const infoTriggers = [
@@ -322,7 +339,7 @@ function loadInfoModal() {
 
 function loadSearchModal() {
   const searchIcon = document.getElementById('searchIconID');
-  const modalContainer = document.getElementById('search-modal-container');
+  const modalContainer = document.getElementById('searchModalContainer');
 
   if (!searchIcon) {
     console.error('Error: Search icon not found!');
@@ -548,12 +565,12 @@ function attachSearchFunctionality(searchModal, modalContainer) {
 
 function initialiseUIComponents() {
   // Initialise tooltips
-  var tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  tooltipTriggerList.map(function (tooltipTriggerEl) {
-    new bootstrap.Tooltip(tooltipTriggerEl, {
-      trigger: 'hover',
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
+    const existing = bootstrap.Tooltip.getInstance(el);
+    if (existing) existing.dispose();
+
+    new bootstrap.Tooltip(el, {
+      trigger: 'hover focus',
       placement: 'bottom',
     });
   });
@@ -562,8 +579,8 @@ function initialiseUIComponents() {
   var popoverTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="popover"]')
   );
-  popoverTriggerList.map(function (popoverTriggerEl) {
-    new bootstrap.Popover(popoverTriggerEl, {
+  popoverTriggerList.map(function (e) {
+    new bootstrap.Popover(e, {
       trigger: 'click',
       html: true,
       placement: 'top',
@@ -572,7 +589,7 @@ function initialiseUIComponents() {
 }
 
 function loadEmailModal() {
-  const modalContainer = document.getElementById('info-modal-container');
+  const modalContainer = document.getElementById('infoModalContainer');
 
   // Elements that can trigger the contact modal
   const emailTriggers = [
@@ -614,7 +631,7 @@ function loadEmailModal() {
 }
 
 function showWarningModal() {
-  const modalContainer = document.getElementById('warning-modal-container');
+  const modalContainer = document.getElementById('warningModalContainer');
 
   if (!modalContainer) {
     console.error('Modal container not found!');
@@ -732,8 +749,8 @@ function updateContentBasedOnSelection() {
             data-bs-target="#component-${component.group_name}" 
             aria-expanded="true"
             aria-controls="component-${component.group_name}">${
-        component.group_label
-      }
+              component.group_label
+            }
             <!-- Show info note only if group_label is "Sample" -->
             ${
               component.group_label === 'Sample'
