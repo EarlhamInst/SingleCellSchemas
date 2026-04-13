@@ -106,7 +106,7 @@ classes:
         inlined: false
       technology:
         identifier: false
-        required: true
+        required: false
         description: The sorting or visualisation technology used.
         examples:
         - value: Vizgen
@@ -352,7 +352,7 @@ classes:
         inlined: false
       scientific_name:
         identifier: false
-        required: false
+        required: true
         description: The formal Latin name used to identify the organism from which
           the sample was derived (e.g. Homo sapiens or Arabidopsis thaliana). This
           name must accurately correspond to the Taxon ID provided to ensure correct
@@ -811,7 +811,7 @@ classes:
         inlined: false
       library_prep_kit:
         identifier: false
-        required: true
+        required: false
         description: Packaged kits (containing adapters, indexes, enzymes, buffers
           etc.), tailored for specific sequencing workflows, which allow the simplified
           preparation of sequencing-ready libraries for small genomes, amplicons,
@@ -825,7 +825,7 @@ classes:
         inlined: false
       library_prep_kit_version:
         identifier: false
-        required: true
+        required: false
         description: The version number of the library preparation kit used for sequencing.
         examples:
         - value: '2'
@@ -979,7 +979,7 @@ classes:
         inlined: false
       i5_index:
         identifier: false
-        required: true
+        required: false
         description: Barcode sequence used on the i5 adapter during library preparation
           for identifying samples in multiplexed single-cell RNA-sequencing.
         examples:
@@ -991,7 +991,7 @@ classes:
         inlined: false
       i7_index:
         identifier: false
-        required: true
+        required: false
         description: Barcode sequence used on the i7 adapter to distinguish samples
           in multiplexed sequencing runs.
         examples:
@@ -1003,7 +1003,7 @@ classes:
         inlined: false
       dual_single_index:
         identifier: false
-        required: true
+        required: false
         description: Specifies if both i5 and i7 indices (dual) or only one index
           (single) was used for sample identification during sequencing.
         examples:
@@ -1015,7 +1015,7 @@ classes:
         inlined: false
       i5_sequence:
         identifier: false
-        required: true
+        required: false
         description: The nucleotide sequence of the i5 index used in multiplexing
           during sequencing.
         examples:
@@ -1027,7 +1027,7 @@ classes:
         inlined: false
       i7_sequence:
         identifier: false
-        required: true
+        required: false
         description: The specific nucleotide sequence of the i7 index used for a sample.
         examples:
         - value: TGCATGCA
@@ -1230,7 +1230,7 @@ classes:
         inlined: false
       pool_creation_date:
         identifier: false
-        required: true
+        required: false
         description: Date at which the pool was created.
         examples:
         - value: '2025-10-24'
@@ -1241,10 +1241,24 @@ classes:
         inlined: false
       pool_creation_protocol:
         identifier: false
-        required: true
+        required: false
         description: A link to the protocol for pool of specimens creation.
         examples: []
         slot_uri: faang:pool_creation_protocol
+        domain: Library Preparation
+        range: string
+        multivalued: false
+        inlined: false
+      sample_id:
+        identifier: false
+        required: true
+        description: A unique reference or identifier for the sample assigned to the
+          library preparation. This field must provide a consistent, unambiguous way
+          to identify the sample within and across datasets. It can be a name, code,
+          or accession-like format, as long as it remains unique.
+        examples:
+        - value: SAMPLE001
+        slot_uri: ei:sample_id
         domain: Library Preparation
         range: string
         multivalued: false
@@ -1276,7 +1290,7 @@ classes:
         inlined: false
       sequencing_platform_name:
         identifier: false
-        required: true
+        required: false
         description: The name of the sequencing platform used for the experiment.
         examples:
         - value: Pacbio
@@ -1287,7 +1301,7 @@ classes:
         inlined: false
       sequencing_instrument_model:
         identifier: false
-        required: true
+        required: false
         description: This refers to the machine or platform used for sequencing, with
           variations in throughput, read lengths, error rates, and application suitability.
         examples:
@@ -1299,7 +1313,7 @@ classes:
         inlined: false
       lib_layout:
         identifier: false
-        required: true
+        required: false
         description: Specify whether to expect single, paired, or other configuration
           of reads for sequencing
         examples:
@@ -1380,7 +1394,7 @@ classes:
         inlined: false
       cdna_read:
         identifier: false
-        required: true
+        required: false
         description: The actual nucleotide sequence obtained from Complementary DNA
           (cDNA) during sequencing.
         examples:
@@ -2047,7 +2061,7 @@ classes:
         inlined: false
       read_1_file:
         identifier: false
-        required: true
+        required: false
         description: The name or accession of the file that contains read 1.
         examples:
         - value: file1_r1.fastq.gz
@@ -2091,7 +2105,7 @@ classes:
         inlined: false
       read_1_file_checksum:
         identifier: false
-        required: true
+        required: false
         description: Result of a hash function calculated on the content of the read
           1 file  to verify file integrity. Commonly used algorithms include MD5 and
           SHA-1. The checksums should be separated by a comma (,).

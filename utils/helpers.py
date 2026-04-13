@@ -652,6 +652,11 @@ def generate_output_file_path(element, default_extension=DEFAULT_SCHEMA_EXTENSIO
     output_file_path = os.path.join(output_directory, output_file_name)
     return output_file_path
 
+def generate_output_file_name(standard, technology):
+    output_type = (
+        'spatial_transcriptomics' if 'stx' in technology.lower() else 'single_cell'
+    )
+    return f'{output_type}_manifest_version_{standard}_{technology}'
 
 def get_required_columns(component_df, version_column_name):
     # Mandatory columns are columns with 'M' cells
@@ -722,7 +727,7 @@ def get_checklists_from_xlsx_file():
                 'version_description': row['description'],
                 'standard_name': row['standard'],
                 'standard_label': get_label(row['standard'], standards_map, 'standard'),
-                'output_file_name': f"single_cell_manifest_version_{row['standard']}_{row['technology']}",
+                'output_file_name': generate_output_file_name(row['standard'], row['technology']),
                 'technology_name': row['technology'],
                 'technology_label': get_label(
                     row['technology'], technologies_map, 'technologies'
