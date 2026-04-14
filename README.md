@@ -96,7 +96,7 @@ Please follow the instructions below to convert the XLSX schema into an xlsx, xm
 
 - [Single-cell website](https://singlecellschemas.org/) - _The official website for this repository_
 
-- [Single-cell submission documentation](https://copo-docs.readthedocs.io/en/latest/submissions/single-cell-submissions.html)
+- [Single-cell submission documentation](https://copo-docs.readthedocs.io/en/latest/submissions/biodata/single-cell-submissions.html)
 
 - [COPO's FAIRsharing resource](https://doi.org/10.25504/FAIRsharing.91a79b)
 
