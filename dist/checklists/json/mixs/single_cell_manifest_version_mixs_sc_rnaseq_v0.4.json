@@ -15,6 +15,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -30,6 +33,9 @@
     "term_type": "string",
     "term_reference": "https://w3id.org/mixs/0000092",
     "version_mixs_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -62,6 +68,9 @@
     "version_dwc_sc_rnaseq": "O",
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
     "allowed_values": [
@@ -326,6 +335,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
     "allowed_values": [
@@ -430,6 +442,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -448,6 +463,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -467,6 +485,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -486,6 +507,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -505,6 +529,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -524,6 +551,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -541,6 +571,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -560,6 +593,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -579,6 +615,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -596,6 +635,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -616,6 +658,9 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
+    "version_dwc_stx_fish": "O",
+    "version_mixs_stx_fish": "O",
+    "version_tol_stx_fish": "O",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -636,6 +681,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -654,6 +702,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -4411,6 +4462,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
@@ -4431,6 +4485,9 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
+    "version_dwc_stx_fish": "M",
+    "version_mixs_stx_fish": "M",
+    "version_tol_stx_fish": "M",
     "technology_name": "sc_rnaseq",
     "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
   },
