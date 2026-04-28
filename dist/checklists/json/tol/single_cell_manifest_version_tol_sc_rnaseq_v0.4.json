@@ -16,7 +16,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "study",
@@ -32,7 +32,7 @@
     "version_dwc_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "study",
@@ -49,7 +49,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "study",
@@ -64,7 +64,7 @@
     "version_mixs_sc_rnaseq": "O",
     "version_tol_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -165,7 +165,7 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "study",
@@ -181,7 +181,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -285,7 +285,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -303,7 +303,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -322,7 +322,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -341,7 +341,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -360,7 +360,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -379,7 +379,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -396,7 +396,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "person",
@@ -415,7 +415,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sample",
@@ -434,7 +434,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sample",
@@ -451,7 +451,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sample",
@@ -471,7 +471,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sample",
@@ -491,7 +491,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sample",
@@ -509,7 +509,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -528,7 +528,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -548,7 +548,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -564,7 +564,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -580,7 +580,7 @@
     "version_mixs_sc_rnaseq": "M",
     "version_tol_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -596,7 +596,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -612,7 +612,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -713,7 +713,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -732,7 +732,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -748,7 +748,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -764,7 +764,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "dissociation",
@@ -780,7 +780,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -799,7 +799,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -819,7 +819,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -836,7 +836,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -855,7 +855,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -871,7 +871,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -965,7 +965,7 @@
     "term_label": "Cell Count",
     "copo_name": "cell_count",
     "term_description": "An number representing the number of cells in the sequencing library.",
-    "term_example": "10000",
+    "term_example": 10000,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -975,7 +975,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -990,7 +990,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1083,7 +1083,7 @@
     "term_name": "cell_viability",
     "term_label": "Cell Viability",
     "term_description": "The percentage of living cells in a sample, indicating the health and quality of cells for RNA-sequencing analysis.",
-    "term_example": "95",
+    "term_example": 95,
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1091,7 +1091,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1107,7 +1107,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1115,7 +1115,7 @@
     "term_name": "cell_size",
     "term_label": "Cell Size",
     "term_description": "The size of the cell, typically measured in micrometres.",
-    "term_example": "10",
+    "term_example": 10,
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1123,7 +1123,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1131,7 +1131,7 @@
     "term_name": "suspension_volume_\u00b5l",
     "term_label": "Suspension Volume (\u00b5L)",
     "term_description": "The volume of the cell suspension in microlitres (\u00b5L).",
-    "term_example": "100",
+    "term_example": 100,
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1139,7 +1139,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1147,7 +1147,7 @@
     "term_name": "suspension_concentration_cells_per_\u00b5l",
     "term_label": "Suspension Concentration Cells Per \u00b5L",
     "term_description": "The concentration of cells in the suspension in microlitres (\u00b5L).",
-    "term_example": "1000",
+    "term_example": 1000,
     "term_cardinality": "single",
     "term_type": "string",
     "version_dwc_sc_rnaseq": "O",
@@ -1155,7 +1155,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1171,7 +1171,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1179,7 +1179,7 @@
     "term_name": "loading_volume_\u00b5l",
     "term_label": "Loading Volume \u039cl",
     "term_description": "The volume of the cell suspension loaded into the single-cell RNA-sequencing system for analysis.",
-    "term_example": "10",
+    "term_example": 10,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -1189,7 +1189,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "cell_suspension",
@@ -1205,7 +1205,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1224,7 +1224,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1244,7 +1244,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1263,7 +1263,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1280,7 +1280,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1288,7 +1288,7 @@
     "term_name": "library_prep_kit_version",
     "term_label": "Library Preparation Kit Version",
     "term_description": "The version number of the library preparation kit used for sequencing.",
-    "term_example": "2",
+    "term_example": 2,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -1299,7 +1299,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1316,7 +1316,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1324,7 +1324,7 @@
     "term_name": "cdna_amplification_cycles",
     "term_label": "cDNA Amplification Cycles",
     "term_description": "The number of cycles used during the Complementary DNA (cDNA) amplification process.",
-    "term_example": "12",
+    "term_example": 12,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -1334,7 +1334,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1342,7 +1342,7 @@
     "term_name": "average_size_distribution",
     "term_label": "Average Size Distribution",
     "term_description": "The average length of RNA fragments in base pairs (BP) after library preparation, indicating the quality and suitability of the RNA for sequencing.",
-    "term_example": "350",
+    "term_example": 350,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -1352,7 +1352,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1368,7 +1368,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1384,7 +1384,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1400,7 +1400,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1501,7 +1501,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1594,7 +1594,7 @@
     "term_name": "end_bias",
     "term_label": "End Bias",
     "term_description": "The end bias of the library.",
-    "term_example": "3",
+    "term_example": 3,
     "term_cardinality": "single",
     "term_type": "enum",
     "version_dwc_sc_rnaseq": "O",
@@ -1602,7 +1602,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1703,7 +1703,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1804,7 +1804,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -1905,7 +1905,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1921,7 +1921,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1937,7 +1937,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1953,7 +1953,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -1969,7 +1969,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2070,7 +2070,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2086,7 +2086,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2104,7 +2104,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2120,7 +2120,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2128,7 +2128,7 @@
     "term_name": "well_col",
     "term_label": "Well Column",
     "term_description": "The column identifier in a 96-well plate indicating the sample's position.",
-    "term_example": "5",
+    "term_example": 5,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -2138,7 +2138,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2154,7 +2154,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2254,7 +2254,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "lib_prep",
@@ -2271,7 +2271,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2373,7 +2373,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2475,7 +2475,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2579,7 +2579,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -2600,7 +2600,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -2617,7 +2617,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -2635,7 +2635,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "454 GS",
       "454 GS 20",
@@ -2738,7 +2738,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2839,7 +2839,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -2932,7 +2932,6 @@
     "term_name": "umi_barcode_offset",
     "term_label": "UMI Barcode Offset",
     "term_description": "The offset in sequence of the Unique Molecular Identifier (UMI) identifying barcode.",
-    "term_example": "0",
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -2942,7 +2941,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -2950,7 +2949,7 @@
     "term_name": "umi_barcode_size",
     "term_label": "UMI Barcode Size",
     "term_description": "The size of the Unique Molecular Identifier (UMI) identifying barcode.",
-    "term_example": "10",
+    "term_example": 10,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -2960,7 +2959,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -2977,7 +2976,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -3070,7 +3069,7 @@
     "term_name": "cell_barcode_offset",
     "term_label": "Cell Barcode Offset",
     "term_description": "The offset in sequence of the cell identifying barcode.",
-    "term_example": "10",
+    "term_example": 10,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -3081,7 +3080,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -3089,7 +3088,6 @@
     "term_name": "cell_barcode_size",
     "term_label": "Cell Barcode Size",
     "term_description": "The offset in sequence of the cell identifying barcode.",
-    "term_example": "0",
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -3100,7 +3098,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -3117,7 +3115,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -3221,7 +3219,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "sequencing",
@@ -3229,7 +3227,7 @@
     "term_name": "cdna_read_size",
     "term_label": "cDNA Read Size",
     "term_description": "The size of the Complementary DNA (cDNA) read.",
-    "term_example": "75",
+    "term_example": 75,
     "term_regex": "^\\d+$",
     "term_error_message": "Expected positive whole numbers only.",
     "term_cardinality": "single",
@@ -3240,7 +3238,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "analysis_derived_data",
@@ -3259,7 +3257,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "analysis_derived_data",
@@ -3275,7 +3273,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "analysis_derived_data",
@@ -3291,7 +3289,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "analysis_derived_data",
@@ -3307,7 +3305,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -3408,7 +3406,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -3512,7 +3510,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3528,7 +3526,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3544,7 +3542,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3560,7 +3558,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3576,7 +3574,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3592,7 +3590,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3608,7 +3606,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3624,7 +3622,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3640,7 +3638,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3656,7 +3654,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3672,7 +3670,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3688,7 +3686,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3704,7 +3702,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3720,7 +3718,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "raw_data_processing",
@@ -3736,7 +3734,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "downstream_processing",
@@ -3755,7 +3753,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "downstream_processing",
@@ -3771,7 +3769,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "downstream_processing",
@@ -3787,7 +3785,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "downstream_processing",
@@ -3803,7 +3801,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3819,7 +3817,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3835,7 +3833,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3853,7 +3851,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3869,7 +3867,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3885,7 +3883,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3901,7 +3899,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3917,7 +3915,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "data_availability_checklist",
@@ -3933,7 +3931,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -3952,7 +3950,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -3972,7 +3970,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -3991,7 +3989,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4010,7 +4008,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4026,7 +4024,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4042,7 +4040,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4058,7 +4056,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4074,7 +4072,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4092,7 +4090,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4110,7 +4108,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "file",
@@ -4126,7 +4124,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4145,7 +4143,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4165,7 +4163,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4181,7 +4179,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -4284,7 +4282,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4300,7 +4298,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4316,7 +4314,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -4417,7 +4415,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4433,7 +4431,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -4534,7 +4532,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4549,7 +4547,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4567,7 +4565,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4583,7 +4581,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -4683,7 +4681,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4698,7 +4696,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4715,7 +4713,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_process_setting",
@@ -4730,7 +4728,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4749,7 +4747,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4769,7 +4767,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4788,7 +4786,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4807,7 +4805,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4823,7 +4821,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4841,7 +4839,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4857,7 +4855,7 @@
     "version_tol_sc_rnaseq": "M",
     "version_faang_sc_rnaseq": "M",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing",
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing",
     "allowed_values": [
       "",
       "",
@@ -4960,7 +4958,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4978,7 +4976,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -4996,7 +4994,7 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   },
   {
     "component_name": "expression_data_file",
@@ -5014,6 +5012,6 @@
     "version_tol_sc_rnaseq": "O",
     "version_faang_sc_rnaseq": "O",
     "technology_name": "sc_rnaseq",
-    "technology_label": "Single-cell Ribonucleic Acid Sequencing Sequencing"
+    "technology_label": "Single-cell Ribonucleic Acid Sequencing"
   }
 ]

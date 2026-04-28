@@ -282,6 +282,8 @@
 
     <script>
       var outputFileData = {{ output_data | tojson | safe }};
+      var standardOnlyList = {{ standard_only | tojson | safe }};
+      var technologyOnlyList = {{ technology_only | tojson | safe }};
       var components = {{ components | tojson | safe }};
       var relPathTraverse = {{ rel_path_traverse | tojson | safe }};
     </script>

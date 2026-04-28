@@ -12,31 +12,18 @@ from openpyxl.utils import get_column_letter
 from pathlib import Path
 
 # Helpers: Variables
+STANDARD_ONLY = ['rembi']
+TECHNOLOGY_ONLY = []
 DWC_NAMESPACE_PREFIXES = ['dwc', 'dcterms']
 DEFAULT_SCHEMA_EXTENSION = '.xlsx'
 
 SCHEMA_DIR_PATH = 'schemas'
+SCHEMA_TYPES = [path.name for path in Path(SCHEMA_DIR_PATH).iterdir() if path.is_dir()]
 
-SCHEMA_FILE_PATH = next(
-    (
-        str(file)
-        for file in Path(SCHEMA_DIR_PATH).iterdir()
-        if file.is_file()
-        and file.name.endswith(DEFAULT_SCHEMA_EXTENSION)
-        and file.name.startswith('singlecell')
-    ),
-    None,
-)
-# Extract filename without extension
-SCHEMA_FILENAME_WO_EXT = Path(
-    SCHEMA_FILE_PATH
-).stem  # e.g. 'singlecell_schema_main_v0.1'
-# Find the part starting with 'v' at the end
-SCHEMA_VERSION = (
-    SCHEMA_FILENAME_WO_EXT.split('_')[-1]
-    if SCHEMA_FILENAME_WO_EXT.split('_')[-1].startswith('v')
-    else None
-)
+SCHEMA_FILE_PATHS = [
+    str(file) for file in Path(SCHEMA_DIR_PATH).rglob(f'*{DEFAULT_SCHEMA_EXTENSION}')
+]
+
 
 # Global variables
 CHECKLISTS_DICT = dict()  # Global set to store the schema names
@@ -59,6 +46,12 @@ FORMATS = {
     'html': '.html',
 }
 
+OUTPUT_TYPES = {
+    'sc_rnaseq': 'single_cell',
+    'stx_fish': 'spatial_transcriptomics_image',
+    'rembi': 'rembi_image',
+}
+
 # Gives names to each element in a tuple
 VersionData = namedtuple(
     'VersionData',
@@ -68,11 +61,34 @@ VersionData = namedtuple(
         'standard_name',
         'standard_label',
         'version_description',
+        'schema_version',
     ],
 )
 
 
 # Helpers: Functions
+def get_schema_file_map():
+    return {
+        schema_type: [
+            str(file)
+            for file in Path(SCHEMA_DIR_PATH, schema_type).rglob(
+                f'*{DEFAULT_SCHEMA_EXTENSION}'
+            )
+            if file.is_file() and file.name.endswith(DEFAULT_SCHEMA_EXTENSION)
+        ]
+        for schema_type in SCHEMA_TYPES
+    }
+
+
+SCHEMA_FILE_MAP = get_schema_file_map()
+
+REVERSE_SCHEMA_MAP = {
+    Path(p).stem: Path(p).relative_to(SCHEMA_DIR_PATH).parent.as_posix()
+    for paths in SCHEMA_FILE_MAP.values()
+    for p in paths
+}
+
+
 def apply_data_validation(
     component_df, dataframe, pandas_writer, namespace, allowed_values_dict
 ):
@@ -183,30 +199,40 @@ def autofit_all_sheets(writer):
         sheet.autofit()
 
 
+def normalise(text):
+    return text.lower().replace('_', '').replace('-', '')
+
+
 def remove_existing_schema_files():
-    # Make sure the path ends with a separator
-    target_dir = os.path.abspath(SCHEMA_DIR_PATH)
+    for path in REVERSE_SCHEMA_MAP.values():
+        # Make sure the path ends with a separator
+        target_dir = os.path.abspath(path)
+        output_type = Path(path).name
 
-    # Match any schema-like files ending in .json or .yaml/.yml
-    json_files = glob.glob(os.path.join(target_dir, '*.json'))
-    yaml_files = glob.glob(os.path.join(target_dir, '*.yaml')) + glob.glob(
-        os.path.join(target_dir, '*.yml')
-    )
+        # Match any schema-like files ending in .json or .yaml/.yml
+        json_files = glob.glob(os.path.join(target_dir, '*.json'))
+        yaml_files = glob.glob(os.path.join(target_dir, '*.yaml')) + glob.glob(
+            os.path.join(target_dir, '*.yml')
+        )
 
-    # Define what qualifies as a schema file (adjust as needed)
-    matching_json = [
-        f for f in json_files if 'schema' in f.lower() and 'singlecell' in f.lower()
-    ]
-    matching_yaml = [
-        f for f in yaml_files if 'schema' in f.lower() and 'singlecell' in f.lower()
-    ]
+        # Define what qualifies as a schema file (adjust as needed)
+        matching_json = [
+            f
+            for f in json_files
+            if 'schema' in f.lower() and normalise(output_type) in normalise(f)
+        ]
+        matching_yaml = [
+            f
+            for f in yaml_files
+            if 'schema' in f.lower() and normalise(output_type) in normalise(f)
+        ]
 
-    for f in matching_json + matching_yaml:
-        try:
-            os.remove(f)
-            print(f'Deleted existing file: {f}')
-        except Exception as e:
-            print(f'Could not delete {f}: {e}')
+        for f in matching_json + matching_yaml:
+            try:
+                os.remove(f)
+                print(f'Deleted existing file: {f}')
+            except Exception as e:
+                print(f'Could not delete {f}: {e}')
 
 
 def is_camel_case(text):
@@ -264,6 +290,7 @@ def create_readme_worksheet(readme_sheet_data):
     standard_name = readme_sheet_data['standard_name']
     standard_label = readme_sheet_data['standard_label']
     version_column_name = readme_sheet_data['version_column_name']
+    schema_version = readme_sheet_data['schema_version']
     writer = readme_sheet_data['writer']
     workbook = writer.book
     locked_format = readme_sheet_data['locked_format']
@@ -275,7 +302,7 @@ def create_readme_worksheet(readme_sheet_data):
             'description': [version_description],
             'standard': [standard_name],
             'technology': [technology_name],
-            'manifest_version': [SCHEMA_VERSION.replace('v', '')],
+            'manifest_version': [schema_version.replace('v', '')],
         }
     )
 
@@ -652,11 +679,39 @@ def generate_output_file_path(element, default_extension=DEFAULT_SCHEMA_EXTENSIO
     output_file_path = os.path.join(output_directory, output_file_name)
     return output_file_path
 
-def generate_output_file_name(standard, technology):
-    output_type = (
-        'spatial_transcriptomics' if 'stx' in technology.lower() else 'single_cell'
+
+def generate_output_file_name(standard, technology, return_output_type=False):
+    # Standard only
+    if standard and not technology:
+        if standard in OUTPUT_TYPES:
+            output_type = OUTPUT_TYPES[standard]
+            return output_type if return_output_type else f'{output_type}_manifest'
+        else:
+            raise ValueError(f"Unknown standard: {standard}")
+
+    # Invalid cases
+    if not standard or not technology:
+        raise ValueError('Both standard and technology must be provided.')
+
+    # Standard and technology
+    technology_lower = technology.lower()
+
+    matched_output_type = next(
+        (key for key in OUTPUT_TYPES if key in technology_lower),
+        None,
     )
-    return f'{output_type}_manifest_version_{standard}_{technology}'
+
+    if not matched_output_type:
+        raise ValueError(
+            f"Technology '{technology}' does not match any known output type in 'OUTPUT_TYPES' mapping."
+        )
+
+    return (
+        OUTPUT_TYPES[matched_output_type]
+        if return_output_type
+        else f'{OUTPUT_TYPES[matched_output_type]}_manifest_version_{standard}_{technology}'
+    )
+
 
 def get_required_columns(component_df, version_column_name):
     # Mandatory columns are columns with 'M' cells
@@ -667,14 +722,13 @@ def get_required_columns(component_df, version_column_name):
     ].tolist()
 
 
-def load_worksheet(
-    sheet_name,
-    required_columns=None,
-    dtype=None,
-):
+def load_worksheet(sheet_name, required_columns=None, dtype=None, file_path=None):
     # Load the specified worksheet into a DataFrame.
     # Replace NaN with empty strings
-    df = pd.read_excel(SCHEMA_FILE_PATH, sheet_name=sheet_name, dtype=dtype).fillna('')
+    if not file_path:
+        raise ValueError('File path must be provided to load the worksheet.')
+
+    df = pd.read_excel(file_path, sheet_name=sheet_name, dtype=dtype).fillna('')
 
     # Ensure the required columns exist in the worksheet
     if required_columns is not None:
@@ -690,7 +744,7 @@ def build_key_value_map(df, key_col='key', value_col='name'):
     return dict(zip(df[key_col], df[value_col]))
 
 
-def get_checklists_from_xlsx_file():
+def get_checklists_from_xlsx_file(xlsx_file_path=None):
     '''
     Reads a spreadsheet file and extracts the checklists from the 'checklists' worksheet.
     The worksheet is expected to have 'key', 'name', 'standard' and 'technology' as column headers.
@@ -703,45 +757,72 @@ def get_checklists_from_xlsx_file():
     # Declare the global variable
     global CHECKLISTS_DICT
 
-    try:
-        # Map names of worksheets to their required columns
-        work_sheets = {
-            'checklists': {'key', 'name', 'description', 'standard', 'technology'},
-            'standards': {'key', 'name'},
-            'technologies': {'key', 'name'},
-        }
+    # Map names of worksheets to their required columns
+    work_sheets = {
+        'checklists': {'key', 'name', 'description', 'standard', 'technology'},
+        'standards': {'key', 'name'},
+        'technologies': {'key', 'name'},
+    }
 
-        dfs = {
-            worksheet_name: load_worksheet(worksheet_name, required_columns)
-            for worksheet_name, required_columns in work_sheets.items()
-        }
+    schema_file_paths = SCHEMA_FILE_PATHS if xlsx_file_path is None else xlsx_file_path
+    validate_schema_file(schema_file_paths)
 
-        standards_map = build_key_value_map(dfs['standards'])
-        technologies_map = build_key_value_map(dfs['technologies'])
+    for file_path in schema_file_paths:
+        print(f"\n_________\n\n--Extracting '{file_path}'--\n")
 
-        # Create a dictionary where each 'key' maps to a dictionary of attributes
-        checklists = {
-            row['key']: {
-                'version_column_name': row['key'],
-                'version_column_label': row['name'],
-                'version_description': row['description'],
-                'standard_name': row['standard'],
-                'standard_label': get_label(row['standard'], standards_map, 'standard'),
-                'output_file_name': generate_output_file_name(row['standard'], row['technology']),
-                'technology_name': row['technology'],
-                'technology_label': get_label(
-                    row['technology'], technologies_map, 'technologies'
-                ),
+        try:
+            dfs = {
+                worksheet_name: load_worksheet(
+                    worksheet_name, required_columns, file_path=file_path
+                )
+                for worksheet_name, required_columns in work_sheets.items()
             }
-            for _, row in dfs['checklists'].iterrows()
-        }
 
-        # Update the global dictionary
-        CHECKLISTS_DICT.update(checklists)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"The file '{SCHEMA_FILE_PATH}' does not exist.")
-    except Exception as e:
-        raise RuntimeError(f'An error occurred while processing the file: {e}')
+            standards_map = build_key_value_map(dfs['standards'])
+            technologies_map = build_key_value_map(dfs['technologies'])
+
+            # Get version of the schema/checklist
+            # e.g. 'singlecell_schema_main_v0.1'
+            schema_file_name_without_ext = Path(file_path).stem
+            schema_version = (
+                schema_file_name_without_ext.split('_')[-1]
+                if schema_file_name_without_ext.split('_')[-1].startswith('v')
+                else None
+            )
+
+            # Create a dictionary where each 'key' maps to a dictionary of attributes
+            checklists = {
+                row['key']: {
+                    'version_column_name': row['key'],
+                    'version_column_label': row['name'],
+                    'version_description': row['description'],
+                    'standard_name': row['standard'],
+                    'standard_label': (
+                        get_label(row['standard'], standards_map, 'standard')
+                        if row['standard']
+                        else None
+                    ),
+                    'output_file_name': generate_output_file_name(
+                        row['standard'], row['technology']
+                    ),
+                    'technology_name': row['technology'] or None,
+                    'technology_label': (
+                        get_label(row['technology'], technologies_map, 'technologies')
+                        if row['technology']
+                        else None
+                    ),
+                    'schema_file_path': file_path,
+                    'schema_version': schema_version,
+                }
+                for _, row in dfs['checklists'].iterrows()
+            }
+
+            # Update the global dictionary
+            CHECKLISTS_DICT.update(checklists)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"The file '{file_path}' does not exist.")
+        except Exception as e:
+            raise RuntimeError(f'An error occurred while processing the file: {e}')
 
 
 def merge_row(worksheet, row, last_column_letter, merge_format):
@@ -797,7 +878,7 @@ def merge_row(worksheet, row, last_column_letter, merge_format):
         print(f'Error: {e}')
 
 
-def read_xlsx_data(return_dict=True):
+def read_xlsx_data(return_dict=True, file_path=None):
     '''
     Reads a spreadsheet file and returns a DataFrame and a dictionary of allowed values.
 
@@ -807,16 +888,21 @@ def read_xlsx_data(return_dict=True):
     Returns:
     tuple: A DataFrame containing the data sheet and a dictionary for allowed values.
     '''
+    # Check if schema base input file is valid
+    validate_schema_file(file_path)
+
     # Declare the global variable
     global COMPONENTS
     global REGEX_TO_SPREADSHEET_DATA_VALIDATION_MAPPING
 
     try:
         # Load the spreadsheet file
-        data_df = load_worksheet('data')
-        allowed_values_df = load_worksheet('allowed_values', dtype=str)
-        components_df = load_worksheet('components')
-        regex_to_formula_df = load_worksheet('regex_to_formula')
+        data_df = load_worksheet('data', file_path=file_path)
+        allowed_values_df = load_worksheet(
+            'allowed_values', dtype=str, file_path=file_path
+        )
+        components_df = load_worksheet('components', file_path=file_path)
+        regex_to_formula_df = load_worksheet('regex_to_formula', file_path=file_path)
 
         # 'data' worksheet logic
         # Strip whitespace from all string entries in the DataFrame
@@ -858,7 +944,7 @@ def read_xlsx_data(return_dict=True):
         else:
             return data_df, allowed_values_df
     except FileNotFoundError:
-        raise FileNotFoundError(f"The file '{SCHEMA_FILE_PATH}' does not exist.")
+        raise FileNotFoundError(f"The file '{file_path}' does not exist.")
     except Exception as e:
         raise RuntimeError(f'An error occurred while processing the file: {e}')
 
@@ -884,12 +970,16 @@ def validate_allowed_values(row, allowed_values):
         )
 
 
-def validate_schema_file():
-    file_name = os.path.basename(SCHEMA_FILE_PATH)
+def validate_schema_file(file_path):
+    file_paths = file_path if isinstance(file_path, list) else [file_path]
 
-    if not file_name.startswith('base_') and not file_name.endswith('.xlsx'):
-        raise ValueError(f'Unsupported file type: {SCHEMA_FILE_PATH}')
-    return True
+    if all(
+        f and os.path.isfile(f) and f.endswith(DEFAULT_SCHEMA_EXTENSION)
+        for f in file_paths
+    ):
+        return True
+    else:
+        raise ValueError(f"Unsupported file in the list: {', '.join(file_paths)}")
 
 
 def validate_term_regex_values(data_df):

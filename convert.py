@@ -49,6 +49,7 @@ def extract_components_to_xlsx(element):
     data_df = element['data_df']
     allowed_values_dict = element['allowed_values_dict']
     output_file_path = element['output_file_path']
+    schema_version = element['schema_version']
     standard_name = element['standard_name']
     standard_label = element['standard_label']
     version_column_name = element['version_column_name']
@@ -74,7 +75,12 @@ def extract_components_to_xlsx(element):
         )
 
         protected_format = workbook.add_format(
-            {'locked': False, 'num_format': '0;-0;;@', 'valign': 'top', 'bg_color': '#D3D3D3'}
+            {
+                'locked': False,
+                'num_format': '0;-0;;@',
+                'valign': 'top',
+                'bg_color': '#D3D3D3',
+            }
         )
 
         required_format = workbook.add_format({'bold': True, 'locked': True})
@@ -89,11 +95,12 @@ def extract_components_to_xlsx(element):
         readme_sheet_data['version_column_name'] = version_column_name
         readme_sheet_data['writer'] = writer
         readme_sheet_data['locked_format'] = locked_format
+        readme_sheet_data['schema_version'] = schema_version
 
         helpers.create_readme_worksheet(readme_sheet_data)
 
         # Iterate through unique components
-        component_name_series= data_df['component_name']
+        component_name_series = data_df['component_name']
         for component_name in component_name_series.unique():
             component_df = data_df[component_name_series == component_name].copy()
 
@@ -153,9 +160,9 @@ def extract_components_to_xlsx(element):
 
     # Save to output file
     directory_path = os.path.dirname(output_file_path)  # Get the directory path
-    os.makedirs(
-        directory_path, exist_ok=True
-    )  # Create output directory if it does not exist
+
+    # Create output directory if it does not exist
+    os.makedirs(directory_path, exist_ok=True)
     file_name = os.path.basename(output_file_path)
 
     with open(output_file_path, 'wb') as f:
@@ -193,6 +200,7 @@ def extract_components_to_xml(element):
     allowed_values_dict = element['allowed_values_dict']
     output_file_path = element['output_file_path']
     standard_name = element['standard_name']
+    technology_name = element['technology_name']
     version_column_name = element['version_column_name']
 
     # Ensure the output directory exists
@@ -203,10 +211,16 @@ def extract_components_to_xml(element):
     file_name = os.path.basename(output_file_path)
 
     # Extract checklist type details
-    accession = f"{element['technology_name'].upper().replace('_','')}1"
-    checklist_type = 'single_cell'
-    checklist_label = element['technology_label']
-    checklist_name = element['technology_name']
+    accession = (
+        f"{technology_name.upper().replace('_','')}1"
+        if technology_name
+        else f'{standard_name.upper()}1'
+    )
+    checklist_type = helpers.generate_output_file_name(
+        standard_name, technology_name, return_output_type=True
+    )
+    checklist_label = element['technology_label'] or element['standard_label']
+    checklist_name = technology_name or standard_name
     checklist_description = element['version_description']
 
     # Create root element
@@ -350,7 +364,55 @@ def extract_components_to_xml(element):
         raise IOError(f'Failed to write XML to {output_file_path}: {e}')
 
 
-def generate_index_html(all_components, allowed_values_dict):
+def render_html_from_template(
+    components,
+    output_file_path,
+    rel_path_traverse,
+    template_dir='templates/',
+    template_name="fields-template.html",
+):
+    # Jinja2 template HTML setup
+    environment = Environment(loader=FileSystemLoader(template_dir))
+    fields_template = environment.get_template(template_name)
+
+    standards = {
+        value['standard_name']: value['standard_label']
+        for value in helpers.CHECKLISTS_DICT.values()
+        if value['standard_name'] and value['standard_label']
+    }
+    technologies = {
+        value['technology_name']: value['technology_label']
+        for value in helpers.CHECKLISTS_DICT.values()
+        if value['technology_name'] and value['technology_label']
+    }
+
+    output_file_name_dict = {
+        f"{value['output_file_name']}_{value['schema_version']}.html": helpers.VersionData(
+            value['technology_name'],
+            value['technology_label'],
+            value['standard_name'],
+            value['standard_label'],
+            value['version_description'],
+            value['schema_version'],
+        )
+        for value in helpers.CHECKLISTS_DICT.values()
+    }
+
+    context = {
+        'components': components,
+        'standards': standards,
+        'standard_only': helpers.STANDARD_ONLY,  # Not technology dependent
+        'technologies': technologies,
+        'technology_only': helpers.TECHNOLOGY_ONLY,  # Not standard dependent
+        'output_data': output_file_name_dict,
+        'rel_path_traverse': rel_path_traverse,
+    }
+
+    with open(output_file_path, mode='w', encoding='utf-8') as f:
+        f.write(fields_template.render(context))
+
+
+def generate_index_html(all_components):
     '''
     Generates `index.html` containing all components across all standards.
     '''
@@ -359,43 +421,12 @@ def generate_index_html(all_components, allowed_values_dict):
         output_dir = 'dist/checklists/html'
         os.makedirs(output_dir, exist_ok=True)
 
-        # Jinja2 setup
-        environment = Environment(loader=FileSystemLoader('templates/'))
-        fields_template = environment.get_template('fields-template.html')
-
-        standards = {
-            value['standard_name']: value['standard_label']
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-        technologies = {
-            value['technology_name']: value['technology_label']
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-
-        output_file_name_dict = {
-            f"{value['output_file_name']}_{helpers.SCHEMA_VERSION}.html": helpers.VersionData(
-                value['technology_name'],
-                value['technology_label'],
-                value['standard_name'],
-                value['standard_label'],
-                value['version_description'],
-            )
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-
-        context = {
-            'components': all_components,  # No filter applied
-            'standards': standards,
-            'technologies': technologies,
-            'output_data': output_file_name_dict,
-            'version': helpers.SCHEMA_VERSION,
-            'rel_path_traverse': '../../',
-        }
-
-        # Write `index.html`
-        index_file_path = os.path.join(output_dir, 'index.html')
-        with open(index_file_path, mode='w', encoding='utf-8') as f:
-            f.write(fields_template.render(context))
+        # No filter applied to components when writing to 'index.html' file
+        render_html_from_template(
+            components=all_components,
+            output_file_path=os.path.join(output_dir, 'index.html'),
+            rel_path_traverse='../../',
+        )
 
         print('Generated: index.html (All Components)')
 
@@ -490,128 +521,102 @@ def extract_components_to_html(element, all_components=None, seen_components=Non
                     seen_components.add(key)
                     all_components.append(component_dict)
 
-        # Render HTML using Jinja2 template
-        environment = Environment(loader=FileSystemLoader('templates/'))
-        fields_template = environment.get_template('fields-template.html')
-
-        standards = {
-            value['standard_name']: value['standard_label']
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-        technologies = {
-            value['technology_name']: value['technology_label']
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-
-        output_file_name_dict = {
-            f"{value['output_file_name']}_{helpers.SCHEMA_VERSION}.html": helpers.VersionData(
-                value['technology_name'],
-                value['technology_label'],
-                value['standard_name'],
-                value['standard_label'],
-                value['version_description'],
-            )
-            for value in helpers.CHECKLISTS_DICT.values()
-        }
-
-        context = {
-            'components': components,
-            'standards': standards,
-            'technologies': technologies,
-            'output_data': output_file_name_dict,
-            'version': helpers.SCHEMA_VERSION,
-            'rel_path_traverse': '../../../',
-        }
-
-        # Write individual HTML files
-        with open(output_file_path, mode='w', encoding='utf-8') as fields:
-            fields.write(fields_template.render(context))
+        # Render HTML using Jinja2 template by writing to individual HTML files
+        render_html_from_template(
+            components=components,
+            output_file_path=output_file_path,
+            rel_path_traverse='../../../',
+        )
     except Exception as e:
         raise RuntimeError(f'An error occurred: {e}')
 
 
-def extract_and_convert_schema(standard=None, format_type=None):
+def extract_and_convert_schema(file_path=None, standard=None, format_type=None):
     '''
     Extract and convert schema to multiple formats: XLSX, JSON, XML, and HTML.
     If a specific format_type is provided, only that format is processed.
     '''
-    # Check if schema base input file is valid
-    helpers.validate_schema_file()
+    file_paths = helpers.SCHEMA_FILE_PATHS if file_path is None else file_path
 
-    # Get dataframe and allowed values from spreadsheet file
-    data_df, allowed_values_dict = helpers.read_xlsx_data()
+    if not isinstance(file_paths, list):
+        file_paths = [file_paths]
 
     # Store all components for `index.html`
     all_components = []
     seen_components = set()  # Track unique (group_name, standard_name, technology_name)
 
-    for checklist in helpers.CHECKLISTS_DICT.values():
-        # If a specific standard is provided, skip unrelated entries
-        if standard and standard != checklist['standard_name']:
-            continue
+    for path in file_paths:
+        # Get dataframe and allowed values from spreadsheet file
+        data_df, allowed_values_dict = helpers.read_xlsx_data(file_path=path)
 
-        # Populate the element dictionary
-        element = {
-            'allowed_values_dict': allowed_values_dict,
-            'data_df': data_df,
-            'version_column_name': checklist['version_column_name'],
-            'version_column_label': checklist['version_column_label'],
-            'version_description': checklist['version_description'],
-            'standard_name': checklist['standard_name'],
-            'standard_label': checklist['standard_label'],
-            'technology_name': checklist['technology_name'],
-            'technology_label': checklist['technology_label'],
-            'file_path': helpers.SCHEMA_FILE_PATH,
-            'output_file_name': f"{checklist['output_file_name']}_{helpers.SCHEMA_VERSION}",
-        }
+        for checklist in helpers.CHECKLISTS_DICT.values():
+            # If a specific standard is provided, skip unrelated entries
+            if standard and standard != checklist['standard_name']:
+                continue
 
-        # Filter dataframe by namespace prefix name and schema name
-        element['data_df'] = helpers.filter_data_frame(element)
+            # Populate the element dictionary
+            element = {
+                'allowed_values_dict': allowed_values_dict,
+                'data_df': data_df,
+                'version_column_name': checklist['version_column_name'],
+                'version_column_label': checklist['version_column_label'],
+                'version_description': checklist['version_description'],
+                'standard_name': checklist['standard_name'],
+                'standard_label': checklist['standard_label'],
+                'technology_name': checklist['technology_name'],
+                'technology_label': checklist['technology_label'],
+                'file_path': checklist['schema_file_path'],
+                'schema_version': checklist['schema_version'],
+                'output_file_name': f"{checklist['output_file_name']}_{checklist['schema_version']}",
+            }
 
-        # Skip if the filtered data frame is empty
-        if element['data_df'].empty:
-            print(
-                f"No data found for '{element['standard_name']}' standard and '{element['technology_name']}' technology. Skipping..."
-            )
-            continue
+            # Filter dataframe by namespace prefix name and schema name
+            element['data_df'] = helpers.filter_data_frame(element)
 
-        # Process only the specified format, if provided
-        display_message = "\n*-Generating  '{format_type}' file using '{standard_name}'  standard and '{technology_name}' technology-*"
-        if format_type:
-            print(
-                display_message.format(
-                    format_type=format_type,
-                    standard_name=element['standard_name'],
-                    technology_name=element['technology_name'],
+            # Skip if the filtered data frame is empty
+            if element['data_df'].empty:
+                print(
+                    f"No data found for '{element['standard_name']}' standard and '{element['technology_name']}' technology. Skipping..."
                 )
-            )
+                continue
 
-            if format_type in helpers.FORMATS:
-                handle_format(element, format_type, all_components, seen_components)
-            else:
-                print(f'Invalid format_type: {format_type}. Skipping...')
-            continue  # Skip to the next iteration
-
-        # Process all formats if no specific format is provided
-        for f_type in helpers.FORMATS:
-            print(
-                display_message.format(
-                    format_type=f_type,
-                    standard_name=element['standard_name'],
-                    technology_name=element['technology_name'],
+            # Process only the specified format, if provided
+            display_message = "\n*-Generating  '{format_type}' file using '{standard_name}'  standard and '{technology_name}' technology-*"
+            if format_type:
+                print(
+                    display_message.format(
+                        format_type=format_type,
+                        standard_name=element['standard_name'],
+                        technology_name=element['technology_name'],
+                    )
                 )
-            )
-            handle_format(element, f_type, all_components, seen_components)
+
+                if format_type in helpers.FORMATS:
+                    handle_format(element, format_type, all_components, seen_components)
+                else:
+                    print(f'Invalid format_type: {format_type}. Skipping...')
+                continue  # Skip to the next iteration
+
+            # Process all formats if no specific format is provided
+            for f_type in helpers.FORMATS:
+                print(
+                    display_message.format(
+                        format_type=f_type,
+                        standard_name=element['standard_name'],
+                        technology_name=element['technology_name'],
+                    )
+                )
+                handle_format(element, f_type, all_components, seen_components)
 
     # Generate `index.html` with all components
-    generate_index_html(all_components, allowed_values_dict)
+    generate_index_html(all_components)
 
 
 if __name__ == '__main__':
     args = sys.argv
 
     # Check for correct number of arguments
-    if len(args) not in [1, 2]:
+    if len(args) not in [1, 3]:
         print('Usage:')
         print(' 1. python convert.py : Extract components using all namespaces')
         print(
@@ -626,39 +631,52 @@ if __name__ == '__main__':
         # Remove 'dist/checklists' directory if it exists
         helpers.remove_dist_directory()
 
-        # Extract schema data and convert it into multiple formats for all mapping
-        print(f"\n_________\n\n--Extracting '{helpers.SCHEMA_FILE_PATH}'--\n")
-
+        # Extract schema data and convert it into multiple formats
+        # for all mapping and all schema files
         helpers.get_checklists_from_xlsx_file()
         extract_and_convert_schema()
-    elif len(args) == 2:
-        # If only namespace prefix is provided
-        argument = args[1]
+    elif len(args) == 3:
+        # If only schema type and
+        # either namespace prefix or format type are provided
+        schema_type = args[
+            1
+        ]  # This will always be a schema type (e.g. 'single_cell', 'images')
+        argument2 = args[2]  # This can either be a namespace prefix or a format type
 
-        helpers.get_checklists_from_xlsx_file()
+        if schema_type not in helpers.SCHEMA_TYPES:
+            print(
+                f'Invalid schema type: {schema_type}. Supported schema types are: {", ".join(helpers.SCHEMA_TYPES)}'
+            )
+            sys.exit(1)
+
+        file_path = helpers.SCHEMA_FILE_MAP.get(schema_type)
+
+        if not file_path:
+            print(f'Invalid schema type: {schema_type}')
+            sys.exit(1)
+
+        helpers.get_checklists_from_xlsx_file(xlsx_file_path=file_path)
 
         standards = [
             checklist['standard_name'] for checklist in helpers.CHECKLISTS_DICT.values()
         ]
 
-        if not (argument in helpers.FORMATS or argument in standards):
-            print(f'Invalid argument: {argument}')
+        if not (argument2 in helpers.FORMATS or argument2 in standards):
+            print(f'Invalid argument: {argument2}')
             sys.exit(1)
 
         # Remove 'dist/checklists' directory if it exists
         helpers.remove_dist_directory()
 
         # Extract schema data and convert it into multiple formats for all mapping for the given namespace prefix
-        print(f"\n_________\n\n--Extracting '{helpers.SCHEMA_FILE_PATH}'--\n")
-
         # Get schema names from the spreadsheet file
-        helpers.get_checklists_from_xlsx_file()
+        helpers.get_checklists_from_xlsx_file(xlsx_file_path=file_path)
 
-        if argument in standards:
-            standard = argument
+        if argument2 in standards:
+            standard = argument2
             print(f"\n*-With '{standard}' standard-*\n")
-            extract_and_convert_schema(standard=standard)
+            extract_and_convert_schema(file_path=file_path, standard=standard)
 
-        if argument in helpers.FORMATS:
-            format_type = argument
-            extract_and_convert_schema(format_type=format_type)
+        if argument2 in helpers.FORMATS:
+            format_type = argument2
+            extract_and_convert_schema(file_path=file_path, format_type=format_type)

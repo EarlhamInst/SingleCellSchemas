@@ -5,7 +5,7 @@
       <PRIMARY_ID>SCRNASEQ1</PRIMARY_ID>
     </IDENTIFIERS>
     <DESCRIPTOR>
-      <LABEL>Single-cell Ribonucleic Acid Sequencing Sequencing</LABEL>
+      <LABEL>Single-cell Ribonucleic Acid Sequencing</LABEL>
       <NAME>sc_rnaseq</NAME>
       <DESCRIPTION>For single-cell Ribonucleic Acid Sequencing (RNA-seq) studies with a focus on the essential contextual details for the sampling and sequencing of genomic data.</DESCRIPTION>
       <AUTHORITY>COPO</AUTHORITY>

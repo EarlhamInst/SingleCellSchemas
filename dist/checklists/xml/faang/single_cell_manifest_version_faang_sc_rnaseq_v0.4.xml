@@ -5,7 +5,7 @@
       <PRIMARY_ID>SCRNASEQ1</PRIMARY_ID>
     </IDENTIFIERS>
     <DESCRIPTOR>
-      <LABEL>Single-cell Ribonucleic Acid Sequencing Sequencing</LABEL>
+      <LABEL>Single-cell Ribonucleic Acid Sequencing</LABEL>
       <NAME>sc_rnaseq</NAME>
       <DESCRIPTION>For single-cell Ribonucleic Acid Sequencing (RNA-seq) studies using  Functional Annotation of Animal Genomes (FAANG) metadata  with the aim to improve understanding of animal genomics and gene functions.</DESCRIPTION>
       <AUTHORITY>COPO</AUTHORITY>

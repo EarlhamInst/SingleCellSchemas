@@ -5,7 +5,7 @@
       <PRIMARY_ID>SCRNASEQ1</PRIMARY_ID>
     </IDENTIFIERS>
     <DESCRIPTOR>
-      <LABEL>Single-cell Ribonucleic Acid Sequencing Sequencing</LABEL>
+      <LABEL>Single-cell Ribonucleic Acid Sequencing</LABEL>
       <NAME>sc_rnaseq</NAME>
       <DESCRIPTION>For single-cell Ribonucleic Acid Sequencing (RNA-seq) studies, using Tree of Life (ToL) metadata, aimed at understanding the origins and diversity of life on Earth.</DESCRIPTION>
       <AUTHORITY>COPO</AUTHORITY>

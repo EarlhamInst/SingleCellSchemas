@@ -1,0 +1,1125 @@
+id: https://w3id.org/linkml/examples/single_cell_model
+name: singlecell_schema_model
+description: The Single-cell schema YAML file contains metadata mapping and schemas
+  related to the Earlham Institute's (EI's) CELLGEN ISP project. These metadata are
+  designed to describe various Single Cell Genomics and Spatial Transcriptomics experiment
+  types, including those from platforms like 10X Genomics and Vizgen.
+license: https://creativecommons.org/publicdomain/zero/1.0/
+prefixes:
+  dc: http://purl.org/dc/elements/1.1
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+  dwciri: http://rs.tdwg.org/dwc/iri/
+  linkml: https://w3id.org/linkml/
+  mixs: https://w3id.org/mixs/
+  schemaorg: http://schema.org/
+  singlecell: https://singlecellschemas.org/terms/
+default_curi_maps:
+- semweb_context
+imports:
+- linkml:types
+default_prefix: singlecell
+default_range: string
+classes:
+  Study:
+    attributes:
+      study_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      title:
+        identifier: false
+        required: true
+        description: The title for your dataset. This will be displayed when search
+          results including your data are shown. Often this will be the same as an
+          associated publication.
+        examples:
+        - value: SARS-COV-2 drug repurposing - Caco2 cell line
+        slot_uri: rembi:title
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      description:
+        identifier: false
+        required: true
+        description: Use this field to describe your dataset. This can be the abstract
+          to an accompanying publication.
+        examples:
+        - value: High-throughput screening of repurposed drugs against SARS-CoV-2
+            in Caco-2 cells
+        slot_uri: rembi:description
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      private_until_date:
+        identifier: false
+        required: true
+        description: The date until which the data remains private and embargoed.
+        examples:
+        - value: '2027-06-01 00:00:00'
+        slot_uri: rembi:private_until_date
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      keywords:
+        identifier: false
+        required: true
+        description: Keywords describing your data that can be used to aid search
+          and classification.
+        examples:
+        - value: CRISPR
+        slot_uri: rembi:keywords
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      licence:
+        identifier: false
+        required: false
+        description: The license under which the data are available.
+        examples:
+        - value: MIT License
+        slot_uri: rembi:licence
+        domain: Study
+        range: enum
+        multivalued: false
+        inlined: false
+      funding_statement:
+        identifier: false
+        required: false
+        description: A description of how the data generation was funded.
+        examples:
+        - value: Data generation for this study was supported by a grant from the
+            BBSRC
+        - value: which funded annotation and analysis activities.
+        slot_uri: rembi:funding_statement
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      acknowledgements:
+        identifier: false
+        required: false
+        description: Any people or groups that should be acknowledged as part of the
+          dataset.
+        examples:
+        - value: We acknowledge the contributions of the field research team at the
+            University of Edinburgh
+        - value: the sequencing support from the Earlham Institute
+        - value: and funding provided by the BBSRC. Special thanks to local conservation
+            volunteers for assistance in sample collection.
+        slot_uri: rembi:acknowledgements
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      rembi_version:
+        identifier: false
+        required: true
+        description: The version of REMBI. The current version to be used is 1.5.
+        examples:
+        - value: '1.5'
+        slot_uri: rembi:rembi_version
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+  Grant Reference:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Grant Reference
+        range: string
+        multivalued: false
+        inlined: false
+      identifier:
+        identifier: false
+        required: true
+        description: The identifier for the grant.
+        examples:
+        - value: '12345'
+        slot_uri: rembi:identifier
+        domain: Grant Reference
+        range: string
+        multivalued: false
+        inlined: false
+      funder:
+        identifier: false
+        required: true
+        description: The funding body provididing support.
+        examples:
+        - value: Biotechnology and Biological Sciences Research Council (BBSRC)
+        slot_uri: rembi:funder
+        domain: Grant Reference
+        range: string
+        multivalued: false
+        inlined: false
+  Publication:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+      title:
+        identifier: false
+        required: true
+        description: Title of associated publication.
+        examples:
+        - value: High-throughput drug screening identifies potential SARS-CoV-2 inhibitors
+            in Caco2 cells
+        slot_uri: rembi:title
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+      authors:
+        identifier: false
+        required: false
+        description: Authors of the associated publication. Multiple authors should
+          be listed in order of contribution. Each name should be formatted as Last
+          name, First initial (e.g. Doe, J.). Separate multiple authors with commas.
+        examples:
+        - value: Doe J.
+        - value: Lee A.
+        - value: Gupta R.
+        - value: Zhao L.
+        - value: Thompson M.
+        slot_uri: rembi:authors
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+      doi:
+        identifier: false
+        required: false
+        description: A Digital Object Identifier (DOI) is a unique alphanumeric string
+          assigned to a digital object, such as a journal article, dataset, or publication,
+          to provide a permanent link to its location on the internet. It ensures
+          reliable citation and access. The DOI should follow the standard format
+          (e.g., 10.1234/example.doi) and link to the original source of the publication
+          or data referenced.
+        examples:
+        - value: 10.1038/s41586-020-2577-1
+        slot_uri: rembi:doi
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+      year:
+        identifier: false
+        required: false
+        description: Year of publication.
+        examples:
+        - value: '2025'
+        slot_uri: rembi:year
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+      pubmed_id:
+        identifier: false
+        required: false
+        description: PubMed identifier for the publication.
+        examples:
+        - value: '32726801'
+        slot_uri: rembi:pubmed_id
+        domain: Publication
+        range: string
+        multivalued: false
+        inlined: false
+  Link:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Link
+        range: string
+        multivalued: false
+        inlined: false
+      link_url:
+        identifier: false
+        required: true
+        description: The URL of a link relevant to the dataset.
+        examples:
+        - value: https://example.org/zebrafish-embryo
+        slot_uri: rembi:link_url
+        domain: Link
+        range: string
+        multivalued: false
+        inlined: false
+      link_type:
+        identifier: false
+        required: false
+        description: The type of the link.
+        examples:
+        - value: Dataset
+        slot_uri: rembi:link_type
+        domain: Link
+        range: string
+        multivalued: false
+        inlined: false
+      link_description:
+        identifier: false
+        required: false
+        description: The description of the linked content.
+        examples:
+        - value: Image analysis code
+        slot_uri: rembi:link_description
+        domain: Link
+        range: string
+        multivalued: false
+        inlined: false
+  Study Component:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Study Component
+        range: string
+        multivalued: false
+        inlined: false
+      study_component_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the study component
+        examples:
+        - value: STUDYCOMP001
+        slot_uri: ei:study_component_id
+        domain: Study Component
+        range: string
+        multivalued: false
+        inlined: false
+      name:
+        identifier: false
+        required: true
+        description: The name of your study component.
+        examples:
+        - value: Confocal images
+        slot_uri: rembi:name
+        domain: Study Component
+        range: string
+        multivalued: false
+        inlined: false
+      description:
+        identifier: false
+        required: true
+        description: An explanation of your study component.
+        examples:
+        - value: Stitched max-projected fluorescent confocal images
+        slot_uri: rembi:description
+        domain: Study Component
+        range: string
+        multivalued: false
+        inlined: false
+  Annotations:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the image annotation record.
+        examples:
+        - value: ANNOT001
+        slot_uri: rembi:annotation_id
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_overview:
+        identifier: false
+        required: true
+        description: Short descriptive summary indicating the type of annotation and
+          how it was generated
+        examples:
+        - value: Cell nuclei marked using DAPI staining.
+        slot_uri: rembi:annotation_overview
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      file_type:
+        identifier: false
+        required: false
+        description: The format of the annotation file.
+        examples:
+        - value: gff
+        slot_uri: rembi:file_type
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_type:
+        identifier: false
+        required: false
+        description: Defines the type of annotation (e.g., class_labels, bounding_boxes,
+          counts, derived_annotations).
+        examples:
+        - value: geometrical_annotations
+        slot_uri: rembi:annotation_type
+        domain: Annotations
+        range: enum
+        multivalued: true
+        inlined: false
+      annotation_method:
+        identifier: false
+        required: true
+        description: Description of how the annotations where created. Including protocols
+          used for consensus and quality assurance, if applicable.
+        examples:
+        - value: crowdsourced
+        slot_uri: rembi:annotation_method
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_criteria:
+        identifier: false
+        required: false
+        description: Rules used to generate annotations
+        examples:
+        - value: only nuclei in focus were segmented
+        slot_uri: rembi:annotation_criteria
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_coverage:
+        identifier: false
+        required: false
+        description: The proportion of images from the dataset that were annotated.
+        examples:
+        - value: All data that satisfied the Annotation Criteria were annotated.
+        slot_uri: rembi:annotation_coverage
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_confidence_level:
+        identifier: false
+        required: false
+        description: Confidence on annotation accuracy
+        examples:
+        - value: more than 95% pixel consensus where multiple annotators independently
+            segmented the same object
+        slot_uri: rembi:annotation_confidence_level
+        domain: Annotations
+        range: string
+        multivalued: false
+        inlined: false
+  Person:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      person_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the author.
+        examples:
+        - value: PERSON001
+        slot_uri: ei:person_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the image annotation record.
+        examples:
+        - value: ANNOT001
+        slot_uri: ei:annotation_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      givenName:
+        identifier: false
+        required: true
+        description: A first name (or given name) is the personal name given to an
+          individual conducting the study.
+        examples:
+        - value: Jane
+        slot_uri: schema.org:givenName
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      familyName:
+        identifier: false
+        required: true
+        description: A last name (or surname) is the family name passed down from
+          one generation to the next for the individual conducting the study.
+        examples:
+        - value: Doe
+        slot_uri: schema.org:familyName
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      email:
+        identifier: false
+        required: false
+        description: A unique identifier used to send and receive electronic messages
+          (emails) over the internet.
+        examples:
+        - value: jane.doe@example.com
+        slot_uri: rembi:email
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      orcid_id:
+        identifier: false
+        required: false
+        description: A 16-digit number that uniquely identify researchers.
+        examples:
+        - value: 0000-1234-5678-9012
+        slot_uri: rembi:orcid_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      affiliation:
+        identifier: false
+        required: true
+        description: A URL to a public registry containing organisation information
+          or the name of the organisation. A Research Organisation Registry (ROR)
+          URL is recommended if a URL is provided.
+        examples:
+        - value: https://ror.org/018cxtf62
+        slot_uri: rembi:affiliation
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      role:
+        identifier: false
+        required: false
+        description: Author role in the study. If multiple separate by pipe sybom
+        examples:
+        - value: Senior Bioinformatician
+        slot_uri: rembi:role
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+  Sample:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      sample_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this sample
+        examples:
+        - value: SAMP001
+        slot_uri: ei:sample_id
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      scientific_name:
+        identifier: false
+        required: true
+        description: The formal Latin name used to identify the organism from which
+          the sample was derived (e.g. Homo sapiens or Arabidopsis thaliana). This
+          name must accurately correspond to the Taxon ID provided to ensure correct
+          taxonomic classification.
+        examples:
+        - value: Salvelinus alpinus
+        slot_uri: ei:scientific_name
+        domain: Sample
+        range: BIOSAMPLEACCESSION_EXT_FIELD
+        multivalued: false
+        inlined: false
+      taxon_id:
+        identifier: false
+        required: true
+        description: "A unique identifier (usually from a recognized taxonomy database\
+          \ like NCBI Taxonomy) that corresponds to the organism\u2019s scientific\
+          \ name. It must be accurately matched to the provided scientificName to\
+          \ maintain consistency and traceability in biological records."
+        examples:
+        - value: '8036'
+        slot_uri: ei:taxon_id
+        domain: Sample
+        range: BIOSAMPLEACCESSION_EXT_FIELD
+        multivalued: false
+        inlined: false
+      biosampleAccession:
+        identifier: false
+        required: true
+        description: A unique identifier assigned to a biological sample after it
+          has been submitted to a public database, such as the NCBI BioSample or ENA.
+          It serves as a permanent reference to that specific sample, allowing researchers
+          to retrieve metadata and link it across studies or datasets.
+        examples:
+        - value: SAMEA12907823
+        slot_uri: ei:biosampleAccession
+        domain: Sample
+        range: BIOSAMPLEACCESSION_FIELD
+        multivalued: false
+        inlined: false
+      biological_entity:
+        identifier: false
+        required: true
+        description: What is being imaged
+        examples:
+        - value: Drosophila endoderm
+        slot_uri: rembi:biological_entity
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      common_name:
+        identifier: false
+        required: false
+        description: Common name
+        examples:
+        - value: rock worm
+        slot_uri: rembi:common_name
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      description:
+        identifier: false
+        required: false
+        description: High level description of sample.
+        examples:
+        - value: Bronchial epithelial cell culture
+        slot_uri: rembi:description
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      intrinsic_variables:
+        identifier: false
+        required: false
+        description: Intrinsic (e.g. genetic) alteration if applicable
+        examples:
+        - value: stable overexpression of HIST1H2BJ-mCherry and LMNA
+        slot_uri: rembi:intrinsic_variables
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      extrinsic_variables:
+        identifier: false
+        required: false
+        description: External sample treatment (e.g. reagent) if applicable
+        examples:
+        - value: 2-(9-oxoacridin-10-yl)acetic acid
+        slot_uri: rembi:extrinsic_variables
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      experimental_variables:
+        identifier: false
+        required: false
+        description: What is intentionally varied (e.g. time) between multiple entries
+          in this study component
+        examples:
+        - value: Time
+        slot_uri: rembi:experimental_variables
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+  Specimen:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+      specimen_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this specimen
+        examples:
+        - value: SPEC001
+        slot_uri: ei:specimen_id
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+      sample_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this sample
+        examples:
+        - value: SAMP001
+        slot_uri: ei:sample_id
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+      study_component_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study component
+        examples:
+        - value: STUDYCOMP001
+        slot_uri: ei:study_component_id
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+      sample_preparation:
+        identifier: false
+        required: true
+        description: How the sample was prepared for imaging.
+        examples:
+        - value: Cells were cultured on poly-L-lysine treated coverslips. Culture
+            media was aspirated
+        - value: and coverslips were washed once with PBS. Cells were fixed by incubating
+            for 10 min with 4 % formaldehyde/PBS
+        - value: washed twice with PBS
+        - value: and permeabilized by incubating (>3 h
+        - value: "-20\xB0C) in 70 % ethanol. Cells were rehydrated by incubating (5\
+            \ min"
+        - value: RT) with FISH wash buffer (10 % formamide
+        - value: 2x SSC). For hybridization
+        - value: "coverslips were placed cell-coated side down on a 48\u03BCl drop\
+            \ containing 100 nM Quasar570-labelled probes complementary to one of\
+            \ REV-ERB\u03B1"
+        - value: CRY2
+        - value: or TP53 transcripts (Biosearch Technologies) (see Table S6 for probe
+            sequences)
+        - value: 0.1 g/ml dextran sulfate
+        - value: 1 mg/ml E. coli tRNA
+        - value: 2 mM VRC
+        - value: "20 \u03BCg/ml BSA"
+        - value: 2x SSC
+        - value: "10 % formamide and incubated (37\xB0C"
+        - value: "20 h) in a sealed parafilm chamber. Coverslips were twice incubated\
+            \ (37\xB0C"
+        - value: 30 min) in pre-warmed FISH wash buffer
+        - value: "then in PBS containing 0.5 \u03BCg/ml 4\u2019"
+        - value: 6-diamidino-2-phenylindole (DAPI) (5 min
+        - value: RT)
+        - value: washed twice with PBS
+        - value: dipped in water
+        - value: air-dried
+        - value: placed cell-coated side down on a drop of ProLong Diamond Antifade
+            Mountant (Life Technologies)
+        - value: allowed to polymerize for 24 h in the dark and then sealed with nail
+            varnish.
+        slot_uri: rembi:sample_preparation
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+      growth_protocol:
+        identifier: false
+        required: false
+        description: How the specimen was grown, e.g. cell line cultures, crosses
+          or plant growth.
+        examples:
+        - value: Cells grown on coverslips were fixed in ice-cold methanol at _20
+            _ C for 10 min. After blocking in 0.2% gelatine from cold-water fish (Sigma)
+            in PBS (PBS/FSG) for 15 min
+        - value: coverslips were incubated with primary antibodies in blocking solution
+            for 1h. Following washes with 0.2% PBS/FSG
+        - value: the cells were incubated with a 1:500 dilution of secondary antibodies
+            for 1 h (donkey anti- mouse/rabbit/goat/sheep conjugated to Alexa 488
+            or Alexa 594; Molecular Probes or donkey anti-mouse conjugated to DyLight
+            405
+        - value: Jackson ImmunoResearch). The cells were counterstained with 1 _g
+            ml_1 Hoechst 33342 (Sigma) to visualize chromatin. After washing with
+            0.2% PBS/FSG
+        - value: the coverslips were mounted on glass slides by inverting them into
+            mounting solution (ProLong Gold antifade
+        - value: Molecular Probes). The samples were allowed to cure for 24-48 h.
+        slot_uri: rembi:growth_protocol
+        domain: Specimen
+        range: string
+        multivalued: false
+        inlined: false
+  Image Acquisition:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Image Acquisition
+        range: string
+        multivalued: false
+        inlined: false
+      image_acquisition_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the image acquisition
+        examples:
+        - value: IMGACQ001
+        slot_uri: ei:image_acquisition_id
+        domain: Image Acquisition
+        range: string
+        multivalued: false
+        inlined: false
+      specimen_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this specimen
+        examples:
+        - value: SPEC001
+        slot_uri: ei:specimen_id
+        domain: Image Acquisition
+        range: string
+        multivalued: false
+        inlined: false
+      image_method:
+        identifier: false
+        required: true
+        description: What method was used to capture images.
+        examples:
+        - value: secondary_electron imaging
+        slot_uri: ei:image_method
+        domain: Image Acquisition
+        range: ontology
+        multivalued: true
+        inlined: false
+      imaging_instrument:
+        identifier: false
+        required: true
+        description: Description of the instrument used to capture the images.
+        examples:
+        - value: DeltaVision OMX V3 Blaze system (GE Healthcare) equipped with a 60x/1.42
+            NA PlanApo oil immersion objective (Olympus)
+        - value: pco.edge 5.5 sCMOS cameras (PCO) and 405
+        - value: '488'
+        - value: 593 and 640 nm lasers
+        slot_uri: rembi:imaging_instrument
+        domain: Image Acquisition
+        range: string
+        multivalued: false
+        inlined: false
+      image_acquisition_parameters:
+        identifier: false
+        required: true
+        description: How the images were acquired, including instrument settings/parameters.
+        examples:
+        - value: Embryos were imaged on a Luxendo MuVi SPIM light-sheet microscope
+        - value: using 30x magnification setting on the Nikon 10x/0.3 water objective.
+            The 488 nm laser was used to image nuclei (His-GFP)
+        - value: and the 561 nm laser was used to image transcriptional dots (MCP-mCherry)
+        - value: both at 5% laser power. Exposure time for the green channel was 55
+            ms and exposure for the red channel was 70 ms. The line illumination tool
+            was used to improve background levels and was set to 40 pixels.
+        slot_uri: rembi:image_acquisition_parameters
+        domain: Image Acquisition
+        range: string
+        multivalued: false
+        inlined: false
+  Image Analysis:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Image Analysis
+        range: string
+        multivalued: false
+        inlined: false
+      image_analysis_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the image analysis
+        examples:
+        - value: IMGANAL001
+        slot_uri: ei:image_analysis_id
+        domain: Image Analysis
+        range: string
+        multivalued: false
+        inlined: false
+      study_component_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study component
+        examples:
+        - value: STUDYCOMP001
+        slot_uri: ei:study_component_id
+        domain: Image Analysis
+        range: string
+        multivalued: false
+        inlined: false
+      analysis_overview:
+        identifier: false
+        required: true
+        description: How image analysis was carried out.
+        examples:
+        - value: Each 3D-SIM image contained one nucleus (in a small number of cases
+            multiple nuclei were present
+        - value: 'which did not affect the analysis). The image analysis pipeline
+            contained six main steps: bivalent skeleton tracing'
+        - value: trace fluorescence intensity quantification
+        - value: HEI10 peak detection
+        - value: HEI10 foci identification
+        - value: HEI10 foci intensity quantification
+        - value: and total bivalent intensity quantification. Note that the normalization
+            steps used for foci identification differ from those used for foci intensity
+            quantification; the former was intended to robustly identify foci from
+            noisy traces
+        - value: whilst the latter was used to carefully quantify foci HEI10 levels.
+        slot_uri: rembi:analysis_overview
+        domain: Image Analysis
+        range: string
+        multivalued: false
+        inlined: false
+  Image Correlation:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+      image_correlation_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the image correlation
+        examples:
+        - value: IMGCORR001
+        slot_uri: ei:image_correlation_id
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+      image_analysis_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the image analysis
+        examples:
+        - value: IMGANAL001
+        slot_uri: ei:image_analysis_id
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+      spatial_and_temporal_alignment:
+        identifier: false
+        required: true
+        description: Method used to correlate images from different modalities (e.g.
+          manual overlay, alignment algorithm etc)
+        examples:
+        - value: Alignment algorithm
+        slot_uri: rembi:spatial_and_temporal_alignment
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+      fiducials_used:
+        identifier: false
+        required: true
+        description: Features from correlated datasets used for colocalisation
+        examples:
+        - value: Fluorescent bead markers
+        slot_uri: rembi:fiducials_used
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+      transformation_matrix:
+        identifier: false
+        required: true
+        description: Correlation transformations
+        examples:
+        - value: Translation and rotation matrix applied using ImageJ plugin
+        slot_uri: rembi:transformation_matrix
+        domain: Image Correlation
+        range: string
+        multivalued: false
+        inlined: false
+  File Level Metadata:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      file_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this file
+        examples:
+        - value: FILE001
+        slot_uri: ei:file_id
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      study_component_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the study component
+        examples:
+        - value: STUDYCOMP001
+        slot_uri: ei:study_component_id
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the image annotation record.
+        examples:
+        - value: ANNOT001
+        slot_uri: rembi:annotation_id
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      source_image_id:
+        identifier: false
+        required: true
+        description: The file name of the image including the extension. Common file
+          names end with tiff, jpeg, png, gif, bmp, and ome-tiff etc.
+        examples:
+        - value: file001.png
+        slot_uri: rembi:source_image_id
+        domain: File Level Metadata
+        range: file
+        multivalued: false
+        inlined: false
+      transformations:
+        identifier: false
+        required: false
+        description: Any preprocessing or transformations applied to the image.
+        examples:
+        - value: z-stack flattening
+        slot_uri: rembi:transformations
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      spatial_information:
+        identifier: false
+        required: false
+        description: Spatial resolution, scale, or coordinate info related to the
+          image.
+        examples:
+        - value: "pixel_size=0.5\xB5m"
+        slot_uri: rembi:spatial_information
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+      annotation_creation_time:
+        identifier: false
+        required: false
+        description: Timestamp of when the annotation was created.
+        examples:
+        - value: '2025-05-15T14:32:00Z'
+        slot_uri: rembi:annotation_creation_time
+        domain: File Level Metadata
+        range: string
+        multivalued: false
+        inlined: false
+enums:
+  Licence:
+    permissible_values:
+      ? ''
+      : {}
+      Apache License 2.0: {}
+      Creative Commons Attribution 4.0 International: {}
+      Creative Commons Attribution Share Alike 4.0 International: {}
+      Creative Commons Zero v1.0 Universal: {}
+      GNU General Public License v3.0 or later: {}
+      MIT License: {}
+  Annotation_type:
+    permissible_values:
+      bounding_boxes: {}
+      class_labels: {}
+      counts: {}
+      derived_annotations: {}
+      geometrical_annotations: {}
+      graphs: {}
+      other: {}
+      point_annotations: {}
+      segmentation_mask: {}
+      tracks: {}
+      weak_annotations: {}

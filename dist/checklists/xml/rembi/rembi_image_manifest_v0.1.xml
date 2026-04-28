@@ -1,0 +1,1061 @@
+<?xml version="1.0" ?>
+<CHECKLIST_SET>
+  <CHECKLIST accession="REMBI1" checklistType="rembi_image">
+    <IDENTIFIERS>
+      <PRIMARY_ID>REMBI1</PRIMARY_ID>
+    </IDENTIFIERS>
+    <DESCRIPTOR>
+      <LABEL>Recommended Metadata for Biological Images</LABEL>
+      <NAME>rembi</NAME>
+      <DESCRIPTION>REcommended Metadata for Biological Images (REMBI) provides a way to explain how images have been generated, providing enough context to allow others to interpret them without reference to external sources.</DESCRIPTION>
+      <AUTHORITY>COPO</AUTHORITY>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>study</NAME>
+        <LABEL>Study</LABEL>
+        <DESCRIPTION>Fields under component 'Study'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Title</LABEL>
+          <NAME>title</NAME>
+          <DESCRIPTION>The title for your dataset. This will be displayed when search results including your data are shown. Often this will be the same as an associated publication.</DESCRIPTION>
+          <EXAMPLE>SARS-COV-2 drug repurposing - Caco2 cell line</EXAMPLE>
+          <NAMESPACE>rembi:title</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^.{25,}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Description</LABEL>
+          <NAME>description</NAME>
+          <DESCRIPTION>Use this field to describe your dataset. This can be the abstract to an accompanying publication.</DESCRIPTION>
+          <EXAMPLE>High-throughput screening of repurposed drugs against SARS-CoV-2 in Caco-2 cells</EXAMPLE>
+          <NAMESPACE>rembi:description</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^.{25,}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Release Date</LABEL>
+          <NAME>private_until_date</NAME>
+          <DESCRIPTION>The date until which the data remains private and embargoed.</DESCRIPTION>
+          <EXAMPLE>2027-06-01 00:00:00</EXAMPLE>
+          <NAMESPACE>rembi:private_until_date</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Keywords</LABEL>
+          <NAME>keywords</NAME>
+          <DESCRIPTION>Keywords describing your data that can be used to aid search and classification.</DESCRIPTION>
+          <EXAMPLE>CRISPR</EXAMPLE>
+          <NAMESPACE>rembi:keywords</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Licence</LABEL>
+          <NAME>licence</NAME>
+          <DESCRIPTION>The license under which the data are available.</DESCRIPTION>
+          <EXAMPLE>MIT License</EXAMPLE>
+          <NAMESPACE>rembi:licence</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_CHOICE_FIELD>
+              <TEXT_VALUE>
+                <VALUE/>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE/>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE/>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE/>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE/>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>Apache License 2.0</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>Creative Commons Attribution 4.0 International</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>Creative Commons Attribution Share Alike 4.0 International</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>Creative Commons Zero v1.0 Universal</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>GNU General Public License v3.0 or later</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>MIT License</VALUE>
+              </TEXT_VALUE>
+            </TEXT_CHOICE_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Funding Statement</LABEL>
+          <NAME>funding_statement</NAME>
+          <DESCRIPTION>A description of how the data generation was funded.</DESCRIPTION>
+          <EXAMPLE>Data generation for this study was supported by a grant from the BBSRC, which funded annotation and analysis activities.</EXAMPLE>
+          <NAMESPACE>rembi:funding_statement</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Acknowledgements</LABEL>
+          <NAME>acknowledgements</NAME>
+          <DESCRIPTION>Any people or groups that should be acknowledged as part of the dataset.</DESCRIPTION>
+          <EXAMPLE>We acknowledge the contributions of the field research team at the University of Edinburgh, the sequencing support from the Earlham Institute, and funding provided by the BBSRC. Special thanks to local conservation volunteers for assistance in sample collection.</EXAMPLE>
+          <NAMESPACE>rembi:acknowledgements</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Rembi Version</LABEL>
+          <NAME>rembi_version</NAME>
+          <DESCRIPTION>The version of REMBI. The current version to be used is 1.5.</DESCRIPTION>
+          <EXAMPLE>1.5</EXAMPLE>
+          <NAMESPACE>rembi:rembi_version</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^1\.5$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>grant_reference</NAME>
+        <LABEL>Grant Reference</LABEL>
+        <DESCRIPTION>Fields under component 'Grant Reference'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Identifier</LABEL>
+          <NAME>identifier</NAME>
+          <DESCRIPTION>The identifier for the grant.</DESCRIPTION>
+          <EXAMPLE>12345</EXAMPLE>
+          <NAMESPACE>rembi:identifier</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Funder</LABEL>
+          <NAME>funder</NAME>
+          <DESCRIPTION>The funding body provididing support.</DESCRIPTION>
+          <EXAMPLE>Biotechnology and Biological Sciences Research Council (BBSRC)</EXAMPLE>
+          <NAMESPACE>rembi:funder</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>publication</NAME>
+        <LABEL>Publication</LABEL>
+        <DESCRIPTION>Fields under component 'Publication'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Title</LABEL>
+          <NAME>title</NAME>
+          <DESCRIPTION>Title of associated publication.</DESCRIPTION>
+          <EXAMPLE>High-throughput drug screening identifies potential SARS-CoV-2 inhibitors in Caco2 cells</EXAMPLE>
+          <NAMESPACE>rembi:title</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Authors</LABEL>
+          <NAME>authors</NAME>
+          <DESCRIPTION>Authors of the associated publication. Multiple authors should be listed in order of contribution. Each name should be formatted as Last name, First initial (e.g. Doe, J.). Separate multiple authors with commas.</DESCRIPTION>
+          <EXAMPLE>Doe J., Lee A., Gupta R., Zhao L., Thompson M.</EXAMPLE>
+          <NAMESPACE>rembi:authors</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>DOI</LABEL>
+          <NAME>doi</NAME>
+          <DESCRIPTION>A Digital Object Identifier (DOI) is a unique alphanumeric string assigned to a digital object, such as a journal article, dataset, or publication, to provide a permanent link to its location on the internet. It ensures reliable citation and access. The DOI should follow the standard format (e.g., 10.1234/example.doi) and link to the original source of the publication or data referenced.</DESCRIPTION>
+          <EXAMPLE>10.1038/s41586-020-2577-1</EXAMPLE>
+          <NAMESPACE>rembi:doi</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^10\.\d{4,9}/[-._;()/:A-Za-z0-9]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Year</LABEL>
+          <NAME>year</NAME>
+          <DESCRIPTION>Year of publication.</DESCRIPTION>
+          <EXAMPLE>2025</EXAMPLE>
+          <NAMESPACE>rembi:year</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^(19|20)\d{2}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Pubmed ID</LABEL>
+          <NAME>pubmed_id</NAME>
+          <DESCRIPTION>PubMed identifier for the publication.</DESCRIPTION>
+          <EXAMPLE>32726801</EXAMPLE>
+          <NAMESPACE>rembi:pubmed_id</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d{1,8}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>link</NAME>
+        <LABEL>Link</LABEL>
+        <DESCRIPTION>Fields under component 'Link'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Link URL</LABEL>
+          <NAME>link_url</NAME>
+          <DESCRIPTION>The URL of a link relevant to the dataset.</DESCRIPTION>
+          <EXAMPLE>https://example.org/zebrafish-embryo</EXAMPLE>
+          <NAMESPACE>rembi:link_url</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Link Type</LABEL>
+          <NAME>link_type</NAME>
+          <DESCRIPTION>The type of the link.</DESCRIPTION>
+          <EXAMPLE>Dataset</EXAMPLE>
+          <NAMESPACE>rembi:link_type</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Link Description</LABEL>
+          <NAME>link_description</NAME>
+          <DESCRIPTION>The description of the linked content.</DESCRIPTION>
+          <EXAMPLE>Image analysis code</EXAMPLE>
+          <NAMESPACE>rembi:link_description</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>study_component</NAME>
+        <LABEL>Study Component</LABEL>
+        <DESCRIPTION>Fields under component 'Study Component'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Study Component ID</LABEL>
+          <NAME>study_component_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study component</DESCRIPTION>
+          <EXAMPLE>STUDYCOMP001</EXAMPLE>
+          <NAMESPACE>ei:study_component_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Name</LABEL>
+          <NAME>name</NAME>
+          <DESCRIPTION>The name of your study component.</DESCRIPTION>
+          <EXAMPLE>Confocal images</EXAMPLE>
+          <NAMESPACE>rembi:name</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Description</LABEL>
+          <NAME>description</NAME>
+          <DESCRIPTION>An explanation of your study component.</DESCRIPTION>
+          <EXAMPLE>Stitched max-projected fluorescent confocal images</EXAMPLE>
+          <NAMESPACE>rembi:description</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>annotations</NAME>
+        <LABEL>Annotations</LABEL>
+        <DESCRIPTION>Fields under component 'Annotations'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation ID</LABEL>
+          <NAME>annotation_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image annotation record.</DESCRIPTION>
+          <EXAMPLE>ANNOT001</EXAMPLE>
+          <NAMESPACE>rembi:annotation_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Overview</LABEL>
+          <NAME>annotation_overview</NAME>
+          <DESCRIPTION>Short descriptive summary indicating the type of annotation and how it was generated</DESCRIPTION>
+          <EXAMPLE>Cell nuclei marked using DAPI staining.</EXAMPLE>
+          <NAMESPACE>rembi:annotation_overview</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>File Type</LABEL>
+          <NAME>file_type</NAME>
+          <DESCRIPTION>The format of the annotation file.</DESCRIPTION>
+          <EXAMPLE>gff</EXAMPLE>
+          <NAMESPACE>rembi:file_type</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Type</LABEL>
+          <NAME>annotation_type</NAME>
+          <DESCRIPTION>Defines the type of annotation (e.g., class_labels, bounding_boxes, counts, derived_annotations).</DESCRIPTION>
+          <EXAMPLE>geometrical_annotations</EXAMPLE>
+          <NAMESPACE>rembi:annotation_type</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_CHOICE_FIELD>
+              <TEXT_VALUE>
+                <VALUE>bounding_boxes</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>class_labels</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>counts</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>derived_annotations</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>geometrical_annotations</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>graphs</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>other</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>point_annotations</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>segmentation_mask</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>tracks</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>weak_annotations</VALUE>
+              </TEXT_VALUE>
+            </TEXT_CHOICE_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>multiple</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Method</LABEL>
+          <NAME>annotation_method</NAME>
+          <DESCRIPTION>Description of how the annotations where created. Including protocols used for consensus and quality assurance, if applicable.</DESCRIPTION>
+          <EXAMPLE>crowdsourced</EXAMPLE>
+          <NAMESPACE>rembi:annotation_method</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Criteria</LABEL>
+          <NAME>annotation_criteria</NAME>
+          <DESCRIPTION>Rules used to generate annotations</DESCRIPTION>
+          <EXAMPLE>only nuclei in focus were segmented</EXAMPLE>
+          <NAMESPACE>rembi:annotation_criteria</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Coverage</LABEL>
+          <NAME>annotation_coverage</NAME>
+          <DESCRIPTION>The proportion of images from the dataset that were annotated.</DESCRIPTION>
+          <EXAMPLE>All data that satisfied the Annotation Criteria were annotated.</EXAMPLE>
+          <NAMESPACE>rembi:annotation_coverage</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Confidence Level</LABEL>
+          <NAME>annotation_confidence_level</NAME>
+          <DESCRIPTION>Confidence on annotation accuracy</DESCRIPTION>
+          <EXAMPLE>more than 95% pixel consensus where multiple annotators independently segmented the same object</EXAMPLE>
+          <NAMESPACE>rembi:annotation_confidence_level</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>person</NAME>
+        <LABEL>Person</LABEL>
+        <DESCRIPTION>Fields under component 'Person'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Person ID</LABEL>
+          <NAME>person_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the author.</DESCRIPTION>
+          <EXAMPLE>PERSON001</EXAMPLE>
+          <NAMESPACE>ei:person_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation ID</LABEL>
+          <NAME>annotation_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image annotation record.</DESCRIPTION>
+          <EXAMPLE>ANNOT001</EXAMPLE>
+          <NAMESPACE>ei:annotation_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Author First Name</LABEL>
+          <NAME>givenName</NAME>
+          <DESCRIPTION>A first name (or given name) is the personal name given to an individual conducting the study.</DESCRIPTION>
+          <EXAMPLE>Jane</EXAMPLE>
+          <NAMESPACE>schema.org:givenName</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[A-Za-z]+(?:[-\s][A-Za-z]+)*[a-z]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Author Last Name</LABEL>
+          <NAME>familyName</NAME>
+          <DESCRIPTION>A last name (or surname) is the family name passed down from one generation to the next for the individual conducting the study.</DESCRIPTION>
+          <EXAMPLE>Doe</EXAMPLE>
+          <NAMESPACE>schema.org:familyName</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[A-Za-z]+(-[A-Za-z]+)*[a-z]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Email Address</LABEL>
+          <NAME>email</NAME>
+          <DESCRIPTION>A unique identifier used to send and receive electronic messages (emails) over the internet.</DESCRIPTION>
+          <EXAMPLE>jane.doe@example.com</EXAMPLE>
+          <NAMESPACE>rembi:email</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^(?!.*\.{2,})(?!.*-{2,})[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Orcid ID</LABEL>
+          <NAME>orcid_id</NAME>
+          <DESCRIPTION>A 16-digit number that uniquely identify researchers.</DESCRIPTION>
+          <EXAMPLE>0000-1234-5678-9012</EXAMPLE>
+          <NAMESPACE>rembi:orcid_id</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d{4}-\d{4}-\d{4}-\d{4}$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Affiliation or Institution</LABEL>
+          <NAME>affiliation</NAME>
+          <DESCRIPTION>A URL to a public registry containing organisation information or the name of the organisation. A Research Organisation Registry (ROR) URL is recommended if a URL is provided.</DESCRIPTION>
+          <EXAMPLE>https://ror.org/018cxtf62</EXAMPLE>
+          <NAMESPACE>rembi:affiliation</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Role</LABEL>
+          <NAME>role</NAME>
+          <DESCRIPTION>Author role in the study. If multiple separate by pipe sybom</DESCRIPTION>
+          <EXAMPLE>Senior Bioinformatician</EXAMPLE>
+          <NAMESPACE>rembi:role</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>sample</NAME>
+        <LABEL>Sample</LABEL>
+        <DESCRIPTION>Fields under component 'Sample'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Sample ID</LABEL>
+          <NAME>sample_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this sample</DESCRIPTION>
+          <EXAMPLE>SAMP001</EXAMPLE>
+          <NAMESPACE>ei:sample_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Scientific Name or Organism</LABEL>
+          <NAME>scientific_name</NAME>
+          <DESCRIPTION>The formal Latin name used to identify the organism from which the sample was derived (e.g. Homo sapiens or Arabidopsis thaliana). This name must accurately correspond to the Taxon ID provided to ensure correct taxonomic classification.</DESCRIPTION>
+          <EXAMPLE>Salvelinus alpinus</EXAMPLE>
+          <NAMESPACE>ei:scientific_name</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[A-Za-z]+(?: [A-Za-z]+)*[a-z]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Taxon ID</LABEL>
+          <NAME>taxon_id</NAME>
+          <DESCRIPTION>A unique identifier (usually from a recognized taxonomy database like NCBI Taxonomy) that corresponds to the organism’s scientific name. It must be accurately matched to the provided scientificName to maintain consistency and traceability in biological records.</DESCRIPTION>
+          <EXAMPLE>8036</EXAMPLE>
+          <NAMESPACE>ei:taxon_id</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[0-9]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Biosample Accession</LABEL>
+          <NAME>biosampleAccession</NAME>
+          <DESCRIPTION>A unique identifier assigned to a biological sample after it has been submitted to a public database, such as the NCBI BioSample or ENA. It serves as a permanent reference to that specific sample, allowing researchers to retrieve metadata and link it across studies or datasets.</DESCRIPTION>
+          <EXAMPLE>SAMEA12907823</EXAMPLE>
+          <NAMESPACE>ei:biosampleAccession</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Biological Entity</LABEL>
+          <NAME>biological_entity</NAME>
+          <DESCRIPTION>What is being imaged</DESCRIPTION>
+          <EXAMPLE>Drosophila endoderm</EXAMPLE>
+          <NAMESPACE>rembi:biological_entity</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Common Name</LABEL>
+          <NAME>common_name</NAME>
+          <DESCRIPTION>Common name</DESCRIPTION>
+          <EXAMPLE>rock worm</EXAMPLE>
+          <NAMESPACE>rembi:common_name</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Description</LABEL>
+          <NAME>description</NAME>
+          <DESCRIPTION>High level description of sample.</DESCRIPTION>
+          <EXAMPLE>Bronchial epithelial cell culture</EXAMPLE>
+          <NAMESPACE>rembi:description</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Intrinsic Variables</LABEL>
+          <NAME>intrinsic_variables</NAME>
+          <DESCRIPTION>Intrinsic (e.g. genetic) alteration if applicable</DESCRIPTION>
+          <EXAMPLE>stable overexpression of HIST1H2BJ-mCherry and LMNA</EXAMPLE>
+          <NAMESPACE>rembi:intrinsic_variables</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Extrinsic Variables</LABEL>
+          <NAME>extrinsic_variables</NAME>
+          <DESCRIPTION>External sample treatment (e.g. reagent) if applicable</DESCRIPTION>
+          <EXAMPLE>2-(9-oxoacridin-10-yl)acetic acid</EXAMPLE>
+          <NAMESPACE>rembi:extrinsic_variables</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Experimental Variables</LABEL>
+          <NAME>experimental_variables</NAME>
+          <DESCRIPTION>What is intentionally varied (e.g. time) between multiple entries in this study component</DESCRIPTION>
+          <EXAMPLE>Time</EXAMPLE>
+          <NAMESPACE>rembi:experimental_variables</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>specimen</NAME>
+        <LABEL>Specimen</LABEL>
+        <DESCRIPTION>Fields under component 'Specimen'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Specimen ID</LABEL>
+          <NAME>specimen_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this specimen</DESCRIPTION>
+          <EXAMPLE>SPEC001</EXAMPLE>
+          <NAMESPACE>ei:specimen_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Sample ID</LABEL>
+          <NAME>sample_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this sample</DESCRIPTION>
+          <EXAMPLE>SAMP001</EXAMPLE>
+          <NAMESPACE>ei:sample_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Study Component ID</LABEL>
+          <NAME>study_component_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study component</DESCRIPTION>
+          <EXAMPLE>STUDYCOMP001</EXAMPLE>
+          <NAMESPACE>ei:study_component_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Sample Preparation</LABEL>
+          <NAME>sample_preparation</NAME>
+          <DESCRIPTION>How the sample was prepared for imaging.</DESCRIPTION>
+          <EXAMPLE>Cells were cultured on poly-L-lysine treated coverslips. Culture media was aspirated, and coverslips were washed once with PBS. Cells were fixed by incubating for 10 min with 4 % formaldehyde/PBS, washed twice with PBS, and permeabilized by incubating (&gt;3 h, -20°C) in 70 % ethanol. Cells were rehydrated by incubating (5 min, RT) with FISH wash buffer (10 % formamide, 2x SSC). For hybridization, coverslips were placed cell-coated side down on a 48μl drop containing 100 nM Quasar570-labelled probes complementary to one of REV-ERBα, CRY2, or TP53 transcripts (Biosearch Technologies) (see Table S6 for probe sequences), 0.1 g/ml dextran sulfate, 1 mg/ml E. coli tRNA, 2 mM VRC, 20 μg/ml BSA, 2x SSC, 10 % formamide and incubated (37°C, 20 h) in a sealed parafilm chamber. Coverslips were twice incubated (37°C, 30 min) in pre-warmed FISH wash buffer, then in PBS containing 0.5 μg/ml 4’,6-diamidino-2-phenylindole (DAPI) (5 min, RT), washed twice with PBS, dipped in water, air-dried, placed cell-coated side down on a drop of ProLong Diamond Antifade Mountant (Life Technologies), allowed to polymerize for 24 h in the dark and then sealed with nail varnish.</EXAMPLE>
+          <NAMESPACE>rembi:sample_preparation</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Growth Protocol</LABEL>
+          <NAME>growth_protocol</NAME>
+          <DESCRIPTION>How the specimen was grown, e.g. cell line cultures, crosses or plant growth.</DESCRIPTION>
+          <EXAMPLE>Cells grown on coverslips were fixed in ice-cold methanol at _20 _ C for 10 min. After blocking in 0.2% gelatine from cold-water fish (Sigma) in PBS (PBS/FSG) for 15 min, coverslips were incubated with primary antibodies in blocking solution for 1h. Following washes with 0.2% PBS/FSG, the cells were incubated with a 1:500 dilution of secondary antibodies for 1 h (donkey anti- mouse/rabbit/goat/sheep conjugated to Alexa 488 or Alexa 594; Molecular Probes or donkey anti-mouse conjugated to DyLight 405, Jackson ImmunoResearch). The cells were counterstained with 1 _g ml_1 Hoechst 33342 (Sigma) to visualize chromatin. After washing with 0.2% PBS/FSG, the coverslips were mounted on glass slides by inverting them into mounting solution (ProLong Gold antifade, Molecular Probes). The samples were allowed to cure for 24-48 h.</EXAMPLE>
+          <NAMESPACE>rembi:growth_protocol</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>image_acquisition</NAME>
+        <LABEL>Image Acquisition</LABEL>
+        <DESCRIPTION>Fields under component 'Image Acquisition'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Acquisition ID</LABEL>
+          <NAME>image_acquisition_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image acquisition</DESCRIPTION>
+          <EXAMPLE>IMGACQ001</EXAMPLE>
+          <NAMESPACE>ei:image_acquisition_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Specimen ID</LABEL>
+          <NAME>specimen_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this specimen</DESCRIPTION>
+          <EXAMPLE>SPEC001</EXAMPLE>
+          <NAMESPACE>ei:specimen_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Method</LABEL>
+          <NAME>image_method</NAME>
+          <DESCRIPTION>What method was used to capture images.</DESCRIPTION>
+          <EXAMPLE>secondary_electron imaging</EXAMPLE>
+          <NAMESPACE>ei:image_method</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>multiple</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Imaging Instrument</LABEL>
+          <NAME>imaging_instrument</NAME>
+          <DESCRIPTION>Description of the instrument used to capture the images.</DESCRIPTION>
+          <EXAMPLE>DeltaVision OMX V3 Blaze system (GE Healthcare) equipped with a 60x/1.42 NA PlanApo oil immersion objective (Olympus), pco.edge 5.5 sCMOS cameras (PCO) and 405, 488, 593 and 640 nm lasers</EXAMPLE>
+          <NAMESPACE>rembi:imaging_instrument</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Acquisition Parameters</LABEL>
+          <NAME>image_acquisition_parameters</NAME>
+          <DESCRIPTION>How the images were acquired, including instrument settings/parameters.</DESCRIPTION>
+          <EXAMPLE>Embryos were imaged on a Luxendo MuVi SPIM light-sheet microscope, using 30x magnification setting on the Nikon 10x/0.3 water objective. The 488 nm laser was used to image nuclei (His-GFP), and the 561 nm laser was used to image transcriptional dots (MCP-mCherry), both at 5% laser power. Exposure time for the green channel was 55 ms and exposure for the red channel was 70 ms. The line illumination tool was used to improve background levels and was set to 40 pixels.</EXAMPLE>
+          <NAMESPACE>rembi:image_acquisition_parameters</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>image_analysis</NAME>
+        <LABEL>Image Analysis</LABEL>
+        <DESCRIPTION>Fields under component 'Image Analysis'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Analysis ID</LABEL>
+          <NAME>image_analysis_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image analysis</DESCRIPTION>
+          <EXAMPLE>IMGANAL001</EXAMPLE>
+          <NAMESPACE>ei:image_analysis_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Study Component ID</LABEL>
+          <NAME>study_component_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study component</DESCRIPTION>
+          <EXAMPLE>STUDYCOMP001</EXAMPLE>
+          <NAMESPACE>ei:study_component_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Analysis Overview</LABEL>
+          <NAME>analysis_overview</NAME>
+          <DESCRIPTION>How image analysis was carried out.</DESCRIPTION>
+          <EXAMPLE>Each 3D-SIM image contained one nucleus (in a small number of cases multiple nuclei were present, which did not affect the analysis). The image analysis pipeline contained six main steps: bivalent skeleton tracing, trace fluorescence intensity quantification, HEI10 peak detection, HEI10 foci identification, HEI10 foci intensity quantification, and total bivalent intensity quantification. Note that the normalization steps used for foci identification differ from those used for foci intensity quantification; the former was intended to robustly identify foci from noisy traces, whilst the latter was used to carefully quantify foci HEI10 levels.</EXAMPLE>
+          <NAMESPACE>rembi:analysis_overview</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>image_correlation</NAME>
+        <LABEL>Image Correlation</LABEL>
+        <DESCRIPTION>Fields under component 'Image Correlation'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Correlation ID</LABEL>
+          <NAME>image_correlation_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image correlation</DESCRIPTION>
+          <EXAMPLE>IMGCORR001</EXAMPLE>
+          <NAMESPACE>ei:image_correlation_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image Analysis ID</LABEL>
+          <NAME>image_analysis_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image analysis</DESCRIPTION>
+          <EXAMPLE>IMGANAL001</EXAMPLE>
+          <NAMESPACE>ei:image_analysis_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Spatial and Temporal Alignment</LABEL>
+          <NAME>spatial_and_temporal_alignment</NAME>
+          <DESCRIPTION>Method used to correlate images from different modalities (e.g. manual overlay, alignment algorithm etc)</DESCRIPTION>
+          <EXAMPLE>Alignment algorithm</EXAMPLE>
+          <NAMESPACE>rembi:spatial_and_temporal_alignment</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Fiducials Used</LABEL>
+          <NAME>fiducials_used</NAME>
+          <DESCRIPTION>Features from correlated datasets used for colocalisation</DESCRIPTION>
+          <EXAMPLE>Fluorescent bead markers</EXAMPLE>
+          <NAMESPACE>rembi:fiducials_used</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Transformation Matrix or Other Information</LABEL>
+          <NAME>transformation_matrix</NAME>
+          <DESCRIPTION>Correlation transformations</DESCRIPTION>
+          <EXAMPLE>Translation and rotation matrix applied using ImageJ plugin</EXAMPLE>
+          <NAMESPACE>rembi:transformation_matrix</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+      <FIELD_GROUP restrictionType="Any number or none of the fields">
+        <NAME>file_level_metadata</NAME>
+        <LABEL>File Level Metadata</LABEL>
+        <DESCRIPTION>Fields under component 'File Level Metadata'</DESCRIPTION>
+        <FIELD>
+          <LABEL>Study ID</LABEL>
+          <NAME>study_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this study</DESCRIPTION>
+          <EXAMPLE>STUDY001</EXAMPLE>
+          <NAMESPACE>ei:study_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>File ID</LABEL>
+          <NAME>file_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for this file</DESCRIPTION>
+          <EXAMPLE>FILE001</EXAMPLE>
+          <NAMESPACE>ei:file_id</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^[a-zA-Z0-9]+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Study Component ID</LABEL>
+          <NAME>study_component_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the study component</DESCRIPTION>
+          <EXAMPLE>STUDYCOMP001</EXAMPLE>
+          <NAMESPACE>ei:study_component_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation ID</LABEL>
+          <NAME>annotation_id</NAME>
+          <DESCRIPTION>A unique alphanumeric identifier for the image annotation record.</DESCRIPTION>
+          <EXAMPLE>ANNOT001</EXAMPLE>
+          <NAMESPACE>rembi:annotation_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Image File name</LABEL>
+          <NAME>source_image_id</NAME>
+          <DESCRIPTION>The file name of the image including the extension. Common file names end with tiff, jpeg, png, gif, bmp, and ome-tiff etc.</DESCRIPTION>
+          <EXAMPLE>file001.png</EXAMPLE>
+          <NAMESPACE>rembi:source_image_id</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>mandatory</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Transformations</LABEL>
+          <NAME>transformations</NAME>
+          <DESCRIPTION>Any preprocessing or transformations applied to the image.</DESCRIPTION>
+          <EXAMPLE>z-stack flattening</EXAMPLE>
+          <NAMESPACE>rembi:transformations</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Spatial Information</LABEL>
+          <NAME>spatial_information</NAME>
+          <DESCRIPTION>Spatial resolution, scale, or coordinate info related to the image.</DESCRIPTION>
+          <EXAMPLE>pixel_size=0.5µm</EXAMPLE>
+          <NAMESPACE>rembi:spatial_information</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Annotation Creation Time</LABEL>
+          <NAME>annotation_creation_time</NAME>
+          <DESCRIPTION>Timestamp of when the annotation was created.</DESCRIPTION>
+          <EXAMPLE>2025-05-15T14:32:00Z</EXAMPLE>
+          <NAMESPACE>rembi:annotation_creation_time</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+      </FIELD_GROUP>
+    </DESCRIPTOR>
+  </CHECKLIST>
+</CHECKLIST_SET>

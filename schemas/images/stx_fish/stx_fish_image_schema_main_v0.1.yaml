@@ -1,0 +1,533 @@
+id: https://w3id.org/linkml/examples/single_cell_model
+name: singlecell_schema_model
+description: The Single-cell schema YAML file contains metadata mapping and schemas
+  related to the Earlham Institute's (EI's) CELLGEN ISP project. These metadata are
+  designed to describe various Single Cell Genomics and Spatial Transcriptomics experiment
+  types, including those from platforms like 10X Genomics and Vizgen.
+license: https://creativecommons.org/publicdomain/zero/1.0/
+prefixes:
+  dc: http://purl.org/dc/elements/1.1
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+  dwciri: http://rs.tdwg.org/dwc/iri/
+  linkml: https://w3id.org/linkml/
+  mixs: https://w3id.org/mixs/
+  schemaorg: http://schema.org/
+  singlecell: https://singlecellschemas.org/terms/
+default_curi_maps:
+- semweb_context
+imports:
+- linkml:types
+default_prefix: singlecell
+default_range: string
+classes:
+  Study:
+    attributes:
+      study_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      title:
+        identifier: false
+        required: false
+        description: A name given to the study or project. Project title should be
+          fewer than 30 words, such as a title of a grant proposal or a publication.
+        examples:
+        - value: Spatial Transcriptomics FISH of Human Lung Tissue
+        slot_uri: dcterms:title
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+      workflow:
+        identifier: false
+        required: false
+        description: The workflow or protocol followed during the study.
+        examples:
+        - value: Spatial Transcriptomics
+        slot_uri: ei:workflow
+        domain: Study
+        range: enum
+        multivalued: false
+        inlined: false
+      licence:
+        identifier: false
+        required: false
+        description: Specifies the terms under which the data associated with the
+          study can be used, shared, or reused. It informs users how they may legally
+          reference, distribute, or build upon the study. Common licenses include
+          Creative Commons (e.g., CC BY 4.0), which require attribution to the original
+          authors when the data is cited or reused.
+        examples:
+        - value: MIT
+        slot_uri: ei:licence
+        domain: Study
+        range: enum
+        multivalued: false
+        inlined: false
+      project_name:
+        identifier: false
+        required: true
+        description: Official name of the study or project. Project title should be
+          fewer than 30 words, such as a title of a grant proposal or a publication.
+        examples:
+        - value: Spatial Transcriptomics FISH of Human Lung Tissue
+        slot_uri: mixs:project_name
+        domain: Study
+        range: string
+        multivalued: false
+        inlined: false
+  Person:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      orcid_id:
+        identifier: false
+        required: false
+        description: A 16-digit number that uniquely identify researchers.
+        examples:
+        - value: 0000-1234-5678-9012
+        slot_uri: ei:orcid_id
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      givenName:
+        identifier: false
+        required: true
+        description: A first name (or given name) is the personal name given to an
+          individual conducting the study.
+        examples:
+        - value: Jane
+        slot_uri: schema.org:givenName
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      familyName:
+        identifier: false
+        required: true
+        description: A last name (or surname) is the family name passed down from
+          one generation to the next for the individual conducting the study.
+        examples:
+        - value: Doe
+        slot_uri: schema.org:familyName
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      email:
+        identifier: false
+        required: false
+        description: A unique identifier used to send and receive electronic messages
+          (emails) over the internet.
+        examples:
+        - value: jane.doe@example.com
+        slot_uri: schema.org:email
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      affiliation:
+        identifier: false
+        required: true
+        description: An organisation or institution that this person is associated
+          with.
+        examples:
+        - value: University of Liverpool
+        slot_uri: schema.org:affiliation
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      funder:
+        identifier: false
+        required: false
+        description: A person or organization that supports (sponsors) something through
+          some kind of financial contribution.
+        examples:
+        - value: BBSRC
+        slot_uri: schema.org:funder
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+      funding:
+        identifier: false
+        required: false
+        description: A grant that directly or indirectly provides funding or sponsorship
+          for the person to conduct the study.
+        examples:
+        - value: GRAK3489
+        slot_uri: schema.org:funding
+        domain: Person
+        range: string
+        multivalued: false
+        inlined: false
+  Sample:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the  study if referring
+          to
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      sample_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric reference or identifier for the sample.
+          This field must provide a consistent, unambiguous way to identify the sample
+          within and across datasets. It can be a name, code, or accession-like format,
+          as long as it remains unique.
+        examples:
+        - value: SAMP001
+        slot_uri: ei:sample_id
+        domain: Sample
+        range: string
+        multivalued: false
+        inlined: false
+      scientific_name:
+        identifier: false
+        required: false
+        description: The formal Latin name used to identify the organism from which
+          the sample was derived (e.g. Homo sapiens or Arabidopsis thaliana). This
+          name must accurately correspond to the Taxon ID provided to ensure correct
+          taxonomic classification.
+        examples:
+        - value: Salvelinus alpinus
+        slot_uri: ontology:scientific_name
+        domain: Sample
+        range: BIOSAMPLEACCESSION_EXT_FIELD
+        multivalued: false
+        inlined: false
+      taxon_id:
+        identifier: false
+        required: true
+        description: "A unique identifier (usually from a recognized taxonomy database\
+          \ like NCBI Taxonomy) that corresponds to the organism\u2019s scientific\
+          \ name. It must be accurately matched to the provided scientificName to\
+          \ maintain consistency and traceability in biological records."
+        examples:
+        - value: '8036'
+        slot_uri: ontology:taxon_id
+        domain: Sample
+        range: BIOSAMPLEACCESSION_EXT_FIELD
+        multivalued: false
+        inlined: false
+      biosampleAccession:
+        identifier: false
+        required: true
+        description: A unique identifier assigned to a biological sample after it
+          has been submitted to a public database, such as the NCBI BioSample or ENA.
+          It serves as a permanent reference to that specific sample, allowing researchers
+          to retrieve metadata and link it across studies or datasets.
+        examples:
+        - value: SAMEA12907823
+        slot_uri: ontology:biosampleAccession
+        domain: Sample
+        range: BIOSAMPLEACCESSION_FIELD
+        multivalued: false
+        inlined: false
+  Imaging Protocol:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      imaging_protocol_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for the imaging protocol.
+        examples:
+        - value: IMGPRO001
+        slot_uri: ei:imaging_protocol_id
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      platform:
+        identifier: false
+        required: true
+        description: The platform used to isolate the cells.
+        examples:
+        - value: Illumina NovaSeq
+        slot_uri: ei:platform
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      instrument:
+        identifier: false
+        required: true
+        description: The instrument used to isolate the cells.
+        examples:
+        - value: Illumina NovaSeq 6000
+        slot_uri: ei:instrument
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      target_probe_code:
+        identifier: false
+        required: true
+        description: The type of probes used to detect and quantify specific RNA molecules
+          in their native spatial context within a tissue or cell.
+        examples:
+        - value: Oligo-dT
+        slot_uri: ei:target_probe_code
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      section_thickness_%C2%B5m:
+        identifier: false
+        required: false
+        description: The thickness of the tissue section in micrometres.
+        examples:
+        - value: '10'
+        slot_uri: ei:section_thickness_%C2%B5m
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      section_thickness_measurement_method:
+        identifier: false
+        required: false
+        description: The method used to measure tissue section thickness.
+        examples:
+        - value: Microtome
+        slot_uri: ei:section_thickness_measurement_method
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      section_thickness_temperature:
+        identifier: false
+        required: false
+        description: The temperature at which the section was made in degree celsius.
+        examples:
+        - value: '22'
+        slot_uri: ei:section_thickness_temperature
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      is_pathological:
+        identifier: false
+        required: false
+        description: A quality inhering in a bearer by virtue of the bearer's being
+          abnormal and having a destructive effect on living tissue.
+        examples:
+        - value: 'No'
+        slot_uri: ei:is_pathological
+        domain: Imaging Protocol
+        range: enum
+        multivalued: false
+        inlined: false
+      photobleaching_duration_in_hours:
+        identifier: false
+        required: false
+        description: The duration of photobleaching in hours
+        examples:
+        - value: '2'
+        slot_uri: ei:photobleaching_duration_in_hours
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      clearing_with_proteinasek:
+        identifier: false
+        required: true
+        description: "The duration of clearing at 47\xB0C with Proteinase K."
+        examples:
+        - value: 24 hrs
+        slot_uri: ei:clearing_with_proteinasek
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      clearing_without_proteinasek:
+        identifier: false
+        required: true
+        description: "The duration of tissue clearing at 37\xB0C without Proteinase\
+          \ K."
+        examples:
+        - value: 4.5 days
+        slot_uri: ei:clearing_without_proteinasek
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      instrument_user_guide:
+        identifier: false
+        required: true
+        description: The user guide for the instrument used.
+        examples:
+        - value: User Guide
+        slot_uri: ei:instrument_user_guide
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      instrument_user_guide_revision:
+        identifier: false
+        required: true
+        description: The revision of the instrument user guide.
+        examples:
+        - value: '1.2'
+        slot_uri: ei:instrument_user_guide_revision
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      sample_preparation_guide:
+        identifier: false
+        required: true
+        description: The guide used for sample preparation.
+        examples:
+        - value: example_guide_v1.0.pdf
+        slot_uri: ei:sample_preparation_guide
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      sample_preparation_guide_revision:
+        identifier: false
+        required: true
+        description: The revision of the sample preparation guide.
+        examples:
+        - value: '1.0'
+        slot_uri: ei:sample_preparation_guide_revision
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+      deviations_from_official_protocol:
+        identifier: false
+        required: true
+        description: Any deviations from the official protocol. Separate individual
+          deviations with '|'.
+        examples:
+        - value: "Temperature exceeded 25\xB0C during storage | Sample handling delayed\
+            \ by 2 hours"
+        slot_uri: ei:deviations_from_official_protocol
+        domain: Imaging Protocol
+        range: string
+        multivalued: false
+        inlined: false
+  File:
+    attributes:
+      study_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for this study
+        examples:
+        - value: STUDY001
+        slot_uri: ei:study_id
+        domain: File
+        range: string
+        multivalued: false
+        inlined: false
+      file_id:
+        identifier: true
+        required: true
+        description: A unique alphanumeric identifier for this file
+        examples:
+        - value: FILE001
+        slot_uri: ei:file_id
+        domain: File
+        range: string
+        multivalued: false
+        inlined: false
+      imaging_protocol_id:
+        identifier: false
+        required: true
+        description: A unique alphanumeric identifier for the imaging protocol.
+        examples:
+        - value: IMGPRO001
+        slot_uri: ei:imaging_protocol_id
+        domain: File
+        range: string
+        multivalued: false
+        inlined: false
+      file_name:
+        identifier: false
+        required: true
+        description: A file name  is  used to uniquely identify a data file related
+          to the study.  Common file names end with  tiff, jpeg, png, gif, bmp and
+          ome-tiff etc.
+        examples:
+        - value: file001.tiff
+        slot_uri: ei:file_name
+        domain: File
+        range: file
+        multivalued: false
+        inlined: false
+      file_type:
+        identifier: false
+        required: true
+        description: A file type is a name given to a specific kind of file. Common
+          file types are tiff, jpeg, png, gif, bmp and ome-tiff etc.
+        examples:
+        - value: tiff
+        slot_uri: ei:file_type
+        domain: File
+        range: string
+        multivalued: false
+        inlined: false
+enums:
+  Workflow:
+    permissible_values:
+      Laser microdissection: {}
+      Laser microdissection, Culturing: {}
+      Laser microdissection, Culturing, Sequencing: {}
+      Laser microdissection, Sequencing: {}
+      Microfluidics, Facs, Culturing: {}
+      Microfluidics, Facs, Culturing, Sequencing: {}
+      Microfluidics, Facs, Sequencing: {}
+      Spatial Transcriptomics: {}
+  Licence:
+    permissible_values:
+      ? ''
+      : {}
+      Apache-2.0: {}
+      CC-BY-4.0: {}
+      CC-BY-SA-4.0: {}
+      CC0-1.0: {}
+      GPL-3.0-or-later: {}
+      MIT: {}
+  Is_pathological:
+    permissible_values:
+      ? ''
+      : {}
+      'No': {}
+      'Yes': {}

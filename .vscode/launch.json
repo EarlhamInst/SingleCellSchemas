@@ -18,13 +18,13 @@
       ]
     },
     {
-      "name": "Python: Extract All Components with 'dwc' Namespace Prefix",
+      "name": "Python: Extract Extract Single-cell components for Darwin Core standard",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/convert.py",
       "console": "integratedTerminal",
       "args": [
-        "dwc" // Termset argument (either 'dwc', 'mixs' or 'tol')
+        "single_cell dwc" // Schema type argument (either 'single_cell' or 'images'); Termset argument (either 'dwc', 'mixs' or 'tol')
       ],
       "python": "${workspaceFolder}/venv/bin/python",
       "env": {
@@ -36,13 +36,13 @@
       ]
     },
     {
-      "name": "Python: Extract All Components with 'html' Output Format",
+      "name": "Python: Extract Single-cell components in HTML format",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/convert.py",
       "console": "integratedTerminal",
       "args": [
-        "html" // Termset argument (either 'excel', 'json', 'xml')
+        "single_cell html" // Schema type argument (either 'single_cell' or 'images'); Output format argument (either 'xlsx', 'json', 'xml')
       ],
       "python": "${workspaceFolder}/venv/bin/python",
       "env": {

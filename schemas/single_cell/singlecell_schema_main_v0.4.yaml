@@ -1326,8 +1326,7 @@ classes:
         required: false
         description: The offset in sequence of the Unique Molecular Identifier (UMI)
           identifying barcode.
-        examples:
-        - value: '0'
+        examples: []
         slot_uri: ei:umi_barcode_offset
         domain: Sequencing
         range: string
@@ -1371,8 +1370,7 @@ classes:
         identifier: false
         required: false
         description: The offset in sequence of the cell identifying barcode.
-        examples:
-        - value: '0'
+        examples: []
         slot_uri: ontology:cell_barcode_size
         domain: Sequencing
         range: string

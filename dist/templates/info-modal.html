@@ -13,7 +13,8 @@
             <li><a href="#introduction" class="info-modal-toc-link">Introduction</a></li>
             <li><a href="#sampleMetadataInfo" class="info-modal-toc-link">Why is only partial Sample metadata shown?</a></li>
             <li><a href="#headingSingleCellRNASeq" class="info-modal-toc-link">Single-cell RNA Sequencing overview</a></li>
-            <li><a href="#headingSpatialTranscriptomics" class="info-modal-toc-link">Spatial Transcriptomics overview</a></li>
+            <li><a href="#headingSpatialTranscriptomics" class="info-modal-toc-link">Spatial Transcriptomics images overview</a></li>
+            <li><a href="#headingREMBI" class="info-modal-toc-link">REMBI overview</a></li>
           </ul>
         </div>
         <hr>
@@ -21,13 +22,13 @@
         <div>
           <h4 id="introduction"> Introduction</h4>
           <p>The <b>Single-cell Schemas</b> website is developed by the Collaborative OPen Omics (COPO) project team based 
-            in Norwich, United Kingdom, to support two main research areas:</p>
+            in Norwich, United Kingdom, to support the following research areas:</p>
           <ul>
-            <li>Single-cell Ribonucleic Acid Sequencing (Single-cell RNA Sequencing)</li> 
-            <li>Spatial Transcriptomics with a focus on:
+            <li>Single-cell Ribonucleic Acid Sequencing (Single-cell RNA Seq)</li> 
+            <li>Images with a focus on:
               <ul>
-                <li>Sequencing</li>
-                <li>Fluorescence In Situ Hybridisation (FISH)</li>
+                <li>Spatial Transcriptomics Fluorescence In Situ Hybridisation (ST FISH)</li>
+                <li>Recommended Metadata for Biological Images (REMBI)</li>
               </ul>
             </li>
           </ul>
@@ -78,7 +79,7 @@
             For a full list of available sample manifests, please visit the
             <a href="https://copo-project.org/manifests/index" target="_blank" rel="noopener noreferrer">Manifests page</a> on the Collaborative
             OPen Omics (COPO) website. For more information on Single-cell submissions, please refer to the
-            <a href="https://copo-docs.readthedocs.io/en/latest/submissions/single-cell-submissions.html" target="_blank" rel="noopener noreferrer">
+            <a href="https://copo-docs.readthedocs.io/en/latest/submissions/biodata/single-cell-submissions.html" target="_blank" rel="noopener noreferrer">
               Single-cell submissions guide
             </a>.
           </p>
@@ -110,7 +111,7 @@
                 <p>Single-cell Ribonucleic Acid Sequencing (scRNA-seq) is a technique that allows researchers to profile gene expression at 
                   the single-cell level. Below are the key combinations of standards and technologies used in this field:
                 </p>
-                <ul id="singleCellInfoModalListID"></ul>
+                <ul id="singleCellInfoModalListId"></ul>
               </div>
             </div>
           </div>
@@ -120,16 +121,37 @@
             <h2 class="accordion-header" id="headingSpatialTranscriptomics">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseSpatialTranscriptomics" aria-expanded="false" aria-controls="collapseSpatialTranscriptomics">
-                Spatial Transcriptomics (ST)
+                Spatial Transcriptomics images
               </button>
             </h2>
             <div id="collapseSpatialTranscriptomics" class="accordion-collapse collapse" aria-labelledby="headingSpatialTranscriptomics"
               data-bs-parent="#infoAccordion">
               <div class="accordion-body">
-                <p>Spatial Transcriptomics (ST) integrates high-throughput sequencing with spatial mapping of gene expression. Here are the 
+                <p>Spatial Transcriptomics Fluorescence In Situ Hybridisation (STX FISH or ST FISH) maps gene 
+                  expression within tissue sections by visualising specific RNA molecules 
+                  with fluorescent probes, preserving their spatial context. Here are the 
                   key combinations of standards and technologies used in this area:
                 </p>
-                <ul id="stxInfoModalListID"></ul>
+                <ul id="stxInfoModalListId"></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended Metadata for Biological Images Accordion Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingREMBI">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseREMBI" aria-expanded="false" aria-controls="collapseREMBI">
+                Recommended Metadata for Biological Images (REMBI)
+              </button>
+            </h2>
+            <div id="collapseREMBI" class="accordion-collapse collapse" aria-labelledby="headingREMBI"
+              data-bs-parent="#infoAccordion">
+              <div class="accordion-body">
+                <p>REcommended Metadata for Biological Images (REMBI) is the standard used 
+                  for General image submissions.
+                </p>
+                <ul id="rembiInfoModalListId"></ul>
               </div>
             </div>
           </div>

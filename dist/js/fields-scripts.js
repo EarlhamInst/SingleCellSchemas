@@ -18,7 +18,7 @@ $(document).ready(function () {
   $('.dropdown-menu-info-icon').on('click', function (e) {
     e.stopPropagation(); // Prevent the event from bubbling up to the document
 
-    // Close all other popovers before opening the new one
+    // Close all other popovers before opening a new one
     $('.dropdown-menu-info-icon').not(this).popover('hide');
 
     // Toggle the clicked popover (show if hidden, hide if shown)
@@ -197,27 +197,60 @@ $(document).ready(function () {
   });
 });
 
-function loadSelectedValues() {
-  // Set the value of the dropdown menu options
-  // if it exists in the URL parameters
-  function updateDropdown(selector, paramName, defaultValue) {
-    let urlParams = new URLSearchParams(window.location.search);
-    let value = urlParams.get(paramName) || defaultValue;
-    let $dropdown = $(selector);
-    let option = `option[value="${value}"]`;
+function updateDropdown({
+  dropdownEl,
+  paramName = null,
+  defaultValue = null,
+  disabled = null,
+  message = null,
+}) {
+  const tooltipEl = dropdownEl.closest("[data-bs-toggle='tooltip']")[0];
 
-    if (value !== null && $dropdown.find(option).length) {
-      $dropdown.val(value);
-     
-      // Update tooltip wrapper instead of the select itself
-      const $tooltipEl = $dropdown.closest('[data-bs-toggle="tooltip"]');
-      $tooltipEl.attr('data-bs-title', $dropdown.find(option).text());
+  if (paramName) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get(paramName) || defaultValue;
+    const option = `option[value="${value}"]`;
+
+    if (value !== null && dropdownEl.find(option).length) {
+      dropdownEl.val(value);
+
+      // Default tooltip message from selected option text
+      if (!message) {
+        message = dropdownEl.find(option).text();
+      }
     }
   }
 
-  // Set dropdowns based on URL
-  updateDropdown('#stdDropdown', 'stdDropdown', 'dwc');
-  updateDropdown('#techDropdown', 'techDropdown', 'sc_rnaseq');
+  // Enable/disable dropdown if specified
+  if (disabled !== null) {
+    dropdownEl.prop('disabled', disabled);
+  }
+
+  // Update tooltip wrapper instead of the select itself if element exists
+  if (!tooltipEl || message == null) return;
+
+  tooltipEl.setAttribute('data-bs-title', message);
+
+  const tooltip = bootstrap.Tooltip.getOrCreateInstance(tooltipEl);
+
+  tooltip.setContent({
+    '.tooltip-inner': message,
+  });
+}
+
+function loadSelectedValues() {
+  // Set the value of the dropdown menu options
+  // if it exists in the URL parameters
+  updateDropdown({
+    dropdownEl: $('#stdDropdown'),
+    paramName: 'stdDropdown',
+    defaultValue: 'dwc',
+  });
+  updateDropdown({
+    dropdownEl: $('#techDropdown'),
+    paramName: 'techDropdown',
+    defaultValue: 'sc_rnaseq',
+  });
 
   // Update URL and rebuild content
   updateUrlWithParams();
@@ -235,8 +268,16 @@ function loadSelectedValues() {
   // Handle navigation changes (e.g. back/forward navigation or a pasted URL)
   window.addEventListener('popstate', () => {
     // Reload dropdowns and content
-    updateDropdown('#stdDropdown', 'stdDropdown', 'dwc');
-    updateDropdown('#techDropdown', 'techDropdown', 'sc_rnaseq');
+    updateDropdown({
+      dropdownEl: $('#stdDropdown'),
+      paramName: 'stdDropdown',
+      defaultValue: 'dwc',
+    });
+    updateDropdown({
+      dropdownEl: $('#techDropdown'),
+      paramName: 'techDropdown',
+      defaultValue: 'sc_rnaseq',
+    });
     updateContentBasedOnSelection();
 
     // Try to open the accordion after new content has loaded
@@ -253,45 +294,91 @@ function loadSelectedValues() {
 }
 
 function getOutputFileName() {
-  let standard = $('#stdDropdown').val();
-  let technology = $('#techDropdown').val();
+  const standard = $('#stdDropdown').val();
+  const $technologyDropdown = $('#techDropdown');
+  const technology = $technologyDropdown.val();
 
-  for (let file in outputFileData) {
-    let [tech, tech_label, std, std_label, version_desc] = outputFileData[file]; // Destructure tuple values
-    if (tech === technology && std === standard) {
-      return file; // Return the matched file
+  for (const [file, [tech, techLabel, std]] of Object.entries(outputFileData)) {
+    // Note: No technology-only case is considered
+    if (std !== standard) continue; // Skip if standard doesn't match
+
+    // Standard exists but no technology available
+    if (tech === null) {
+      const message = `No technology options available for selected standard. 
+      Change standard to enable technology selection.`;
+
+      updateDropdown({
+        dropdownEl: $technologyDropdown,
+        disabled: true,
+        message: message,
+      });
+
+      return file;
+    }
+
+    // Both technology and standard exist
+    if (tech === technology) {
+      const message = $technologyDropdown
+        .find(`option[value='${technology}']`)
+        .text();
+
+      updateDropdown({
+        dropdownEl: $technologyDropdown,
+        disabled: false,
+        message: message,
+      });
+
+      return file;
     }
   }
+
   return null;
 }
 
 // Function to populate the modal with outputFileData
 function populateInfoModalContent() {
-  let scInfoModalContent = '';
-  let stxInfoModalContent = '';
+  const sectionMap = {
+    sc_rnaseq: [],
+    stx: [],
+    rembi: [],
+  };
 
-  for (let key in outputFileData) {
-    let [
+  const elementIds = {
+    sc_rnaseq: 'singleCellInfoModalListId',
+    stx: 'stxInfoModalListId',
+    rembi: 'rembiInfoModalListId',
+  };
+
+  for (const [key, value] of Object.entries(outputFileData)) {
+    const [
       technology_name,
       technology_label,
       standard_name,
       standard_label,
       version_description,
-    ] = outputFileData[key];
+    ] = value;
 
-    let listItem = `<li><strong>${standard_label} & ${technology_label}:</strong> ${version_description}</li>`;
+    const technologyLabel =
+      technology_label === null ? '' : ` & ${technology_label}`;
 
-    if (key.includes('sc_rnaseq')) {
-      scInfoModalContent += listItem;
-    } else if (key.includes('stx')) {
-      stxInfoModalContent += listItem;
+    const listItem = `<li><strong>${standard_label}${technologyLabel}:</strong> ${version_description}</li>`;
+
+    for (const section in sectionMap) {
+      if (key.includes(section)) {
+        sectionMap[section].push(listItem);
+        break;
+      }
     }
   }
 
   // Insert data into the modal body (Ensure these IDs exist in info-modal.html)
-  document.getElementById('singleCellInfoModalListID').innerHTML =
-    scInfoModalContent;
-  document.getElementById('stxInfoModalListID').innerHTML = stxInfoModalContent;
+  for (const category in sectionMap) {
+    const el = document.getElementById(elementIds[category]);
+
+    if (el) {
+      el.innerHTML = sectionMap[category].join('');
+    }
+  }
 }
 
 function loadInfoModal() {
@@ -707,11 +794,44 @@ function updateUrlWithParams({ method = 'replace', preserveHash = true } = {}) {
   const url = new URL(window.location.href);
 
   // Get the values from the dropdown menus
-  let standard = $('#stdDropdown').val();
-  let technology = $('#techDropdown').val();
+  const $standardDropdown = $('#stdDropdown');
+  const $technologyDropdown = $('#techDropdown');
+  const standard = $standardDropdown.val();
+  const technology = $technologyDropdown.val();
 
-  url.searchParams.set('stdDropdown', standard);
-  url.searchParams.set('techDropdown', technology);
+  const isStandardOnly =
+    standardOnlyList.includes(standard) &&
+    !technologyOnlyList.includes(technology);
+
+  // Note: No technology-only case is considered
+  if (isStandardOnly) {
+    // Standard exists but no technology available
+    url.searchParams.set('stdDropdown', standard);
+    url.searchParams.delete('techDropdown');
+
+    // Disable technology dropdown and set tooltip
+    const message = `No technology options available for selected standard. 
+      Change standard to enable technology selection.`;
+    updateDropdown({
+      dropdownEl: $technologyDropdown,
+      disabled: true,
+      message: message,
+    });
+  } else {
+    // Standard and technology content exists
+    url.searchParams.set('stdDropdown', standard);
+    url.searchParams.set('techDropdown', technology);
+
+    // Enable technology dropdown and set tooltip to selected technology
+    const message = $technologyDropdown
+      .find(`option[value='${technology}']`)
+      .text();
+    updateDropdown({
+      dropdownEl: $technologyDropdown,
+      disabled: false,
+      message: message,
+    });
+  }
 
   if (!preserveHash) url.hash = '';
 
@@ -724,16 +844,41 @@ function updateUrlWithParams({ method = 'replace', preserveHash = true } = {}) {
 
 // Dynamically load and update content based on selected filters
 function updateContentBasedOnSelection() {
-  let selectedStandard = $('#stdDropdown').val();
-  let selectedTechnology = $('#techDropdown').val();
-  let fieldsAccordion = $('#fieldsAccordion');
+  const selectedStandard = $('#stdDropdown').val();
+  const selectedTechnology = $('#techDropdown').val();
+  const fieldsAccordion = $('#fieldsAccordion');
 
   // Filter components based on standardName and technologyName
-  let filteredComponents = components.filter((item) => {
-    return (
-      item.standard_name === selectedStandard &&
-      item.technology_name === selectedTechnology
-    );
+  const filteredComponents = components.filter((item) => {
+    // Standard-only content exists
+    if (
+      standardOnlyList.includes(selectedStandard) &&
+      !technologyOnlyList.includes(selectedTechnology)
+    ) {
+      return (
+        item.standard_name === selectedStandard && item.technology_name === null
+      );
+    } else if (
+      technologyOnlyList.includes(selectedTechnology) &&
+      !standardOnlyList.includes(selectedStandard)
+    ) {
+      // Technology-only content exists
+      return (
+        item.technology_name === selectedTechnology &&
+        item.standard_name === null
+      );
+    }
+
+    // Standard and technology content exists
+    if (
+      !standardOnlyList.includes(selectedStandard) &&
+      !technologyOnlyList.includes(selectedTechnology)
+    ) {
+      return (
+        item.standard_name === selectedStandard &&
+        item.technology_name === selectedTechnology
+      );
+    }
   });
 
   // Empty the current accordion content
@@ -742,7 +887,7 @@ function updateContentBasedOnSelection() {
   if (filteredComponents.length) {
     // Iterate over the filtered components and dynamically add them to the accordion
     filteredComponents.forEach(function (component) {
-      let accordionItem = `
+      const accordionItem = `
       <div class="accordion-item">
         <div class="accordion-header">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" 
