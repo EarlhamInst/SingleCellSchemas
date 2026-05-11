@@ -4055,18 +4055,6 @@
                 <VALUE/>
               </TEXT_VALUE>
               <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
                 <VALUE>5-methylcytidine antibody</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
@@ -4079,13 +4067,16 @@
                 <VALUE>ChIP-Seq</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
-                <VALUE>DNase</VALUE>
+                <VALUE>Dnase</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>HMPR</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>Hybrid Selection</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>Inverse rRNA</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>Inverse rRNA selection</VALUE>
@@ -4100,16 +4091,19 @@
                 <VALUE>MF</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
-                <VALUE>MNase</VALUE>
+                <VALUE>MSLL</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
-                <VALUE>MSLL</VALUE>
+                <VALUE>Mnase</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>Oligo-dT</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>PCR</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>PolyA</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>RACE</VALUE>
@@ -4131,6 +4125,12 @@
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>cDNA</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>cDNA_oligo_dT</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>cDNA_randomPriming</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>other</VALUE>
@@ -4383,13 +4383,10 @@
                 <VALUE/>
               </TEXT_VALUE>
               <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
-              <TEXT_VALUE>
                 <VALUE>GENOMIC</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>GENOMIC SINGLE CELL</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>METAGENOMIC</VALUE>
@@ -4407,6 +4404,9 @@
                 <VALUE>TRANSCRIPTOMIC</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
+                <VALUE>TRANSCRIPTOMIC SINGLE CELL</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
                 <VALUE>VIRAL RNA</VALUE>
               </TEXT_VALUE>
             </TEXT_CHOICE_FIELD>
@@ -4422,9 +4422,6 @@
           <NAMESPACE>ei:library_strategy</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_CHOICE_FIELD>
-              <TEXT_VALUE>
-                <VALUE/>
-              </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE/>
               </TEXT_VALUE>
@@ -4610,6 +4607,9 @@
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>MeDIP-Seq</VALUE>
+              </TEXT_VALUE>
+              <TEXT_VALUE>
+                <VALUE>NOMe-Seq</VALUE>
               </TEXT_VALUE>
               <TEXT_VALUE>
                 <VALUE>OTHER</VALUE>
