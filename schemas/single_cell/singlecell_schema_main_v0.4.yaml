@@ -1326,7 +1326,8 @@ classes:
         required: false
         description: The offset in sequence of the Unique Molecular Identifier (UMI)
           identifying barcode.
-        examples: []
+        examples:
+        - value: '0'
         slot_uri: ei:umi_barcode_offset
         domain: Sequencing
         range: string
@@ -1370,7 +1371,8 @@ classes:
         identifier: false
         required: false
         description: The offset in sequence of the cell identifying barcode.
-        examples: []
+        examples:
+        - value: '0'
         slot_uri: ontology:cell_barcode_size
         domain: Sequencing
         range: string
@@ -2515,17 +2517,19 @@ enums:
       CAGE: {}
       ChIP: {}
       ChIP-Seq: {}
-      DNase: {}
+      Dnase: {}
       HMPR: {}
       Hybrid Selection: {}
+      Inverse rRNA: {}
       Inverse rRNA selection: {}
       MBD2 protein methyl-CpG binding domain: {}
       MDA: {}
       MF: {}
-      MNase: {}
       MSLL: {}
+      Mnase: {}
       Oligo-dT: {}
       PCR: {}
+      PolyA: {}
       RACE: {}
       RANDOM: {}
       RANDOM PCR: {}
@@ -2533,6 +2537,8 @@ enums:
       Reduced Representation: {}
       Restriction Digest: {}
       cDNA: {}
+      cDNA_oligo_dT: {}
+      cDNA_randomPriming: {}
       other: {}
       padlock probes capture method: {}
       repeat fractionation: {}
@@ -2543,11 +2549,13 @@ enums:
       ? ''
       : {}
       GENOMIC: {}
+      GENOMIC SINGLE CELL: {}
       METAGENOMIC: {}
       METATRANSCRIPTOMIC: {}
       OTHER: {}
       SYNTHETIC: {}
       TRANSCRIPTOMIC: {}
+      TRANSCRIPTOMIC SINGLE CELL: {}
       VIRAL RNA: {}
   Library_strategy:
     permissible_values:
@@ -2573,6 +2581,7 @@ enums:
       MNase-Seq: {}
       MRE-Seq: {}
       MeDIP-Seq: {}
+      NOMe-Seq: {}
       OTHER: {}
       POOLCLONE: {}
       RAD-Seq: {}

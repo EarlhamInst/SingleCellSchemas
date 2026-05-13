@@ -632,7 +632,7 @@
           <NAMESPACE>ei:orcid_id</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
-              <REGEX_VALUE>^\d{4}-\d{4}-\d{4}-\d{4}$</REGEX_VALUE>
+              <REGEX_VALUE>^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$</REGEX_VALUE>
             </TEXT_FIELD>
           </FIELD_TYPE>
           <MANDATORY>optional</MANDATORY>
@@ -1646,7 +1646,7 @@
           <NAMESPACE>ontology:library_prep_kit_version</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
-              <REGEX_VALUE>^\d+$</REGEX_VALUE>
+              <REGEX_VALUE>^\d+(\.\d+)?$</REGEX_VALUE>
             </TEXT_FIELD>
           </FIELD_TYPE>
           <MANDATORY>mandatory</MANDATORY>
@@ -7179,7 +7179,7 @@ dataset.</DESCRIPTION>
           <NAMESPACE>ei:reference_genome</NAMESPACE>
           <FIELD_TYPE>
             <TEXT_FIELD>
-              <REGEX_VALUE>^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$</REGEX_VALUE>
+              <REGEX_VALUE>^((https?|ftp):\/\/[^\s|]+)(\|((https?|ftp):\/\/[^\s|]+))*$</REGEX_VALUE>
             </TEXT_FIELD>
           </FIELD_TYPE>
           <MANDATORY>mandatory</MANDATORY>
