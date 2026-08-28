@@ -1808,16 +1808,6 @@
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
         <FIELD>
-          <LABEL>Suspension Volume (µL)</LABEL>
-          <NAME>suspension_volume_µl</NAME>
-          <DESCRIPTION>The volume of the cell suspension in microlitres (µL).</DESCRIPTION>
-          <EXAMPLE>100</EXAMPLE>
-          <NAMESPACE>ei:suspension_volume_µl</NAMESPACE>
-          <FIELD_TYPE/>
-          <MANDATORY>optional</MANDATORY>
-          <CARDINALITY>single</CARDINALITY>
-        </FIELD>
-        <FIELD>
           <LABEL>Suspension Concentration Cells Per µL</LABEL>
           <NAME>suspension_concentration_cells_per_µl</NAME>
           <DESCRIPTION>The concentration of cells in the suspension in microlitres (µL).</DESCRIPTION>
@@ -1838,9 +1828,9 @@
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
         <FIELD>
-          <LABEL>Loading Volume Μl</LABEL>
+          <LABEL>Loading Volume of Cell Suspension (µL)</LABEL>
           <NAME>loading_volume_µl</NAME>
-          <DESCRIPTION>The volume of the cell suspension loaded into the single-cell RNA-sequencing system for analysis.</DESCRIPTION>
+          <DESCRIPTION>The volume of the cell suspension loaded into the single-cell RNA-sequencing system for analysis in microlitres (µL).</DESCRIPTION>
           <EXAMPLE>10</EXAMPLE>
           <NAMESPACE>ei:loading_volume_µl</NAMESPACE>
           <FIELD_TYPE>
@@ -3323,7 +3313,7 @@
         <FIELD>
           <LABEL>i5 Index</LABEL>
           <NAME>i5_index</NAME>
-          <DESCRIPTION>Barcode sequence used on the i5 adapter during library preparation for identifying samples in multiplexed single-cell RNA-sequencing.</DESCRIPTION>
+          <DESCRIPTION>Barcode sequence used on the i5 adapter during library preparation for identifying samples in multiplexed single-cell RNA-sequencing. The DNA barcode sequence (A, C, G, T), not a plate or well identifier should be specified.</DESCRIPTION>
           <EXAMPLE>ATCACG</EXAMPLE>
           <NAMESPACE>ei:i5_index</NAMESPACE>
           <FIELD_TYPE/>
@@ -3333,7 +3323,7 @@
         <FIELD>
           <LABEL>i7 Index</LABEL>
           <NAME>i7_index</NAME>
-          <DESCRIPTION>Barcode sequence used on the i7 adapter to distinguish samples in multiplexed sequencing runs.</DESCRIPTION>
+          <DESCRIPTION>Barcode sequence used on the i7 adapter to distinguish samples in multiplexed sequencing runs. The nucleotide sequence (A, C, G, T), not a plate or well identifier should be specified.</DESCRIPTION>
           <EXAMPLE>CGATGT</EXAMPLE>
           <NAMESPACE>ei:i7_index</NAMESPACE>
           <FIELD_TYPE/>
@@ -3599,26 +3589,6 @@
               </TEXT_VALUE>
             </TEXT_CHOICE_FIELD>
           </FIELD_TYPE>
-          <MANDATORY>mandatory</MANDATORY>
-          <CARDINALITY>single</CARDINALITY>
-        </FIELD>
-        <FIELD>
-          <LABEL>I5 Sequence</LABEL>
-          <NAME>i5_sequence</NAME>
-          <DESCRIPTION>The nucleotide sequence of the i5 index used in multiplexing during sequencing.</DESCRIPTION>
-          <EXAMPLE>ATCGTAGC</EXAMPLE>
-          <NAMESPACE>ei:i5_sequence</NAMESPACE>
-          <FIELD_TYPE/>
-          <MANDATORY>mandatory</MANDATORY>
-          <CARDINALITY>single</CARDINALITY>
-        </FIELD>
-        <FIELD>
-          <LABEL>i7 Sequence</LABEL>
-          <NAME>i7_sequence</NAME>
-          <DESCRIPTION>The specific nucleotide sequence of the i7 index used for a sample.</DESCRIPTION>
-          <EXAMPLE>TGCATGCA</EXAMPLE>
-          <NAMESPACE>ei:i7_sequence</NAMESPACE>
-          <FIELD_TYPE/>
           <MANDATORY>mandatory</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
@@ -6874,6 +6844,106 @@ from the cell was included in the sequencing analysis. For example, cells might 
               </TEXT_VALUE>
             </TEXT_CHOICE_FIELD>
           </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Number of Cells Analysed</LABEL>
+          <NAME>number_of_cells_analysed</NAME>
+          <DESCRIPTION>Total number of cells retained after quality-control filtering and included in the downstream analysis.</DESCRIPTION>
+          <EXAMPLE>12458</EXAMPLE>
+          <NAMESPACE>ei:number_of_cells_analysed</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Genes Detected per Cell</LABEL>
+          <NAME>genes_detected_per_cell</NAME>
+          <DESCRIPTION>Mean or median number of genes detected per cell among the cells included in the analysis.</DESCRIPTION>
+          <EXAMPLE>1842</EXAMPLE>
+          <NAMESPACE>ei:genes_detected_per_cell</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Cell-level QC Threshold</LABEL>
+          <NAME>cell_level_qc_threshold</NAME>
+          <DESCRIPTION>Criteria and cut-off values used to retain or exclude individual cells from downstream analysis.</DESCRIPTION>
+          <EXAMPLE>≥200 genes, ≤5,000 genes, &lt;15% mitochondrial reads</EXAMPLE>
+          <NAMESPACE>ei:cell_level_qc_threshold</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Number of Clusters or Cell Populations</LABEL>
+          <NAME>number_of_clusters_or_cell_populations</NAME>
+          <DESCRIPTION>Total number of computationally identified clusters or annotated cell populations reported in the study.</DESCRIPTION>
+          <EXAMPLE>8</EXAMPLE>
+          <NAMESPACE>ei:number_of_clusters_or_cell_populations</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Main Single-cell Response</LABEL>
+          <NAME>main_single_cell_response</NAME>
+          <DESCRIPTION>Principal biological response or finding identified through the single-cell analysis.</DESCRIPTION>
+          <EXAMPLE>Increased interferon signalling in macrophages</EXAMPLE>
+          <NAMESPACE>ei:main_single_cell_response</NAMESPACE>
+          <FIELD_TYPE/>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Separation Score</LABEL>
+          <NAME>separation_score</NAME>
+          <DESCRIPTION>Reported metric used to quantify separation between experimental conditions, clusters or cell populations.</DESCRIPTION>
+          <EXAMPLE>0.62</EXAMPLE>
+          <NAMESPACE>ei:separation_score</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^(0?\.[0-9]+)$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Number of Candidate Genes</LABEL>
+          <NAME>number_of_candidate_genes</NAME>
+          <DESCRIPTION>Total number of marker, switch or other candidate genes identified in the analysis.</DESCRIPTION>
+          <EXAMPLE>27</EXAMPLE>
+          <NAMESPACE>ei:number_of_candidate_genes</NAMESPACE>
+          <FIELD_TYPE>
+            <TEXT_FIELD>
+              <REGEX_VALUE>^\d+$</REGEX_VALUE>
+            </TEXT_FIELD>
+          </FIELD_TYPE>
+          <MANDATORY>optional</MANDATORY>
+          <CARDINALITY>single</CARDINALITY>
+        </FIELD>
+        <FIELD>
+          <LABEL>Key Analysis Method or Threshold</LABEL>
+          <NAME>key_analysis_method_or_threshold</NAME>
+          <DESCRIPTION>Principal computational method or threshold used to derive the reported downstream-analysis results.</DESCRIPTION>
+          <EXAMPLE>Leiden clustering, resolution = 0.8; DE threshold: FDR &lt;0.05</EXAMPLE>
+          <NAMESPACE>ei:key_analysis_method_or_threshold</NAMESPACE>
+          <FIELD_TYPE/>
           <MANDATORY>optional</MANDATORY>
           <CARDINALITY>single</CARDINALITY>
         </FIELD>
